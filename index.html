@@ -14,6 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="stylesheet" href="./css/index.css" />
     <script
       type="module"
@@ -26,59 +27,64 @@
     <title>Médiathèque Paris-Saclay</title>
   </head>
   <body>
-    <div class="circle">
-      <svg
-        width="873"
-        height="388"
-        viewBox="0 0 873 388"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle cx="138" cy="-347" r="735" fill="#FF6636" />
-      </svg>
+    <div class="background">
+      <div class="circle">
+        <svg
+          width="873"
+          height="388"
+          viewBox="0 0 873 388"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle cx="138" cy="-347" r="735" fill="#FF6636" />
+        </svg>
+      </div>
+      <div class="path">
+        <svg
+          width="1914"
+          height="636"
+          viewBox="0 0 1914 636"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M996.584 128.169C729.433 345.713 153.457 388.851 0 331.834V636H1914V245.975C1819.53 7.03459 1282.65 -104.781 996.584 128.169Z"
+            fill="#E76F51"
+          />
+        </svg>
+      </div>
+      <div class="path-circle">
+        <svg
+          width="2723"
+          height="1127"
+          viewBox="0 0 2723 1127"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <circle
+            cx="417.046"
+            cy="709.954"
+            r="415.046"
+            stroke="white"
+            stroke-width="4"
+          />
+          <circle
+            cx="2305.61"
+            cy="419.835"
+            r="415.046"
+            stroke="white"
+            stroke-width="4"
+          />
+          <circle cx="686.94" cy="396.821" r="23.0142" fill="#FE912C" />
+          <circle cx="2403.94" cy="17.435" r="17.435" fill="#FE912C" />
+          <circle cx="1893.44" cy="459.587" r="17.435" fill="#FE912C" />
+        </svg>
+      </div>
+      <div class="psm-bg">
+        <h1>PSM</h1>
+      </div>
+      <div class="overlay-blur"></div>
     </div>
-    <div class="path">
-      <svg
-        width="1914"
-        height="636"
-        viewBox="0 0 1914 636"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M996.584 128.169C729.433 345.713 153.457 388.851 0 331.834V636H1914V245.975C1819.53 7.03459 1282.65 -104.781 996.584 128.169Z"
-          fill="#E76F51"
-        />
-      </svg>
-    </div>
-    <div class="path-circle">
-      <svg
-        width="2723"
-        height="1127"
-        viewBox="0 0 2723 1127"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <circle
-          cx="417.046"
-          cy="709.954"
-          r="415.046"
-          stroke="white"
-          stroke-width="4"
-        />
-        <circle
-          cx="2305.61"
-          cy="419.835"
-          r="415.046"
-          stroke="white"
-          stroke-width="4"
-        />
-        <circle cx="686.94" cy="396.821" r="23.0142" fill="#FE912C" />
-        <circle cx="2403.94" cy="17.435" r="17.435" fill="#FE912C" />
-        <circle cx="1893.44" cy="459.587" r="17.435" fill="#FE912C" />
-      </svg>
-    </div>
-    <div class="overlay-blur"></div>
     <header>
       <div class="logo">
         <img src="" alt="logo" />
@@ -95,10 +101,34 @@
       </nav>
       <div class="search">
         <input type="text" placeholder="Search" />
+        <button>
+          <ion-icon name="search-outline"></ion-icon>
+        </button>
       </div>
       <div class="center-block"></div>
-      <div class="logo">
-        <img src="" alt="logo" />
+      <div class="user">
+        <img
+          src="https://cdn-icons-png.flaticon.com/512/149/149071.png"
+          alt="user"
+        />
+        <ul class="drowdown_user_menu">
+          <li class="dropdown_item-1">
+            <a href="#"
+              ><ion-icon name="person-circle-outline"></ion-icon>Mon compte</a
+            >
+          </li>
+          <li class="dropdown_item-2">
+            <a href="#"><ion-icon name="book-outline"></ion-icon>Emprunt</a>
+          </li>
+          <li class="dropdown_item-3">
+            <a href="#"><ion-icon name="cart-outline"></ion-icon>Panier</a>
+          </li>
+          <li class="dropdown_item-4">
+            <a href="#"
+              ><ion-icon name="log-out-outline"></ion-icon>Se déconnecter</a
+            >
+          </li>
+        </ul>
       </div>
     </header>
     <main>
@@ -109,7 +139,7 @@
           <div class="left-line"></div>
           <h2 class="left-titre">Les Misérables</h2>
           <span>Victor Hugo</span>
-          <button>Emprunter</button>
+          <button>EMPRUNTER</button>
         </div>
         <div class="right">
           <img src="./img/event_miserable_797898.jpg" alt="LesMiserable" />
