@@ -1,0 +1,109 @@
+.search-tab {
+  width: 60%;
+  margin: 30vh auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2029;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+  border-radius: 1rem;
+  padding: 30px;
+  flex-direction: column;
+  .search-input {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    input,
+    select {
+      padding: 10px 20px;
+      border: none;
+      text-align: center;
+      font-family: "Montserrat", sans-serif;
+      font-weight: 500;
+      font-size: 1em;
+      border-radius: 10px;
+    }
+    input:focus {
+      outline: none;
+    }
+    select > option {
+      text-align: center;
+    }
+    &-titre,
+    &-auteur {
+      width: 50%;
+    }
+    &-annee {
+      width: 20%;
+    }
+    &-categorie {
+      position: relative;
+      width: 20%;
+      padding: 10px 20px;
+      input {
+        z-index: 1;
+      }
+      label {
+        position: relative;
+        font-weight: 500;
+        font-size: 15px;
+        border-radius: 4px;
+        letter-spacing: 1px;
+        display: -webkit-inline-flex;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-align-items: center;
+        -moz-align-items: center;
+        -ms-align-items: center;
+        align-items: center;
+        -webkit-justify-content: center;
+        -moz-justify-content: center;
+        -ms-justify-content: center;
+        justify-content: center;
+        -ms-flex-pack: center;
+        text-align: center;
+        border: none;
+        background-color: #ffeba7;
+        cursor: pointer;
+        color: #102770;
+        z-index: 2;
+      }
+      .dropdown {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+      .for-dropdown {
+        width: 100%;
+        height: 100%;
+        padding: 10px 0;
+      }
+      input[type="checkbox"]:checked + .search-input-categorie-dropdown {
+        display: flex;
+      }
+      &-dropdown {
+        width: 100%;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        display: none;
+        align-items: center;
+        flex-direction: column;
+        background-color: #fff;
+        padding: 10px 0;
+      }
+    }
+  }
+  .search-button {
+    button {
+      width: 40%;
+      background-color: #c5340f;
+    }
+  }
+}
