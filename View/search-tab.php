@@ -1,11 +1,12 @@
 <section class="search-tab">
     <div class="search-input">
         <input type="text" placeholder="Titre du document" class="search-input-titre" />
-        <input type="text" placeholder="Année parution" class="search-input-annee" />
+        <input type="number" placeholder="Année parution" class="search-input-annee" />
         <input type="text" placeholder="Auteur" class="search-input-auteur" />
         <div class="search-input-categorie">
-            <label class="for-dropdown" for="dropdown">Categorie </label>
             <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
+            <label class="for-dropdown" for="dropdown">Categorie <ion-icon name="chevron-up-outline"></ion-icon>
+            </label>
             <div class="search-input-categorie-dropdown">
                 <ul>
                     <li><a href="#">Type 1</a></li>

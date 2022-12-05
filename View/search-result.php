@@ -1,5 +1,5 @@
 <section class="search-result">
     <?php
-    include("./card-result.php");
+    include("./View/card-result.php");
     ?>
 </section>

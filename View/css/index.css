@@ -406,6 +406,7 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
 }
 main .trending-book {
   display: flex;
@@ -479,7 +480,7 @@ main .trending-book .right img {
 }
 main .search-tab {
   width: 60%;
-  margin: 30vh auto 0 auto;
+  margin: 15vh auto 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -518,13 +519,18 @@ main .search-tab .search-input select > option {
 main .search-tab .search-input-titre, main .search-tab .search-input-auteur {
   width: 50%;
 }
+main .search-tab .search-input-titre, main .search-tab .search-input-annee {
+  margin-bottom: 10px;
+}
 main .search-tab .search-input-annee {
   width: 20%;
 }
 main .search-tab .search-input-categorie {
   position: relative;
   width: 20%;
-  padding: 10px 20px;
+  padding: 0px 20px;
+  background-color: #fff;
+  border-radius: 10px;
 }
 main .search-tab .search-input-categorie input {
   z-index: 1;
@@ -549,9 +555,9 @@ main .search-tab .search-input-categorie label {
   -ms-flex-pack: center;
   text-align: center;
   border: none;
-  background-color: #ffeba7;
+  background-color: #fff;
   cursor: pointer;
-  color: #102770;
+  color: #555555;
   z-index: 2;
 }
 main .search-tab .search-input-categorie .dropdown {
@@ -563,25 +569,151 @@ main .search-tab .search-input-categorie .dropdown {
 main .search-tab .search-input-categorie .for-dropdown {
   width: 100%;
   height: 100%;
-  padding: 10px 0;
+  padding: 15px 0;
 }
-main .search-tab .search-input-categorie input[type=checkbox]:checked + .search-input-categorie-dropdown {
-  display: flex;
+main .search-tab .search-input-categorie input[type=checkbox]:checked ~ .search-input-categorie-dropdown {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+main .search-tab .search-input-categorie input[type=checkbox]:checked + label > ion-icon {
+  transform: rotate(180deg);
+}
+main .search-tab .search-input-categorie ion-icon {
+  transition: 0.5s ease;
+  position: absolute;
+  right: 10px;
 }
 main .search-tab .search-input-categorie-dropdown {
   width: 100%;
   position: absolute;
-  top: 100%;
+  top: 130%;
   left: 0;
-  display: none;
+  display: flex;
   align-items: center;
   flex-direction: column;
   background-color: #fff;
+  opacity: 0;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+main .search-tab .search-input-categorie-dropdown ul {
+  width: 100%;
+}
+main .search-tab .search-input-categorie-dropdown ul li {
+  width: 100%;
   padding: 10px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+main .search-tab .search-input-categorie-dropdown ul li:hover {
+  background-color: #f5f5f5;
+}
+main .search-tab .search-input-categorie-dropdown ul li a {
+  text-decoration: none;
+  color: #555555;
+}
+main .search-tab .search-button {
+  width: 20%;
+  margin-top: 30px;
 }
 main .search-tab .search-button button {
-  width: 40%;
-  background-color: #c5340f;
+  width: 100%;
+  background-color: #e76f51;
+  padding: 15px 0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+main .search-result {
+  width: 70%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  flex-wrap: wrap;
+}
+main .search-result .card-result {
+  width: 25%;
+  background-color: #fff;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  padding: 20px 10px;
+  border-radius: 5px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+main .search-result .card-result-img {
+  width: 30%;
+  border: 2px solid #e76f51;
+  border-radius: 5px;
+}
+main .search-result .card-result-img img {
+  width: 100%;
+}
+main .search-result .card-result-text {
+  display: flex;
+  align-items: left;
+  justify-content: space-between;
+  flex-direction: column;
+  text-align: left;
+}
+main .search-result .card-result-text h2 {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 700;
+  font-size: 20px;
+}
+main .search-result .card-result-text span {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-weight: 500;
+  font-size: 13px;
+}
+main .search-result .card-result-text h2,
+main .search-result .card-result-text span,
+main .search-result .card-result-text .categorie-tag {
+  margin-bottom: 10px;
+}
+main .search-result .card-result-text .categorie-tag {
+  width: fit-content;
+  background-color: #264653;
+  padding: 5px 10px;
+  text-align: center;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem;
+}
+main .search-result .card-result-text .categorie-tag span {
+  font-size: 11px;
+  color: #fff;
+  margin-bottom: unset;
+}
+main .search-result .card-result-text button {
+  width: 80%;
+  padding: 10px 0;
+  border: none;
+  background-color: #e76f51;
+  border-radius: 5px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
 }
 
 footer {
