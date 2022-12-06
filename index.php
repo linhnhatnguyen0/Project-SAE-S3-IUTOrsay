@@ -1,3 +1,3 @@
 <?php
-require_once("./View/viewTotal.php")
+require_once("./View/controlleur.php")
     ?>
