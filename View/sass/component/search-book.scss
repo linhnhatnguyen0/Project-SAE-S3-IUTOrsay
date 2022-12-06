@@ -18,8 +18,7 @@
     align-items: center;
     justify-content: space-around;
     flex-wrap: wrap;
-    input,
-    select {
+    input {
       padding: 10px 20px;
       border: none;
       text-align: center;
@@ -31,9 +30,7 @@
     input:focus {
       outline: none;
     }
-    select > option {
-      text-align: center;
-    }
+
     &-titre,
     &-auteur {
       width: 50%;

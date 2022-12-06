@@ -9,7 +9,8 @@ $inputBG: #f3fafd;
   position: fixed;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: block;
+  top: 0;
 }
 .login {
   display: none;

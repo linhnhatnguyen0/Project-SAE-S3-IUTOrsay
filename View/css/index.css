@@ -64,7 +64,8 @@ header main footer {
   position: fixed;
   z-index: 2;
   background-color: rgba(0, 0, 0, 0.5);
-  display: none;
+  display: block;
+  top: 0;
 }
 
 .login {
@@ -500,8 +501,7 @@ main .search-tab .search-input {
   justify-content: space-around;
   flex-wrap: wrap;
 }
-main .search-tab .search-input input,
-main .search-tab .search-input select {
+main .search-tab .search-input input {
   padding: 10px 20px;
   border: none;
   text-align: center;
@@ -512,9 +512,6 @@ main .search-tab .search-input select {
 }
 main .search-tab .search-input input:focus {
   outline: none;
-}
-main .search-tab .search-input select > option {
-  text-align: center;
 }
 main .search-tab .search-input-titre, main .search-tab .search-input-auteur {
   width: 50%;
@@ -714,6 +711,164 @@ main .search-result .card-result-text button {
   color: #fff;
   font-family: "Montserrat", sans-serif;
   cursor: pointer;
+}
+main .loan {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 90vh;
+  z-index: 3;
+  margin: auto;
+  background-color: rgb(219, 219, 219);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 30px;
+}
+main .loan .loan-title {
+  margin-bottom: 30px;
+}
+main .loan .loan-title h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 40px;
+  color: #264653;
+  text-shadow: -2px -2px 0 #fff, 2px -2px 0 #fff, -2px 2px 0 #fff, 2px 2px 0 #fff;
+}
+main .loan .loan-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  position: relative;
+  margin-bottom: 10px;
+}
+main .loan .loan-search input {
+  width: 100%;
+  border-radius: 2rem;
+  padding: 10px 20px;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 1em;
+  border: none;
+}
+main .loan .loan-search input:focus {
+  outline: none;
+}
+main .loan .loan-search button {
+  padding: 5px;
+  margin: 0;
+  position: absolute;
+  left: 20px;
+  color: #c5340f;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  cursor: pointer;
+}
+main .loan .loan-filter {
+  margin-bottom: 20px;
+}
+main .loan .loan-list {
+  width: 70%;
+  min-height: 60vh;
+  overflow-y: scroll;
+}
+main .loan .loan-list .loan-item {
+  width: 95%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  align-items: center;
+  margin: 0 auto 30px auto;
+  border-radius: 10px;
+  border: #c5340f 4px solid;
+}
+main .loan .loan-list .loan-item-content {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+}
+main .loan .loan-list .loan-item-content-left {
+  width: 75%;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+main .loan .loan-list .loan-item-content-left-img {
+  width: 10%;
+}
+main .loan .loan-list .loan-item-content-left-img img {
+  width: 100%;
+}
+main .loan .loan-list .loan-item-content-left-text {
+  width: 80%;
+  margin-left: 30px;
+  display: inline;
+}
+main .loan .loan-list .loan-item-content-left-text > * {
+  margin-bottom: 10px;
+}
+main .loan .loan-list .loan-item-content-left-text h1 {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 2rem;
+  color: #264653;
+}
+main .loan .loan-list .loan-item-content-left-text p {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: #000;
+}
+main .loan .loan-list .loan-item-content-left-text b {
+  font-weight: bold;
+}
+main .loan .loan-list .loan-item-content-right {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+main .loan .loan-list .loan-item-content-right span {
+  margin-right: 10px;
+  font-weight: 700;
+  font-size: 1.1rem;
+  color: #c5340f;
+}
+main .loan .loan-list .loan-item-content-right .expand {
+  width: 50px;
+  position: relative;
+}
+main .loan .loan-list .loan-item-content-right .expand input {
+  width: 100%;
+  position: absolute;
+}
+main .loan .loan-list .loan-item-content-right .expand label {
+  position: relative;
+  display: block;
+  width: 100%;
+  background-color: #fff;
+  cursor: pointer;
+}
+main .loan .loan-list .loan-item-content-right .expand ion-icon {
+  width: 100%;
+  transition: 0.2s ease;
+}
+main .loan .loan-list .loan-item-content-right .expand input[type=checkbox]:checked + label > ion-icon {
+  transform: rotate(180deg);
+  transition: 0.2s ease;
 }
 
 footer {
