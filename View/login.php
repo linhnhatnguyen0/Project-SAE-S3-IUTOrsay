@@ -151,6 +151,6 @@
     </div>
     <div class="inputGroup inputGroup3">
         <button id="login">Se connecter</button>
-        <span class="indicator"><a href="#">S'inscrire</a></span>
+        <a href="#" id="indicator">S'inscrire</a>
     </div>
 </form>

@@ -8,22 +8,19 @@ html {
   font-family: "Mona Sans";
 }
 
-body {
-  width: 100vw;
-}
-
 header {
-  width: 80%;
+  width: 100%;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
-  margin: 0 auto;
-  padding: 30px 0;
+  padding: 0 20vw;
+  padding: 20px;
   position: fixed;
   top: 0;
   right: 50%;
   transform: translateX(50%);
-  z-index: 2;
+  z-index: 3;
+  background-color: #11141a;
 }
 header .menu {
   width: 50%;
@@ -64,13 +61,14 @@ header button:hover {
 }
 
 main {
-  width: 100vw;
+  width: 100%;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #11141a;
   overflow-x: hidden;
+  min-height: 100vh;
 }
 main .acceuil {
   display: flex;
@@ -148,33 +146,30 @@ main .preferee, main .connu {
   position: relative;
   padding-top: 20px;
 }
-main .preferee svg, main .connu svg {
-  width: 100vh;
-  height: 100vw;
-  position: absolute;
-  transform: rotate(-90deg);
-  z-index: 1;
-}
-main .preferee svg text, main .connu svg text {
-  fill: none;
-  stroke: #fff;
-  stroke-width: 0.1px;
-  stroke-linejoin: round;
-  font-weight: 900;
-  opacity: 0.4;
-}
-main .preferee-decor {
+main .preferee-decor, main .connu-decor {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-main .preferee-decor h1 {
+main .preferee-decor h1, main .connu-decor h1 {
   transform: rotate(-90deg);
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 40%;
+  font-weight: 800;
+  font-size: 150px;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+  color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #fff;
+}
+main .preferee-decor .left, main .connu-decor .left {
+  left: -250px;
+}
+main .preferee-decor .right, main .connu-decor .right {
+  right: -250px;
 }
 main .preferee-auteurs, main .connu-auteurs, main .preferee-livres, main .connu-livres {
   display: flex;
@@ -329,27 +324,30 @@ main .preferee-livres .livres .livre-title ul li, main .connu-livres .livres .li
   margin-right: 10px;
   border-radius: 10px;
 }
+main .connu-decor .left {
+  left: -150px;
+}
+main .connu-decor .right {
+  right: -150px;
+}
 /* colors */
 .overlay-dark {
   width: 100vw;
   height: 100vh;
   position: fixed;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: none;
   top: 0;
-}
-
-.login {
-  display: none;
-  z-index: 3;
 }
 
 .active {
   display: block !important;
 }
 
-form {
+.login {
+  display: none;
+  z-index: 4;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -363,7 +361,7 @@ form {
   border-radius: 0.5em;
   font-family: "Mona Sans";
 }
-form .svgContainer {
+.login .svgContainer {
   position: relative;
   width: 200px;
   height: 200px;
@@ -374,14 +372,14 @@ form .svgContainer {
   overflow: hidden;
   pointer-events: none;
 }
-form .svgContainer div {
+.login .svgContainer div {
   position: relative;
   width: 100%;
   height: 0;
   overflow: hidden;
   padding-bottom: 100%;
 }
-form .svgContainer .mySVG {
+.login .svgContainer .mySVG {
   position: absolute;
   left: 0;
   top: 0;
@@ -389,15 +387,15 @@ form .svgContainer .mySVG {
   height: 100%;
   pointer-events: none;
 }
-form .inputGroup {
+.login .inputGroup {
   margin: 0 0 2em;
   padding: 0;
   position: relative;
 }
-form .inputGroup:last-of-type {
+.login .inputGroup:last-of-type {
   margin-bottom: 0;
 }
-form label {
+.login label {
   margin: 0 0 12px;
   display: block;
   font-size: 1.25em;
@@ -405,9 +403,9 @@ form label {
   font-weight: 700;
   font-family: inherit;
 }
-form input[type=email],
-form input[type=text],
-form input[type=password] {
+.login input[type=email],
+.login input[type=text],
+.login input[type=password] {
   display: block;
   margin: 0;
   padding: 0 1em 0;
@@ -424,18 +422,18 @@ form input[type=password] {
   font-family: inherit;
   transition: box-shadow 0.2s linear, border-color 0.25s ease-out;
 }
-form input[type=email]:focus,
-form input[type=text]:focus,
-form input[type=password]:focus {
+.login input[type=email]:focus,
+.login input[type=text]:focus,
+.login input[type=password]:focus {
   outline: none;
   box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
   border: solid 2px #4eb8dd;
 }
-form input[type=email],
-form input[type=text] {
+.login input[type=email],
+.login input[type=text] {
   padding: 0px 1em 0px;
 }
-form button {
+.login button {
   display: block;
   margin: 0 auto;
   padding: 0.8em 1em 1em;
@@ -452,20 +450,21 @@ form button {
   font-family: inherit;
   transition: background-color 0.2s ease-out;
 }
-form button:hover, form button:active {
+.login button:hover, .login button:active {
   background-color: #217093;
 }
-form .indicator a {
+.login a {
   text-decoration: none;
   color: #fff;
   text-align: center;
+  margin-top: 10px;
 }
-form .inputGroup1 .helper {
+.login .inputGroup1 .helper {
   position: absolute;
   z-index: 1;
   font-family: inherit;
 }
-form .inputGroup1 .helper1 {
+.login .inputGroup1 .helper1 {
   top: 0;
   left: 0;
   transform: translate(1.4em, 2.6em) scale(1);
@@ -477,18 +476,96 @@ form .inputGroup1 .helper1 {
   pointer-events: none;
   transition: transform 0.2s ease-out, opacity 0.2s linear;
 }
-form .inputGroup1.focusWithText .helper {
+.login .inputGroup1.focusWithText .helper {
   /*input[type='email']:focus + .helper {*/
   transform: translate(1.4em, 2em) scale(0.65);
   opacity: 1;
 }
-form .inputGroup3 {
+.login .inputGroup3 {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-form .inputGroup3 .indicator {
+.login .inputGroup3 .indicator {
   margin-top: 20px;
+}
+
+.sign-up {
+  display: none;
+  z-index: 4;
+  width: 100%;
+  max-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(33, 20, 49);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  color: #fff;
+  border-radius: 20px;
+}
+.sign-up > div {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+.sign-up label {
+  margin-bottom: 5px;
+}
+.sign-up input[type=text],
+.sign-up input[type=password],
+.sign-up input[type=number] {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 15px;
+  font-family: "Mona Sans";
+  font-size: 16px;
+  border-radius: 10px;
+  border: none;
+}
+.sign-up input:focus {
+  outline: none;
+}
+.sign-up .nom {
+  width: 30%;
+}
+.sign-up .prenom {
+  width: 60%;
+}
+.sign-up .age {
+  width: 20%;
+}
+.sign-up .faculte {
+  width: 70%;
+}
+.sign-up .email,
+.sign-up .password,
+.sign-up .tel {
+  width: 100%;
+}
+.sign-up button {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  margin: 0 auto;
+}
+.sign-up button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+
+.active-sign-up {
+  display: flex;
 }
 
 .search-tab {
@@ -517,7 +594,7 @@ form .inputGroup3 .indicator {
   padding: 10px 20px;
   border: none;
   text-align: center;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Mona Sans";
   font-weight: 500;
   font-size: 1em;
   border-radius: 10px;
@@ -635,16 +712,139 @@ form .inputGroup3 .indicator {
   margin-top: 30px;
 }
 .search-tab .search-button button {
-  width: 100%;
-  background-color: #e76f51;
-  padding: 15px 0;
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
   border: none;
-  border-radius: 10px;
-  color: #fff;
-  font-family: "Montserrat", sans-serif;
   cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
   font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+}
+.search-tab .search-button button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+
+.search-result {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 90%;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+.search-result .search-result-card {
+  min-height: 200px;
+  width: 30%;
+  color: #fff;
+  display: flex;
+  align-items: center;
+  background: #1d222c;
+  border-radius: 15px;
+  margin: 30px 0;
+  min-width: 465px;
+}
+.search-result .search-result-card-img {
+  position: relative;
+  padding-bottom: 40%;
+  width: 25%;
+  margin-right: 20px;
+}
+.search-result .search-result-card-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.search-result .search-result-card-title {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #1d222c;
+  border-radius: 20px;
+  min-height: 180px;
+  max-width: 70%;
+  min-width: 50%;
+}
+.search-result .search-result-card-title h3 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  width: 90%;
+  text-align: left;
+  font-size: 20px;
+  line-height: 25px;
+  min-height: 50px;
+}
+.search-result .search-result-card-title span {
+  font-size: 15px;
+  font-weight: 400;
   font-style: italic;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 0.1em;
+  margin: 5px 0;
+}
+.search-result .search-result-card-title p {
+  overflow: hidden;
+  display: -webkit-inline-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 14px;
+  letter-spacing: 0.05em;
+  width: 90%;
+  text-align: left;
+}
+.search-result .search-result-card-title button {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  font-size: 14px;
+  padding: 6px 10px;
+}
+.search-result .search-result-card-title button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+.search-result .search-result-card-title h3,
+.search-result .search-result-card-title span,
+.search-result .search-result-card-title p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+.search-result .search-result-card-title span,
+.search-result .search-result-card-title p {
+  color: #cacaca;
+  font-style: italic;
+}
+.search-result .search-result-card-title ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.search-result .search-result-card-title ul li {
+  background: #ff51b9;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  vertical-align: baseline;
+  margin-right: 10px;
+  border-radius: 10px;
 }
 
 @keyframes bolder {

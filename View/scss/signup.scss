@@ -1,0 +1,64 @@
+.sign-up {
+  display: none;
+  z-index: 4;
+  width: 100%;
+  max-width: 800px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgb(33, 20, 49);
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 30px;
+  color: #fff;
+  border-radius: 20px;
+  & > div {
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+  label {
+    margin-bottom: 5px;
+  }
+  input[type="text"],
+  input[type="password"],
+  input[type="number"] {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    font-family: "Mona Sans";
+    font-size: 16px;
+    border-radius: 10px;
+    border: none;
+  }
+  input:focus {
+    outline: none;
+  }
+  .nom {
+    width: 30%;
+  }
+  .prenom {
+    width: 60%;
+  }
+  .age {
+    width: 20%;
+  }
+  .faculte {
+    width: 70%;
+  }
+  .email,
+  .password,
+  .tel {
+    width: 100%;
+  }
+  button {
+    @include button;
+    margin: 0 auto;
+  }
+}
+.active-sign-up {
+  display: flex;
+}

@@ -8,18 +8,16 @@ $inputBG: #f3fafd;
   height: 100vh;
   position: fixed;
   z-index: 2;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.7);
   display: none;
   top: 0;
-}
-.login {
-  display: none;
-  z-index: 3;
 }
 .active {
   display: block !important;
 }
-form {
+.login {
+  display: none;
+  z-index: 4;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -123,12 +121,11 @@ form {
       background-color: $darkBlue;
     }
   }
-  .indicator {
-    a {
-      text-decoration: none;
-      color: #fff;
-      text-align: center;
-    }
+  a {
+    text-decoration: none;
+    color: #fff;
+    text-align: center;
+    margin-top: 10px;
   }
 
   .inputGroup1 {

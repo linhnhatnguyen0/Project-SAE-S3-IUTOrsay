@@ -145,7 +145,10 @@
     </div>
 </section>
 <section class="connu">
-
+    <div class="connu-decor">
+        <h1 class="left">CONNU</h1>
+        <h1 class="right">CONNU</h1>
+    </div>
     <div class="connu-auteurs">
         <h1>AUTEURS</h1>
         <div class="line"></div>
