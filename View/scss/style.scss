@@ -1,0 +1,317 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
+    url("Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+@import "./mixin";
+html {
+  font-family: "Mona Sans";
+}
+body {
+  width: 100vw;
+}
+header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 2;
+  .menu {
+    width: 50%;
+    ul {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      li {
+        list-style: none;
+        margin: 0 10px;
+        a {
+          text-decoration: none;
+          color: #fff;
+          font-weight: 400;
+          &:hover {
+            animation: bolder 0.8s ease-in-out infinite alternate;
+          }
+        }
+      }
+    }
+  }
+  button {
+    @include button;
+    font-size: 1rem;
+  }
+}
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #11141a;
+  overflow-x: hidden;
+  .acceuil {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    flex-direction: column;
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    .text {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      color: #fff;
+      width: 60%;
+      text-align: center;
+      margin: 100px 0;
+      span {
+        font-weight: 700;
+        font-stretch: 151%;
+        font-variation-settings: "wdth" 100;
+      }
+      h1 {
+        font-style: italic;
+        font-weight: 700;
+        font-size: 60px;
+        line-height: 75px;
+        text-align: center;
+        letter-spacing: 0.02em;
+      }
+      p {
+        font-family: "Lora", serif;
+        font-size: 0.9em;
+        width: 100%;
+      }
+      button {
+        @include button;
+        margin-top: 20px;
+        font-size: 0.9rem;
+      }
+    }
+    .img {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      img {
+        width: 100%;
+        max-width: 800px;
+      }
+      position: absolute;
+      bottom: 10%;
+    }
+  }
+  .preferee {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    padding-top: 20px;
+    svg {
+      width: 100vh;
+      height: 100vw;
+      position: absolute;
+      transform: rotate(-90deg);
+      z-index: 1;
+      text {
+        fill: none;
+        stroke: #fff;
+        stroke-width: 0.1px;
+        stroke-linejoin: round;
+        font-weight: 900;
+        opacity: 0.4;
+      }
+    }
+    &-decor {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      h1 {
+        transform: rotate(-90deg);
+        position: absolute;
+        top: 50%;
+      }
+      h1 .left {
+        left: 10vw;
+      }
+      h1 .right {
+        right: 10vw;
+      }
+    }
+    &-auteurs {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      width: 80%;
+      z-index: 2;
+      h1 {
+        font-size: 2rem;
+        font-weight: 700;
+        color: #fff;
+      }
+      .line {
+        width: 10%;
+        height: 5px;
+        background: #ffffff;
+        margin-top: 5px;
+      }
+      .auteurs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        flex-wrap: wrap;
+        .auteur {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex: 50%;
+          margin-bottom: 30px;
+          &-img {
+            position: relative;
+            //padding-bottom: 56.25%;
+            width: 117px;
+            height: 157px;
+            margin-right: 20px;
+            img {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+              border-radius: 10px;
+            }
+          }
+          &-title {
+            text-align: center;
+            color: #fff;
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+            justify-content: center;
+            width: 358px;
+            height: 117px;
+            background: #1d222c;
+            border-radius: 20px;
+            padding: 20px;
+            h3 {
+              font-weight: 700;
+              font-size: 20px;
+              letter-spacing: 0.05em;
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+            }
+            span {
+              font-size: 13px;
+              font-weight: 400;
+              font-style: italic;
+              font-variation-settings: "wdth" 100;
+              letter-spacing: 0.1em;
+              margin: 5px 0;
+            }
+            p {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 2;
+              font-size: 12px;
+              letter-spacing: 0.05em;
+              width: 90%;
+              text-align: left;
+            }
+            button {
+              @include button;
+              font-size: 12px;
+              padding: 6px 10px;
+            }
+            h3,
+            span,
+            p {
+              margin: 0;
+              margin-bottom: 10px;
+            }
+          }
+        }
+      }
+    }
+    &-livres {
+      @extend .preferee-auteurs;
+      margin-top: 20px;
+      .livres {
+        @extend .auteurs;
+        .livre {
+          @extend .auteur;
+          &-img {
+            @extend .auteur-img;
+          }
+          &-title {
+            @extend .auteur-title;
+            padding: 15px;
+            height: 127px;
+            h3 {
+              overflow: hidden;
+              display: -webkit-box;
+              -webkit-box-orient: vertical;
+              -webkit-line-clamp: 1;
+              width: 90%;
+              text-align: left;
+              font-size: 20px;
+            }
+            ul {
+              display: flex;
+              align-items: center;
+              margin-bottom: 10px;
+              li {
+                background: #ff51b9;
+                padding: 3px 10px;
+                font-size: 10px;
+                font-weight: 600;
+                vertical-align: baseline;
+                margin-right: 10px;
+                border-radius: 10px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .connu {
+    @extend .preferee;
+    &-auteurs {
+      @extend .preferee-auteurs;
+    }
+    &-livres {
+      @extend .preferee-livres;
+    }
+  }
+}
+
+@import "./login.scss";
+@import "./search-book.scss";
+@keyframes bolder {
+  from {
+    font-weight: 600;
+  }
+  to {
+    font-weight: 900;
+  }
+}

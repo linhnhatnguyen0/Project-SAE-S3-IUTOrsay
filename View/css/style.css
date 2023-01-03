@@ -1,0 +1,659 @@
+@font-face {
+  font-family: "Mona Sans";
+  src: url("Mona-Sans.woff2") format("woff2 supports variations"), url("Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+}
+html {
+  font-family: "Mona Sans";
+}
+
+body {
+  width: 100vw;
+}
+
+header {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  padding: 30px 0;
+  position: fixed;
+  top: 0;
+  right: 50%;
+  transform: translateX(50%);
+  z-index: 2;
+}
+header .menu {
+  width: 50%;
+}
+header .menu ul {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+header .menu ul li {
+  list-style: none;
+  margin: 0 10px;
+}
+header .menu ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: 400;
+}
+header .menu ul li a:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+header button {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  font-size: 1rem;
+}
+header button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+
+main {
+  width: 100vw;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #11141a;
+  overflow-x: hidden;
+}
+main .acceuil {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  position: relative;
+  height: 100vh;
+  width: 100%;
+}
+main .acceuil .text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+  width: 60%;
+  text-align: center;
+  margin: 100px 0;
+}
+main .acceuil .text span {
+  font-weight: 700;
+  font-stretch: 151%;
+  font-variation-settings: "wdth" 100;
+}
+main .acceuil .text h1 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 60px;
+  line-height: 75px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+main .acceuil .text p {
+  font-family: "Lora", serif;
+  font-size: 0.9em;
+  width: 100%;
+}
+main .acceuil .text button {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  margin-top: 20px;
+  font-size: 0.9rem;
+}
+main .acceuil .text button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+main .acceuil .img {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  bottom: 10%;
+}
+main .acceuil .img img {
+  width: 100%;
+  max-width: 800px;
+}
+main .preferee, main .connu {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  padding-top: 20px;
+}
+main .preferee svg, main .connu svg {
+  width: 100vh;
+  height: 100vw;
+  position: absolute;
+  transform: rotate(-90deg);
+  z-index: 1;
+}
+main .preferee svg text, main .connu svg text {
+  fill: none;
+  stroke: #fff;
+  stroke-width: 0.1px;
+  stroke-linejoin: round;
+  font-weight: 900;
+  opacity: 0.4;
+}
+main .preferee-decor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+main .preferee-decor h1 {
+  transform: rotate(-90deg);
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+main .preferee-auteurs, main .connu-auteurs, main .preferee-livres, main .connu-livres {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  z-index: 2;
+}
+main .preferee-auteurs h1, main .connu-auteurs h1, main .preferee-livres h1, main .connu-livres h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #fff;
+}
+main .preferee-auteurs .line, main .connu-auteurs .line, main .preferee-livres .line, main .connu-livres .line {
+  width: 10%;
+  height: 5px;
+  background: #ffffff;
+  margin-top: 5px;
+}
+main .preferee-auteurs .auteurs, main .connu-auteurs .auteurs, main .preferee-livres .auteurs, main .connu-livres .auteurs, main .preferee-livres .livres, main .connu-livres .livres {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-wrap: wrap;
+}
+main .preferee-auteurs .auteurs .auteur, main .connu-auteurs .auteurs .auteur, main .preferee-livres .auteurs .auteur, main .connu-livres .auteurs .auteur, main .preferee-livres .livres .auteur, main .connu-livres .livres .auteur, main .preferee-livres .livres .livre, main .connu-livres .livres .livre {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 50%;
+  margin-bottom: 30px;
+}
+main .preferee-auteurs .auteurs .auteur-img, main .connu-auteurs .auteurs .auteur-img, main .preferee-livres .auteurs .auteur-img, main .connu-livres .auteurs .auteur-img, main .preferee-livres .livres .auteur-img, main .connu-livres .livres .auteur-img, main .preferee-livres .livres .livre-img, main .connu-livres .livres .livre-img {
+  position: relative;
+  width: 117px;
+  height: 157px;
+  margin-right: 20px;
+}
+main .preferee-auteurs .auteurs .auteur-img img, main .connu-auteurs .auteurs .auteur-img img, main .preferee-livres .auteurs .auteur-img img, main .connu-livres .auteurs .auteur-img img, main .preferee-livres .livres .auteur-img img, main .connu-livres .livres .auteur-img img, main .preferee-livres .livres .livre-img img, main .connu-livres .livres .livre-img img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+main .preferee-auteurs .auteurs .auteur-title, main .connu-auteurs .auteurs .auteur-title, main .preferee-livres .auteurs .auteur-title, main .connu-livres .auteurs .auteur-title, main .preferee-livres .livres .auteur-title, main .connu-livres .livres .auteur-title, main .preferee-livres .livres .livre-title, main .connu-livres .livres .livre-title {
+  text-align: center;
+  color: #fff;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  width: 358px;
+  height: 117px;
+  background: #1d222c;
+  border-radius: 20px;
+  padding: 20px;
+}
+main .preferee-auteurs .auteurs .auteur-title h3, main .connu-auteurs .auteurs .auteur-title h3, main .preferee-livres .auteurs .auteur-title h3, main .connu-livres .auteurs .auteur-title h3, main .preferee-livres .livres .auteur-title h3, main .connu-livres .livres .auteur-title h3, main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre-title h3 {
+  font-weight: 700;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+}
+main .preferee-auteurs .auteurs .auteur-title span, main .connu-auteurs .auteurs .auteur-title span, main .preferee-livres .auteurs .auteur-title span, main .connu-livres .auteurs .auteur-title span, main .preferee-livres .livres .auteur-title span, main .connu-livres .livres .auteur-title span, main .preferee-livres .livres .livre-title span, main .connu-livres .livres .livre-title span {
+  font-size: 13px;
+  font-weight: 400;
+  font-style: italic;
+  font-variation-settings: "wdth" 100;
+  letter-spacing: 0.1em;
+  margin: 5px 0;
+}
+main .preferee-auteurs .auteurs .auteur-title p, main .connu-auteurs .auteurs .auteur-title p, main .preferee-livres .auteurs .auteur-title p, main .connu-livres .auteurs .auteur-title p, main .preferee-livres .livres .auteur-title p, main .connu-livres .livres .auteur-title p, main .preferee-livres .livres .livre-title p, main .connu-livres .livres .livre-title p {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  width: 90%;
+  text-align: left;
+}
+main .preferee-auteurs .auteurs .auteur-title button, main .connu-auteurs .auteurs .auteur-title button, main .preferee-livres .auteurs .auteur-title button, main .connu-livres .auteurs .auteur-title button, main .preferee-livres .livres .auteur-title button, main .connu-livres .livres .auteur-title button, main .preferee-livres .livres .livre-title button, main .connu-livres .livres .livre-title button {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  font-size: 12px;
+  padding: 6px 10px;
+}
+main .preferee-auteurs .auteurs .auteur-title button:hover, main .connu-auteurs .auteurs .auteur-title button:hover, main .preferee-livres .auteurs .auteur-title button:hover, main .connu-livres .auteurs .auteur-title button:hover, main .preferee-livres .livres .auteur-title button:hover, main .connu-livres .livres .auteur-title button:hover, main .preferee-livres .livres .livre-title button:hover, main .connu-livres .livres .livre-title button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+main .preferee-auteurs .auteurs .auteur-title h3, main .connu-auteurs .auteurs .auteur-title h3, main .preferee-livres .auteurs .auteur-title h3, main .connu-livres .auteurs .auteur-title h3, main .preferee-livres .livres .auteur-title h3, main .connu-livres .livres .auteur-title h3, main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre-title h3,
+main .preferee-auteurs .auteurs .auteur-title span,
+main .connu-auteurs .auteurs .auteur-title span,
+main .preferee-livres .auteurs .auteur-title span,
+main .connu-livres .auteurs .auteur-title span,
+main .preferee-livres .livres .auteur-title span,
+main .connu-livres .livres .auteur-title span,
+main .preferee-livres .livres .livre-title span,
+main .connu-livres .livres .livre-title span,
+main .preferee-auteurs .auteurs .auteur-title p,
+main .connu-auteurs .auteurs .auteur-title p,
+main .preferee-livres .auteurs .auteur-title p,
+main .connu-livres .auteurs .auteur-title p,
+main .preferee-livres .livres .auteur-title p,
+main .connu-livres .livres .auteur-title p,
+main .preferee-livres .livres .livre-title p,
+main .connu-livres .livres .livre-title p {
+  margin: 0;
+  margin-bottom: 10px;
+}
+main .preferee-livres, main .connu-livres {
+  margin-top: 20px;
+}
+main .preferee-livres .livres .livre-title, main .connu-livres .livres .livre-title {
+  padding: 15px;
+  height: 127px;
+}
+main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre-title h3 {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  width: 90%;
+  text-align: left;
+  font-size: 20px;
+}
+main .preferee-livres .livres .livre-title ul, main .connu-livres .livres .livre-title ul {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+main .preferee-livres .livres .livre-title ul li, main .connu-livres .livres .livre-title ul li {
+  background: #ff51b9;
+  padding: 3px 10px;
+  font-size: 10px;
+  font-weight: 600;
+  vertical-align: baseline;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+/* colors */
+.overlay-dark {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+  top: 0;
+}
+
+.login {
+  display: none;
+  z-index: 3;
+}
+
+.active {
+  display: block !important;
+}
+
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 800px;
+  background-color: #0f1020;
+  margin: 0;
+  padding: 2.25em;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  font-family: "Mona Sans";
+}
+form .svgContainer {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  margin: 0 auto 1em;
+  border-radius: 50%;
+  background: none;
+  border: solid 2.5px #3a5e77;
+  overflow: hidden;
+  pointer-events: none;
+}
+form .svgContainer div {
+  position: relative;
+  width: 100%;
+  height: 0;
+  overflow: hidden;
+  padding-bottom: 100%;
+}
+form .svgContainer .mySVG {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+form .inputGroup {
+  margin: 0 0 2em;
+  padding: 0;
+  position: relative;
+}
+form .inputGroup:last-of-type {
+  margin-bottom: 0;
+}
+form label {
+  margin: 0 0 12px;
+  display: block;
+  font-size: 1.25em;
+  color: #fff;
+  font-weight: 700;
+  font-family: inherit;
+}
+form input[type=email],
+form input[type=text],
+form input[type=password] {
+  display: block;
+  margin: 0;
+  padding: 0 1em 0;
+  background-color: #f3fafd;
+  border: solid 2px #217093;
+  border-radius: 4px;
+  -webkit-appearance: none;
+  box-sizing: border-box;
+  width: 100%;
+  height: 65px;
+  font-size: 1.2em;
+  color: #353538;
+  font-weight: 600;
+  font-family: inherit;
+  transition: box-shadow 0.2s linear, border-color 0.25s ease-out;
+}
+form input[type=email]:focus,
+form input[type=text]:focus,
+form input[type=password]:focus {
+  outline: none;
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+  border: solid 2px #4eb8dd;
+}
+form input[type=email],
+form input[type=text] {
+  padding: 0px 1em 0px;
+}
+form button {
+  display: block;
+  margin: 0 auto;
+  padding: 0.8em 1em 1em;
+  background-color: #c8346b;
+  border: none;
+  border-radius: 30px;
+  box-sizing: border-box;
+  box-shadow: none;
+  width: 40%;
+  height: 65px;
+  font-size: 1.55em;
+  color: #fff;
+  font-weight: 400;
+  font-family: inherit;
+  transition: background-color 0.2s ease-out;
+}
+form button:hover, form button:active {
+  background-color: #217093;
+}
+form .indicator a {
+  text-decoration: none;
+  color: #fff;
+  text-align: center;
+}
+form .inputGroup1 .helper {
+  position: absolute;
+  z-index: 1;
+  font-family: inherit;
+}
+form .inputGroup1 .helper1 {
+  top: 0;
+  left: 0;
+  transform: translate(1.4em, 2.6em) scale(1);
+  transform-origin: 0 0;
+  color: #217093;
+  font-size: 1.25em;
+  font-weight: 400;
+  opacity: 0.65;
+  pointer-events: none;
+  transition: transform 0.2s ease-out, opacity 0.2s linear;
+}
+form .inputGroup1.focusWithText .helper {
+  /*input[type='email']:focus + .helper {*/
+  transform: translate(1.4em, 2em) scale(0.65);
+  opacity: 1;
+}
+form .inputGroup3 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+form .inputGroup3 .indicator {
+  margin-top: 20px;
+}
+
+.search-tab {
+  width: 60%;
+  margin: 15vh auto 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1f2029;
+  background-image: url("https://s3-us-west-2.amazonaws.com/s.cdpn.io/1462889/pat-back.svg");
+  background-position: center;
+  background-repeat: repeat;
+  background-size: 4%;
+  border-radius: 1rem;
+  padding: 30px;
+  flex-direction: column;
+}
+.search-tab .search-input {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.search-tab .search-input input {
+  padding: 10px 20px;
+  border: none;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+  border-radius: 10px;
+}
+.search-tab .search-input input:focus {
+  outline: none;
+}
+.search-tab .search-input-titre, .search-tab .search-input-auteur {
+  width: 50%;
+}
+.search-tab .search-input-titre, .search-tab .search-input-annee {
+  margin-bottom: 10px;
+}
+.search-tab .search-input-annee {
+  width: 20%;
+}
+.search-tab .search-input-categorie {
+  position: relative;
+  width: 20%;
+  padding: 0px 20px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+.search-tab .search-input-categorie input {
+  z-index: 1;
+}
+.search-tab .search-input-categorie label {
+  position: relative;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 4px;
+  letter-spacing: 1px;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+  color: #555555;
+  z-index: 2;
+}
+.search-tab .search-input-categorie .dropdown {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.search-tab .search-input-categorie .for-dropdown {
+  width: 100%;
+  height: 100%;
+  padding: 15px 0;
+}
+.search-tab .search-input-categorie input[type=checkbox]:checked ~ .search-input-categorie-dropdown {
+  opacity: 1;
+  transition: 0.3s ease;
+}
+.search-tab .search-input-categorie input[type=checkbox]:checked + label > ion-icon {
+  transform: rotate(180deg);
+}
+.search-tab .search-input-categorie ion-icon {
+  transition: 0.5s ease;
+  position: absolute;
+  right: 10px;
+}
+.search-tab .search-input-categorie-dropdown {
+  width: 100%;
+  position: absolute;
+  top: 130%;
+  left: 0;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  opacity: 0;
+  transition: 0.3s ease;
+  border-radius: 10px;
+}
+.search-tab .search-input-categorie-dropdown ul {
+  width: 100%;
+}
+.search-tab .search-input-categorie-dropdown ul li {
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+.search-tab .search-input-categorie-dropdown ul li:hover {
+  background-color: #f5f5f5;
+}
+.search-tab .search-input-categorie-dropdown ul li a {
+  text-decoration: none;
+  color: #555555;
+}
+.search-tab .search-button {
+  width: 20%;
+  margin-top: 30px;
+}
+.search-tab .search-button button {
+  width: 100%;
+  background-color: #e76f51;
+  padding: 15px 0;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-style: italic;
+}
+
+@keyframes bolder {
+  from {
+    font-weight: 600;
+  }
+  to {
+    font-weight: 900;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
