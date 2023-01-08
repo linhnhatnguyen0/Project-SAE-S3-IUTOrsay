@@ -66,6 +66,49 @@ main {
     position: relative;
     height: 100vh;
     width: 100%;
+    .img-1 {
+      position: absolute;
+      width: 321px;
+      height: 373px;
+      left: 0px;
+      bottom: 0;
+
+      background: url(../../img/Liv-01.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .img-3 {
+      position: absolute;
+      width: 904px;
+      height: 550px;
+      left: 416px;
+      bottom: 0;
+      background: url(../../img/Liv-03.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .img-2 {
+      position: absolute;
+      width: 505px;
+      height: 374px;
+      right: 0;
+      bottom: 0;
+
+      background: url(../../img/Liv-02.png);
+      background-position: center;
+      background-size: cover;
+    }
+    .img-4 {
+      position: absolute;
+      width: 381px;
+      height: 273px;
+      right: 100px;
+      top: 253px;
+
+      background: url(../../img/Liv-04.png);
+      background-position: center;
+      background-size: cover;
+    }
     .text {
       display: flex;
       align-items: center;

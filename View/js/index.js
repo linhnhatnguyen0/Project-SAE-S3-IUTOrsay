@@ -3,6 +3,7 @@ let loginForm = document.querySelector(".login");
 let signUpForm = document.querySelector(".sign-up");
 let ind = document.querySelector("#indicator");
 let btnConnect = document.querySelector(".btn-connect");
+let image = document.getElementById(".img-1");
 
 btnConnect.addEventListener("click", function () {
   console.log("click");

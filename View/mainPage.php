@@ -1,4 +1,9 @@
 <section class="acceuil">
+
+    <div class="img-1"></div>
+    <div class="img-2"></div>
+    <div class="img-3"></div>
+    <div class="img-4"></div>
     <div class="text">
         <span>Bienvenue à</span>
         <h1>Médiathèque Paris-Saclay</h1>
@@ -9,9 +14,6 @@
             nam, ullam repellat ex.
         </p>
         <button type="button">DÉCOUVRIR</button>
-    </div>
-    <div class="img">
-        <img src="./img/accueil.png" alt="" />
     </div>
 </section>
 <section class="preferee">
