@@ -61,16 +61,19 @@ header button:hover {
 }
 
 main {
+  overflow-x: hidden;
+}
+main .main-page {
   width: 100%;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: #11141a;
-  overflow-x: hidden;
   min-height: 100vh;
+  box-sizing: border-box;
 }
-main .acceuil {
+main .main-page .acceuil {
   display: flex;
   align-items: center;
   justify-content: flex-start;
@@ -79,7 +82,7 @@ main .acceuil {
   height: 100vh;
   width: 100%;
 }
-main .acceuil .img-1 {
+main .main-page .acceuil .img-1 {
   position: absolute;
   width: 321px;
   height: 373px;
@@ -89,7 +92,7 @@ main .acceuil .img-1 {
   background-position: center;
   background-size: cover;
 }
-main .acceuil .img-3 {
+main .main-page .acceuil .img-3 {
   position: absolute;
   width: 904px;
   height: 550px;
@@ -99,7 +102,7 @@ main .acceuil .img-3 {
   background-position: center;
   background-size: cover;
 }
-main .acceuil .img-2 {
+main .main-page .acceuil .img-2 {
   position: absolute;
   width: 505px;
   height: 374px;
@@ -109,7 +112,7 @@ main .acceuil .img-2 {
   background-position: center;
   background-size: cover;
 }
-main .acceuil .img-4 {
+main .main-page .acceuil .img-4 {
   position: absolute;
   width: 381px;
   height: 273px;
@@ -119,7 +122,7 @@ main .acceuil .img-4 {
   background-position: center;
   background-size: cover;
 }
-main .acceuil .text {
+main .main-page .acceuil .text {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -129,12 +132,12 @@ main .acceuil .text {
   text-align: center;
   margin: 100px 0;
 }
-main .acceuil .text span {
+main .main-page .acceuil .text span {
   font-weight: 700;
   font-stretch: 151%;
   font-variation-settings: "wdth" 100;
 }
-main .acceuil .text h1 {
+main .main-page .acceuil .text h1 {
   font-style: italic;
   font-weight: 700;
   font-size: 60px;
@@ -142,12 +145,12 @@ main .acceuil .text h1 {
   text-align: center;
   letter-spacing: 0.02em;
 }
-main .acceuil .text p {
+main .main-page .acceuil .text p {
   font-family: "Lora", serif;
   font-size: 0.9em;
   width: 100%;
 }
-main .acceuil .text button {
+main .main-page .acceuil .text button {
   background-color: #f1c84a;
   color: #11141a;
   padding: 10px 30px;
@@ -161,10 +164,10 @@ main .acceuil .text button {
   margin-top: 20px;
   font-size: 0.9rem;
 }
-main .acceuil .text button:hover {
+main .main-page .acceuil .text button:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
-main .acceuil .img {
+main .main-page .acceuil .img {
   width: 100%;
   display: flex;
   align-items: center;
@@ -172,11 +175,11 @@ main .acceuil .img {
   position: absolute;
   bottom: 10%;
 }
-main .acceuil .img img {
+main .main-page .acceuil .img img {
   width: 100%;
   max-width: 800px;
 }
-main .preferee, main .connu {
+main .main-page .preferee, main .main-page .connu {
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -186,32 +189,89 @@ main .preferee, main .connu {
   position: relative;
   padding-top: 20px;
 }
-main .preferee-decor, main .connu-decor {
+main .main-page .preferee-window, main .main-page .connu-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+}
+main .main-page .preferee-window .preferee-wd-left, main .main-page .connu-window .preferee-wd-left, main .main-page .connu-window .connu-wd-left,
+main .main-page .preferee-window .preferee-wd-right,
+main .main-page .connu-window .preferee-wd-right,
+main .main-page .connu-window .connu-wd-right {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+}
+main .main-page .preferee-window .preferee-wd-left, main .main-page .connu-window .preferee-wd-left, main .main-page .connu-window .connu-wd-left {
+  left: 0;
+  background-color: rgb(122, 42, 42);
+}
+main .main-page .preferee-window .preferee-wd-right, main .main-page .connu-window .preferee-wd-right, main .main-page .connu-window .connu-wd-right {
+  right: 0;
+  background-color: rgb(61, 50, 128);
+}
+main .main-page .preferee-window .preferee-text-button-window, main .main-page .connu-window .preferee-text-button-window, main .main-page .connu-window .connu-text-button-window {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+main .main-page .preferee-window .preferee-text-button-window h1, main .main-page .connu-window .preferee-text-button-window h1, main .main-page .connu-window .connu-text-button-window h1 {
+  font-weight: 800;
+  font-size: 100px;
+  /* identical to box height */
+  letter-spacing: 0.02em;
+  color: #fff;
+}
+main .main-page .preferee-window .preferee-text-button-window button, main .main-page .connu-window .preferee-text-button-window button, main .main-page .connu-window .connu-text-button-window button {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+}
+main .main-page .preferee-window .preferee-text-button-window button:hover, main .main-page .connu-window .preferee-text-button-window button:hover, main .main-page .connu-window .connu-text-button-window button:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
+}
+main .main-page .preferee-decor, main .main-page .connu-decor {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-main .preferee-decor h1, main .connu-decor h1 {
+main .main-page .preferee-decor h1, main .main-page .connu-decor h1 {
   transform: rotate(-90deg);
   position: absolute;
-  top: 40%;
+  top: 42%;
   font-weight: 800;
   font-size: 150px;
   /* identical to box height */
   letter-spacing: 0.02em;
-  color: transparent;
-  -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: #fff;
+  color: #fff;
 }
-main .preferee-decor .left, main .connu-decor .left {
+main .main-page .preferee-decor .left, main .main-page .connu-decor .left {
   left: -250px;
 }
-main .preferee-decor .right, main .connu-decor .right {
+main .main-page .preferee-decor .right, main .main-page .connu-decor .right {
   right: -250px;
 }
-main .preferee-auteurs, main .connu-auteurs, main .preferee-livres, main .connu-livres {
+main .main-page .preferee-auteurs, main .main-page .connu-auteurs, main .main-page .preferee-livres, main .main-page .connu-livres {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -219,45 +279,45 @@ main .preferee-auteurs, main .connu-auteurs, main .preferee-livres, main .connu-
   width: 80%;
   z-index: 2;
 }
-main .preferee-auteurs h1, main .connu-auteurs h1, main .preferee-livres h1, main .connu-livres h1 {
+main .main-page .preferee-auteurs h1, main .main-page .connu-auteurs h1, main .main-page .preferee-livres h1, main .main-page .connu-livres h1 {
   font-size: 2rem;
   font-weight: 700;
   color: #fff;
 }
-main .preferee-auteurs .line, main .connu-auteurs .line, main .preferee-livres .line, main .connu-livres .line {
+main .main-page .preferee-auteurs .line, main .main-page .connu-auteurs .line, main .main-page .preferee-livres .line, main .main-page .connu-livres .line {
   width: 10%;
   height: 5px;
   background: #ffffff;
   margin-top: 5px;
 }
-main .preferee-auteurs .auteurs, main .connu-auteurs .auteurs, main .preferee-livres .auteurs, main .connu-livres .auteurs, main .preferee-livres .livres, main .connu-livres .livres {
+main .main-page .preferee-auteurs .auteurs, main .main-page .connu-auteurs .auteurs, main .main-page .preferee-livres .auteurs, main .main-page .connu-livres .auteurs, main .main-page .preferee-livres .livres, main .main-page .connu-livres .livres {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 100%;
   flex-wrap: wrap;
 }
-main .preferee-auteurs .auteurs .auteur, main .connu-auteurs .auteurs .auteur, main .preferee-livres .auteurs .auteur, main .connu-livres .auteurs .auteur, main .preferee-livres .livres .auteur, main .connu-livres .livres .auteur, main .preferee-livres .livres .livre, main .connu-livres .livres .livre {
+main .main-page .preferee-auteurs .auteurs .auteur, main .main-page .connu-auteurs .auteurs .auteur, main .main-page .preferee-livres .auteurs .auteur, main .main-page .connu-livres .auteurs .auteur, main .main-page .preferee-livres .livres .auteur, main .main-page .connu-livres .livres .auteur, main .main-page .preferee-livres .livres .livre, main .main-page .connu-livres .livres .livre {
   display: flex;
   align-items: center;
   justify-content: center;
   flex: 50%;
   margin-bottom: 30px;
 }
-main .preferee-auteurs .auteurs .auteur-img, main .connu-auteurs .auteurs .auteur-img, main .preferee-livres .auteurs .auteur-img, main .connu-livres .auteurs .auteur-img, main .preferee-livres .livres .auteur-img, main .connu-livres .livres .auteur-img, main .preferee-livres .livres .livre-img, main .connu-livres .livres .livre-img {
+main .main-page .preferee-auteurs .auteurs .auteur-img, main .main-page .connu-auteurs .auteurs .auteur-img, main .main-page .preferee-livres .auteurs .auteur-img, main .main-page .connu-livres .auteurs .auteur-img, main .main-page .preferee-livres .livres .auteur-img, main .main-page .connu-livres .livres .auteur-img, main .main-page .preferee-livres .livres .livre-img, main .main-page .connu-livres .livres .livre-img {
   position: relative;
   width: 117px;
   height: 157px;
   margin-right: 20px;
 }
-main .preferee-auteurs .auteurs .auteur-img img, main .connu-auteurs .auteurs .auteur-img img, main .preferee-livres .auteurs .auteur-img img, main .connu-livres .auteurs .auteur-img img, main .preferee-livres .livres .auteur-img img, main .connu-livres .livres .auteur-img img, main .preferee-livres .livres .livre-img img, main .connu-livres .livres .livre-img img {
+main .main-page .preferee-auteurs .auteurs .auteur-img img, main .main-page .connu-auteurs .auteurs .auteur-img img, main .main-page .preferee-livres .auteurs .auteur-img img, main .main-page .connu-livres .auteurs .auteur-img img, main .main-page .preferee-livres .livres .auteur-img img, main .main-page .connu-livres .livres .auteur-img img, main .main-page .preferee-livres .livres .livre-img img, main .main-page .connu-livres .livres .livre-img img {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
   border-radius: 10px;
 }
-main .preferee-auteurs .auteurs .auteur-title, main .connu-auteurs .auteurs .auteur-title, main .preferee-livres .auteurs .auteur-title, main .connu-livres .auteurs .auteur-title, main .preferee-livres .livres .auteur-title, main .connu-livres .livres .auteur-title, main .preferee-livres .livres .livre-title, main .connu-livres .livres .livre-title {
+main .main-page .preferee-auteurs .auteurs .auteur-title, main .main-page .connu-auteurs .auteurs .auteur-title, main .main-page .preferee-livres .auteurs .auteur-title, main .main-page .connu-livres .auteurs .auteur-title, main .main-page .preferee-livres .livres .auteur-title, main .main-page .connu-livres .livres .auteur-title, main .main-page .preferee-livres .livres .livre-title, main .main-page .connu-livres .livres .livre-title {
   text-align: center;
   color: #fff;
   display: flex;
@@ -270,7 +330,7 @@ main .preferee-auteurs .auteurs .auteur-title, main .connu-auteurs .auteurs .aut
   border-radius: 20px;
   padding: 20px;
 }
-main .preferee-auteurs .auteurs .auteur-title h3, main .connu-auteurs .auteurs .auteur-title h3, main .preferee-livres .auteurs .auteur-title h3, main .connu-livres .auteurs .auteur-title h3, main .preferee-livres .livres .auteur-title h3, main .connu-livres .livres .auteur-title h3, main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre-title h3 {
+main .main-page .preferee-auteurs .auteurs .auteur-title h3, main .main-page .connu-auteurs .auteurs .auteur-title h3, main .main-page .preferee-livres .auteurs .auteur-title h3, main .main-page .connu-livres .auteurs .auteur-title h3, main .main-page .preferee-livres .livres .auteur-title h3, main .main-page .connu-livres .livres .auteur-title h3, main .main-page .preferee-livres .livres .livre-title h3, main .main-page .connu-livres .livres .livre-title h3 {
   font-weight: 700;
   font-size: 20px;
   letter-spacing: 0.05em;
@@ -279,7 +339,7 @@ main .preferee-auteurs .auteurs .auteur-title h3, main .connu-auteurs .auteurs .
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 1;
 }
-main .preferee-auteurs .auteurs .auteur-title span, main .connu-auteurs .auteurs .auteur-title span, main .preferee-livres .auteurs .auteur-title span, main .connu-livres .auteurs .auteur-title span, main .preferee-livres .livres .auteur-title span, main .connu-livres .livres .auteur-title span, main .preferee-livres .livres .livre-title span, main .connu-livres .livres .livre-title span {
+main .main-page .preferee-auteurs .auteurs .auteur-title span, main .main-page .connu-auteurs .auteurs .auteur-title span, main .main-page .preferee-livres .auteurs .auteur-title span, main .main-page .connu-livres .auteurs .auteur-title span, main .main-page .preferee-livres .livres .auteur-title span, main .main-page .connu-livres .livres .auteur-title span, main .main-page .preferee-livres .livres .livre-title span, main .main-page .connu-livres .livres .livre-title span {
   font-size: 13px;
   font-weight: 400;
   font-style: italic;
@@ -287,7 +347,7 @@ main .preferee-auteurs .auteurs .auteur-title span, main .connu-auteurs .auteurs
   letter-spacing: 0.1em;
   margin: 5px 0;
 }
-main .preferee-auteurs .auteurs .auteur-title p, main .connu-auteurs .auteurs .auteur-title p, main .preferee-livres .auteurs .auteur-title p, main .connu-livres .auteurs .auteur-title p, main .preferee-livres .livres .auteur-title p, main .connu-livres .livres .auteur-title p, main .preferee-livres .livres .livre-title p, main .connu-livres .livres .livre-title p {
+main .main-page .preferee-auteurs .auteurs .auteur-title p, main .main-page .connu-auteurs .auteurs .auteur-title p, main .main-page .preferee-livres .auteurs .auteur-title p, main .main-page .connu-livres .auteurs .auteur-title p, main .main-page .preferee-livres .livres .auteur-title p, main .main-page .connu-livres .livres .auteur-title p, main .main-page .preferee-livres .livres .livre-title p, main .main-page .connu-livres .livres .livre-title p {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -297,7 +357,7 @@ main .preferee-auteurs .auteurs .auteur-title p, main .connu-auteurs .auteurs .a
   width: 90%;
   text-align: left;
 }
-main .preferee-auteurs .auteurs .auteur-title button, main .connu-auteurs .auteurs .auteur-title button, main .preferee-livres .auteurs .auteur-title button, main .connu-livres .auteurs .auteur-title button, main .preferee-livres .livres .auteur-title button, main .connu-livres .livres .auteur-title button, main .preferee-livres .livres .livre-title button, main .connu-livres .livres .livre-title button {
+main .main-page .preferee-auteurs .auteurs .auteur-title button, main .main-page .connu-auteurs .auteurs .auteur-title button, main .main-page .preferee-livres .auteurs .auteur-title button, main .main-page .connu-livres .auteurs .auteur-title button, main .main-page .preferee-livres .livres .auteur-title button, main .main-page .connu-livres .livres .auteur-title button, main .main-page .preferee-livres .livres .livre-title button, main .main-page .connu-livres .livres .livre-title button {
   background-color: #f1c84a;
   color: #11141a;
   padding: 10px 30px;
@@ -311,37 +371,37 @@ main .preferee-auteurs .auteurs .auteur-title button, main .connu-auteurs .auteu
   font-size: 12px;
   padding: 6px 10px;
 }
-main .preferee-auteurs .auteurs .auteur-title button:hover, main .connu-auteurs .auteurs .auteur-title button:hover, main .preferee-livres .auteurs .auteur-title button:hover, main .connu-livres .auteurs .auteur-title button:hover, main .preferee-livres .livres .auteur-title button:hover, main .connu-livres .livres .auteur-title button:hover, main .preferee-livres .livres .livre-title button:hover, main .connu-livres .livres .livre-title button:hover {
+main .main-page .preferee-auteurs .auteurs .auteur-title button:hover, main .main-page .connu-auteurs .auteurs .auteur-title button:hover, main .main-page .preferee-livres .auteurs .auteur-title button:hover, main .main-page .connu-livres .auteurs .auteur-title button:hover, main .main-page .preferee-livres .livres .auteur-title button:hover, main .main-page .connu-livres .livres .auteur-title button:hover, main .main-page .preferee-livres .livres .livre-title button:hover, main .main-page .connu-livres .livres .livre-title button:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
-main .preferee-auteurs .auteurs .auteur-title h3, main .connu-auteurs .auteurs .auteur-title h3, main .preferee-livres .auteurs .auteur-title h3, main .connu-livres .auteurs .auteur-title h3, main .preferee-livres .livres .auteur-title h3, main .connu-livres .livres .auteur-title h3, main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre-title h3,
-main .preferee-auteurs .auteurs .auteur-title span,
-main .connu-auteurs .auteurs .auteur-title span,
-main .preferee-livres .auteurs .auteur-title span,
-main .connu-livres .auteurs .auteur-title span,
-main .preferee-livres .livres .auteur-title span,
-main .connu-livres .livres .auteur-title span,
-main .preferee-livres .livres .livre-title span,
-main .connu-livres .livres .livre-title span,
-main .preferee-auteurs .auteurs .auteur-title p,
-main .connu-auteurs .auteurs .auteur-title p,
-main .preferee-livres .auteurs .auteur-title p,
-main .connu-livres .auteurs .auteur-title p,
-main .preferee-livres .livres .auteur-title p,
-main .connu-livres .livres .auteur-title p,
-main .preferee-livres .livres .livre-title p,
-main .connu-livres .livres .livre-title p {
+main .main-page .preferee-auteurs .auteurs .auteur-title h3, main .main-page .connu-auteurs .auteurs .auteur-title h3, main .main-page .preferee-livres .auteurs .auteur-title h3, main .main-page .connu-livres .auteurs .auteur-title h3, main .main-page .preferee-livres .livres .auteur-title h3, main .main-page .connu-livres .livres .auteur-title h3, main .main-page .preferee-livres .livres .livre-title h3, main .main-page .connu-livres .livres .livre-title h3,
+main .main-page .preferee-auteurs .auteurs .auteur-title span,
+main .main-page .connu-auteurs .auteurs .auteur-title span,
+main .main-page .preferee-livres .auteurs .auteur-title span,
+main .main-page .connu-livres .auteurs .auteur-title span,
+main .main-page .preferee-livres .livres .auteur-title span,
+main .main-page .connu-livres .livres .auteur-title span,
+main .main-page .preferee-livres .livres .livre-title span,
+main .main-page .connu-livres .livres .livre-title span,
+main .main-page .preferee-auteurs .auteurs .auteur-title p,
+main .main-page .connu-auteurs .auteurs .auteur-title p,
+main .main-page .preferee-livres .auteurs .auteur-title p,
+main .main-page .connu-livres .auteurs .auteur-title p,
+main .main-page .preferee-livres .livres .auteur-title p,
+main .main-page .connu-livres .livres .auteur-title p,
+main .main-page .preferee-livres .livres .livre-title p,
+main .main-page .connu-livres .livres .livre-title p {
   margin: 0;
   margin-bottom: 10px;
 }
-main .preferee-livres, main .connu-livres {
+main .main-page .preferee-livres, main .main-page .connu-livres {
   margin-top: 20px;
 }
-main .preferee-livres .livres .livre-title, main .connu-livres .livres .livre-title {
+main .main-page .preferee-livres .livres .livre-title, main .main-page .connu-livres .livres .livre-title {
   padding: 15px;
   height: 127px;
 }
-main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre-title h3 {
+main .main-page .preferee-livres .livres .livre-title h3, main .main-page .connu-livres .livres .livre-title h3 {
   overflow: hidden;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -350,12 +410,12 @@ main .preferee-livres .livres .livre-title h3, main .connu-livres .livres .livre
   text-align: left;
   font-size: 20px;
 }
-main .preferee-livres .livres .livre-title ul, main .connu-livres .livres .livre-title ul {
+main .main-page .preferee-livres .livres .livre-title ul, main .main-page .connu-livres .livres .livre-title ul {
   display: flex;
   align-items: center;
   margin-bottom: 10px;
 }
-main .preferee-livres .livres .livre-title ul li, main .connu-livres .livres .livre-title ul li {
+main .main-page .preferee-livres .livres .livre-title ul li, main .main-page .connu-livres .livres .livre-title ul li {
   background: #ff51b9;
   padding: 3px 10px;
   font-size: 10px;
@@ -364,10 +424,10 @@ main .preferee-livres .livres .livre-title ul li, main .connu-livres .livres .li
   margin-right: 10px;
   border-radius: 10px;
 }
-main .connu-decor .left {
+main .main-page .connu-decor .left {
   left: -150px;
 }
-main .connu-decor .right {
+main .main-page .connu-decor .right {
   right: -150px;
 }
 /* colors */

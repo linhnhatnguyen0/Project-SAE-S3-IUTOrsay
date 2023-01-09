@@ -50,301 +50,359 @@ header {
   }
 }
 main {
-  width: 100%;
   overflow-x: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #11141a;
-  overflow-x: hidden;
-  min-height: 100vh;
-  .acceuil {
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-    flex-direction: column;
-    position: relative;
-    height: 100vh;
+  .main-page {
     width: 100%;
-    .img-1 {
-      position: absolute;
-      width: 321px;
-      height: 373px;
-      left: 0px;
-      bottom: 0;
-
-      background: url(../../img/Liv-01.png);
-      background-position: center;
-      background-size: cover;
-    }
-    .img-3 {
-      position: absolute;
-      width: 904px;
-      height: 550px;
-      left: 416px;
-      bottom: 0;
-      background: url(../../img/Liv-03.png);
-      background-position: center;
-      background-size: cover;
-    }
-    .img-2 {
-      position: absolute;
-      width: 505px;
-      height: 374px;
-      right: 0;
-      bottom: 0;
-
-      background: url(../../img/Liv-02.png);
-      background-position: center;
-      background-size: cover;
-    }
-    .img-4 {
-      position: absolute;
-      width: 381px;
-      height: 273px;
-      right: 100px;
-      top: 253px;
-
-      background: url(../../img/Liv-04.png);
-      background-position: center;
-      background-size: cover;
-    }
-    .text {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      color: #fff;
-      width: 60%;
-      text-align: center;
-      margin: 100px 0;
-      span {
-        font-weight: 700;
-        font-stretch: 151%;
-        font-variation-settings: "wdth" 100;
-      }
-      h1 {
-        font-style: italic;
-        font-weight: 700;
-        font-size: 60px;
-        line-height: 75px;
-        text-align: center;
-        letter-spacing: 0.02em;
-      }
-      p {
-        font-family: "Lora", serif;
-        font-size: 0.9em;
-        width: 100%;
-      }
-      button {
-        @include button;
-        margin-top: 20px;
-        font-size: 0.9rem;
-      }
-    }
-    .img {
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      img {
-        width: 100%;
-        max-width: 800px;
-      }
-      position: absolute;
-      bottom: 10%;
-    }
-  }
-  .preferee {
-    width: 100vw;
-    height: 100vh;
+    overflow-x: hidden;
     display: flex;
-    align-items: center;
     flex-direction: column;
-    justify-content: center;
-    position: relative;
-    padding-top: 20px;
-    &-decor {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      h1 {
-        transform: rotate(-90deg);
-        position: absolute;
-        top: 40%;
-        font-weight: 800;
-        font-size: 150px;
-        /* identical to box height */
-        letter-spacing: 0.02em;
-        color: transparent;
-        -webkit-text-stroke-width: 1px;
-        -webkit-text-stroke-color: #fff;
-      }
-      .left {
-        left: -250px;
-      }
-      .right {
-        right: -250px;
-      }
-    }
-    &-auteurs {
+    align-items: center;
+    background-color: #11141a;
+    min-height: 100vh;
+    box-sizing: border-box;
+    .acceuil {
       display: flex;
       align-items: center;
-      justify-content: center;
+      justify-content: flex-start;
       flex-direction: column;
-      width: 80%;
-      z-index: 2;
-      h1 {
-        font-size: 2rem;
-        font-weight: 700;
-        color: #fff;
+      position: relative;
+      height: 100vh;
+      width: 100%;
+      .img-1 {
+        position: absolute;
+        width: 321px;
+        height: 373px;
+        left: 0px;
+        bottom: 0;
+
+        background: url(../../img/Liv-01.png);
+        background-position: center;
+        background-size: cover;
       }
-      .line {
-        width: 10%;
-        height: 5px;
-        background: #ffffff;
-        margin-top: 5px;
+      .img-3 {
+        position: absolute;
+        width: 904px;
+        height: 550px;
+        left: 416px;
+        bottom: 0;
+        background: url(../../img/Liv-03.png);
+        background-position: center;
+        background-size: cover;
       }
-      .auteurs {
+      .img-2 {
+        position: absolute;
+        width: 505px;
+        height: 374px;
+        right: 0;
+        bottom: 0;
+
+        background: url(../../img/Liv-02.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .img-4 {
+        position: absolute;
+        width: 381px;
+        height: 273px;
+        right: 100px;
+        top: 253px;
+
+        background: url(../../img/Liv-04.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .text {
         display: flex;
         align-items: center;
         justify-content: center;
+        flex-direction: column;
+        color: #fff;
+        width: 60%;
+        text-align: center;
+        margin: 100px 0;
+        span {
+          font-weight: 700;
+          font-stretch: 151%;
+          font-variation-settings: "wdth" 100;
+        }
+        h1 {
+          font-style: italic;
+          font-weight: 700;
+          font-size: 60px;
+          line-height: 75px;
+          text-align: center;
+          letter-spacing: 0.02em;
+        }
+        p {
+          font-family: "Lora", serif;
+          font-size: 0.9em;
+          width: 100%;
+        }
+        button {
+          @include button;
+          margin-top: 20px;
+          font-size: 0.9rem;
+        }
+      }
+      .img {
         width: 100%;
-        flex-wrap: wrap;
-        .auteur {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        img {
+          width: 100%;
+          max-width: 800px;
+        }
+        position: absolute;
+        bottom: 10%;
+      }
+    }
+    .preferee {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      position: relative;
+      padding-top: 20px;
+      &-window {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 100%;
+        height: 100%;
+        z-index: 3;
+        .preferee-wd-left,
+        .preferee-wd-right {
+          width: 50%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+        }
+        .preferee-wd-left {
+          left: 0;
+          background-color: rgb(122, 42, 42);
+        }
+        .preferee-wd-right {
+          right: 0;
+          background-color: rgb(61, 50, 128);
+        }
+        .preferee-text-button-window {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 4;
           display: flex;
           align-items: center;
           justify-content: center;
-          flex: 50%;
-          margin-bottom: 30px;
-          &-img {
-            position: relative;
-            //padding-bottom: 56.25%;
-            width: 117px;
-            height: 157px;
-            margin-right: 20px;
-            img {
-              position: absolute;
-              width: 100%;
-              height: 100%;
-              object-fit: cover;
-              border-radius: 10px;
-            }
-          }
-          &-title {
-            text-align: center;
+          flex-direction: column;
+          h1 {
+            font-weight: 800;
+            font-size: 100px;
+            /* identical to box height */
+            letter-spacing: 0.02em;
             color: #fff;
+          }
+          button {
+            @include button;
+          }
+        }
+      }
+      &-decor {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        h1 {
+          transform: rotate(-90deg);
+          position: absolute;
+          top: 42%;
+          font-weight: 800;
+          font-size: 150px;
+          /* identical to box height */
+          letter-spacing: 0.02em;
+          color: #fff;
+        }
+        .left {
+          left: -250px;
+        }
+        .right {
+          right: -250px;
+        }
+      }
+      &-auteurs {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        width: 80%;
+        z-index: 2;
+        h1 {
+          font-size: 2rem;
+          font-weight: 700;
+          color: #fff;
+        }
+        .line {
+          width: 10%;
+          height: 5px;
+          background: #ffffff;
+          margin-top: 5px;
+        }
+        .auteurs {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 100%;
+          flex-wrap: wrap;
+          .auteur {
             display: flex;
-            align-items: flex-start;
-            flex-direction: column;
+            align-items: center;
             justify-content: center;
-            width: 358px;
-            height: 117px;
-            background: #1d222c;
-            border-radius: 20px;
-            padding: 20px;
-            h3 {
-              font-weight: 700;
-              font-size: 20px;
-              letter-spacing: 0.05em;
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 1;
+            flex: 50%;
+            margin-bottom: 30px;
+            &-img {
+              position: relative;
+              //padding-bottom: 56.25%;
+              width: 117px;
+              height: 157px;
+              margin-right: 20px;
+              img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+              }
             }
-            span {
-              font-size: 13px;
-              font-weight: 400;
-              font-style: italic;
-              font-variation-settings: "wdth" 100;
-              letter-spacing: 0.1em;
-              margin: 5px 0;
-            }
-            p {
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 2;
-              font-size: 12px;
-              letter-spacing: 0.05em;
-              width: 90%;
-              text-align: left;
-            }
-            button {
-              @include button;
-              font-size: 12px;
-              padding: 6px 10px;
-            }
-            h3,
-            span,
-            p {
-              margin: 0;
-              margin-bottom: 10px;
+            &-title {
+              text-align: center;
+              color: #fff;
+              display: flex;
+              align-items: flex-start;
+              flex-direction: column;
+              justify-content: center;
+              width: 358px;
+              height: 117px;
+              background: #1d222c;
+              border-radius: 20px;
+              padding: 20px;
+              h3 {
+                font-weight: 700;
+                font-size: 20px;
+                letter-spacing: 0.05em;
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+              }
+              span {
+                font-size: 13px;
+                font-weight: 400;
+                font-style: italic;
+                font-variation-settings: "wdth" 100;
+                letter-spacing: 0.1em;
+                margin: 5px 0;
+              }
+              p {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 2;
+                font-size: 12px;
+                letter-spacing: 0.05em;
+                width: 90%;
+                text-align: left;
+              }
+              button {
+                @include button;
+                font-size: 12px;
+                padding: 6px 10px;
+              }
+              h3,
+              span,
+              p {
+                margin: 0;
+                margin-bottom: 10px;
+              }
             }
           }
         }
       }
-    }
-    &-livres {
-      @extend .preferee-auteurs;
-      margin-top: 20px;
-      .livres {
-        @extend .auteurs;
-        .livre {
-          @extend .auteur;
-          &-img {
-            @extend .auteur-img;
-          }
-          &-title {
-            @extend .auteur-title;
-            padding: 15px;
-            height: 127px;
-            h3 {
-              overflow: hidden;
-              display: -webkit-box;
-              -webkit-box-orient: vertical;
-              -webkit-line-clamp: 1;
-              width: 90%;
-              text-align: left;
-              font-size: 20px;
+      &-livres {
+        @extend .preferee-auteurs;
+        margin-top: 20px;
+        .livres {
+          @extend .auteurs;
+          .livre {
+            @extend .auteur;
+            &-img {
+              @extend .auteur-img;
             }
-            ul {
-              display: flex;
-              align-items: center;
-              margin-bottom: 10px;
-              li {
-                background: #ff51b9;
-                padding: 3px 10px;
-                font-size: 10px;
-                font-weight: 600;
-                vertical-align: baseline;
-                margin-right: 10px;
-                border-radius: 10px;
+            &-title {
+              @extend .auteur-title;
+              padding: 15px;
+              height: 127px;
+              h3 {
+                overflow: hidden;
+                display: -webkit-box;
+                -webkit-box-orient: vertical;
+                -webkit-line-clamp: 1;
+                width: 90%;
+                text-align: left;
+                font-size: 20px;
+              }
+              ul {
+                display: flex;
+                align-items: center;
+                margin-bottom: 10px;
+                li {
+                  background: #ff51b9;
+                  padding: 3px 10px;
+                  font-size: 10px;
+                  font-weight: 600;
+                  vertical-align: baseline;
+                  margin-right: 10px;
+                  border-radius: 10px;
+                }
               }
             }
           }
         }
       }
     }
-  }
-  .connu {
-    @extend .preferee;
-    &-decor {
-      @extend .preferee-decor;
-      .left {
-        left: -150px;
+    .connu {
+      @extend .preferee;
+      &-window {
+        @extend .preferee-window;
+        .connu-wd-left {
+          @extend .preferee-wd-left;
+        }
+        .connu-wd-right {
+          @extend .preferee-wd-right;
+        }
+        .connu-text-button-window {
+          @extend .preferee-text-button-window;
+        }
       }
-      .right {
-        right: -150px;
+      &-decor {
+        @extend .preferee-decor;
+        .left {
+          left: -150px;
+        }
+        .right {
+          right: -150px;
+        }
       }
-    }
-    &-auteurs {
-      @extend .preferee-auteurs;
-    }
-    &-livres {
-      @extend .preferee-livres;
+      &-auteurs {
+        @extend .preferee-auteurs;
+      }
+      &-livres {
+        @extend .preferee-livres;
+      }
     }
   }
 }
