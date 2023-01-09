@@ -1,3 +1,3 @@
 <?php
-require_once("./View/controlleur.php")
+require_once("./routeur.php")
     ?>
