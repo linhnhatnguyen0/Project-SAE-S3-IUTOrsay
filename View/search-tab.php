@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="search-button">
-        <button type="button">Rechercher</button>
+        <a href="#">Rechercher</a>
     </div>
     <div class="search-tag"></div>
 </section>

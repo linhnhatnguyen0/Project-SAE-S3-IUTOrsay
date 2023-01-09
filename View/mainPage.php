@@ -44,7 +44,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -57,7 +57,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -70,7 +70,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -83,7 +83,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
             </div>
@@ -104,7 +104,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
                 <div class="livre">
@@ -119,7 +119,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
                 <div class="livre">
@@ -134,7 +134,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
                 <div class="livre">
@@ -149,7 +149,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
             </div>
@@ -182,7 +182,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -195,7 +195,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -208,7 +208,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -221,7 +221,7 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <button>Consulter ses oeuvres</button>
+                        <a>Consulter ses oeuvres</a>
                     </div>
                 </div>
             </div>
@@ -242,7 +242,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
                 <div class="livre">
@@ -257,7 +257,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
                 <div class="livre">
@@ -272,7 +272,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
                 <div class="livre">
@@ -287,7 +287,7 @@
                             <li>Fantastique</li>
                             <li>Roman</li>
                         </ul>
-                        <button>Emprunter</button>
+                        <a>Emprunter</a>
                     </div>
                 </div>
             </div>

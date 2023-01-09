@@ -12,7 +12,7 @@ for ($i = 0; $i < 9; $i++) {
             <li>Fantastique</li>
             <li>Roman</li>
         </ul>
-        <button>Emprunter</button>
+        <a>Emprunter</a>
     </div>
     </div>');
 }

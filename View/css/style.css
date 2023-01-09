@@ -358,7 +358,8 @@ main .main-page .preferee-auteurs .auteurs .auteur-title p, main .main-page .con
   width: 90%;
   text-align: left;
 }
-main .main-page .preferee-auteurs .auteurs .auteur-title button, main .main-page .connu-auteurs .auteurs .auteur-title button, main .main-page .preferee-livres .auteurs .auteur-title button, main .main-page .connu-livres .auteurs .auteur-title button, main .main-page .preferee-livres .livres .auteur-title button, main .main-page .connu-livres .livres .auteur-title button, main .main-page .preferee-livres .livres .livre-title button, main .main-page .connu-livres .livres .livre-title button {
+main .main-page .preferee-auteurs .auteurs .auteur-title a, main .main-page .connu-auteurs .auteurs .auteur-title a, main .main-page .preferee-livres .auteurs .auteur-title a, main .main-page .connu-livres .auteurs .auteur-title a, main .main-page .preferee-livres .livres .auteur-title a, main .main-page .connu-livres .livres .auteur-title a, main .main-page .preferee-livres .livres .livre-title a, main .main-page .connu-livres .livres .livre-title a {
+  text-decoration: none;
   background-color: #f1c84a;
   color: #11141a;
   padding: 10px 30px;
@@ -372,7 +373,7 @@ main .main-page .preferee-auteurs .auteurs .auteur-title button, main .main-page
   font-size: 12px;
   padding: 6px 10px;
 }
-main .main-page .preferee-auteurs .auteurs .auteur-title button:hover, main .main-page .connu-auteurs .auteurs .auteur-title button:hover, main .main-page .preferee-livres .auteurs .auteur-title button:hover, main .main-page .connu-livres .auteurs .auteur-title button:hover, main .main-page .preferee-livres .livres .auteur-title button:hover, main .main-page .connu-livres .livres .auteur-title button:hover, main .main-page .preferee-livres .livres .livre-title button:hover, main .main-page .connu-livres .livres .livre-title button:hover {
+main .main-page .preferee-auteurs .auteurs .auteur-title a:hover, main .main-page .connu-auteurs .auteurs .auteur-title a:hover, main .main-page .preferee-livres .auteurs .auteur-title a:hover, main .main-page .connu-livres .auteurs .auteur-title a:hover, main .main-page .preferee-livres .livres .auteur-title a:hover, main .main-page .connu-livres .livres .auteur-title a:hover, main .main-page .preferee-livres .livres .livre-title a:hover, main .main-page .connu-livres .livres .livre-title a:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
 main .main-page .preferee-auteurs .auteurs .auteur-title h3, main .main-page .connu-auteurs .auteurs .auteur-title h3, main .main-page .preferee-livres .auteurs .auteur-title h3, main .main-page .connu-livres .auteurs .auteur-title h3, main .main-page .preferee-livres .livres .auteur-title h3, main .main-page .connu-livres .livres .auteur-title h3, main .main-page .preferee-livres .livres .livre-title h3, main .main-page .connu-livres .livres .livre-title h3,
@@ -671,7 +672,7 @@ main .main-page .connu-decor .right {
 
 .search-tab {
   width: 60%;
-  margin: 15vh auto 0 auto;
+  margin: 15vh auto 5vh auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -812,7 +813,8 @@ main .main-page .connu-decor .right {
   width: 20%;
   margin-top: 30px;
 }
-.search-tab .search-button button {
+.search-tab .search-button a {
+  text-decoration: none;
   background-color: #f1c84a;
   color: #11141a;
   padding: 10px 30px;
@@ -824,7 +826,7 @@ main .main-page .connu-decor .right {
   box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
   border-radius: 38px;
 }
-.search-tab .search-button button:hover {
+.search-tab .search-button a:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
 
@@ -905,7 +907,8 @@ main .main-page .connu-decor .right {
   width: 90%;
   text-align: left;
 }
-.search-result .search-result-card-title button {
+.search-result .search-result-card-title a {
+  text-decoration: none;
   background-color: #f1c84a;
   color: #11141a;
   padding: 10px 30px;
@@ -919,7 +922,7 @@ main .main-page .connu-decor .right {
   font-size: 14px;
   padding: 6px 10px;
 }
-.search-result .search-result-card-title button:hover {
+.search-result .search-result-card-title a:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
 .search-result .search-result-card-title h3,

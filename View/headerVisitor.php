@@ -12,3 +12,4 @@
     </div>
     <button class="btn-connect" type="button">Se connecter</button>
 </header>
+<main>
