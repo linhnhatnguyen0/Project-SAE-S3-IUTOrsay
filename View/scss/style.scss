@@ -52,6 +52,11 @@ header {
 main {
   overflow-x: hidden;
   background-color: #11141a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   .main-page {
     width: 100%;
     overflow-x: hidden;

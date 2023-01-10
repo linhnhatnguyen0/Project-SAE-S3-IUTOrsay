@@ -15,7 +15,6 @@ class Controleur
         include("./View/head.php");
         include("./View/headerVisitor.php");
         include("./View/search-tab.php");
-        include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");
         include("./View/footer.php");

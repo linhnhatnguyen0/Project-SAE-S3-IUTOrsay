@@ -63,6 +63,11 @@ header button:hover {
 main {
   overflow-x: hidden;
   background-color: #11141a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 }
 main .main-page {
   width: 100%;
@@ -813,7 +818,7 @@ main .main-page .connu-decor .right {
   width: 20%;
   margin-top: 30px;
 }
-.search-tab .search-button a {
+.search-tab .search-button button {
   text-decoration: none;
   background-color: #f1c84a;
   color: #11141a;
@@ -826,7 +831,7 @@ main .main-page .connu-decor .right {
   box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
   border-radius: 38px;
 }
-.search-tab .search-button a:hover {
+.search-tab .search-button button:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
 

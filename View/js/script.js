@@ -90,3 +90,11 @@ $("#decouvrir-btn").on("click", function () {
   $("header").animate({ top: -100 + "px" }, 100, "linear");
   n += windowHeight;
 });
+$("#dropdown-li").on("click", function () {
+  $(this).append(
+    '<input type="hidden" name="cat" value="' + $(this).attr("class") + '"/>'
+  );
+  console.log($(this).attr("class"));
+  $(this).parent().parent().parent().children("#nameCat").text($(this).text());
+  event.preventDefault();
+});
