@@ -90,11 +90,22 @@ $("#decouvrir-btn").on("click", function () {
   $("header").animate({ top: -100 + "px" }, 100, "linear");
   n += windowHeight;
 });
-$("#dropdown-li").on("click", function () {
+$(".dropdown-li").on("click", function () {
+  $("input.tempInput").remove();
   $(this).append(
-    '<input type="hidden" name="cat" value="' + $(this).attr("class") + '"/>'
+    '<input type="hidden" name="cat" class="tempInput" value="' +
+      ($(this).index() + 1) +
+      '"/>'
   );
-  console.log($(this).attr("class"));
+  console.log($(this).index());
   $(this).parent().parent().parent().children("#nameCat").text($(this).text());
-  event.preventDefault();
+  $(".search-input-categorie-dropdown").css("opacity", 0);
+});
+$("label.for-dropdown").on("click", function () {
+  if ($(".search-input-categorie-dropdown").css("opacity") == 0) {
+    $(".search-input-categorie-dropdown").css("opacity", 1);
+  }
+  if ($(".search-input-categorie-dropdown").css("opacity") == 1) {
+    $(".search-input-categorie-dropdown").css("opacity", 0);
+  }
 });
