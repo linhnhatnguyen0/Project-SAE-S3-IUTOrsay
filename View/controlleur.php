@@ -20,6 +20,10 @@ class Controlleur
         include("./View/signup.php");
         include("./View/footer.php");
     }
+    function controllerPropos()
+    {
+
+    }
 }
 
 ?>
