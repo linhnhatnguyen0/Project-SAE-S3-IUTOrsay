@@ -5,7 +5,7 @@
     <div class="menu">
         <ul>
             <li><a href="./routeur.php?controleur=controleur&action=controleurIndex">Accueil</a></li>
-            <li><a href="./routeur.php?controleur=controleur&action=controleurRecherche">Recherche</a></li>
+            <li><a href="./routeur.php?controleur=controleur&action=controleurSearch">Recherche</a></li>
             <li><a href="#">Catalogue</a></li>
             <li><a href="#">À propos</a></li>
         </ul>

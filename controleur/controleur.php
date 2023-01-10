@@ -1,7 +1,7 @@
 <?php
 class Controleur
 {
-    function controllerIndex()
+    public static function controleurIndex()
     {
         include("./View/head.php");
         include("./View/headerVisitor.php");
@@ -10,7 +10,7 @@ class Controleur
         include("./View/signup.php");
         include("./View/footer.php");
     }
-    function controllerSearch()
+    public static function controleurSearch()
     {
         include("./View/head.php");
         include("./View/headerVisitor.php");

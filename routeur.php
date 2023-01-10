@@ -4,7 +4,8 @@ $controleur = "controleur";
 if (isset($_GET["controleur"])) {
     $controleur = $_GET["controleur"];
 }
-@require_once("./controleur/" . $controleur . "php");
+@require_once("./controleur/" . $controleur . ".php");
+$action = "";
 if (isset($_GET["action"])) {
     $action = $_GET["action"];
 } else {
@@ -13,6 +14,6 @@ if (isset($_GET["action"])) {
 if (isset($_GET["id"])) {
     $controleur::$action($_GET["id"]);
 } else {
-    $controleur::$action;
+    $controleur::$action();
 }
 ?>
