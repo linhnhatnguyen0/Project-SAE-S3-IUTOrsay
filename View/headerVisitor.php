@@ -4,8 +4,8 @@
     </div>
     <div class="menu">
         <ul>
-            <li><a href="./routeur.php?page=controllerIndex">Accueil</a></li>
-            <li><a href="./routeur.php?page=controllerSearch">Recherche</a></li>
+            <li><a href="./routeur.php?controleur=controleur&action=controleurIndex">Accueil</a></li>
+            <li><a href="./routeur.php?controleur=controleur&action=controleurRecherche">Recherche</a></li>
             <li><a href="#">Catalogue</a></li>
             <li><a href="#">À propos</a></li>
         </ul>

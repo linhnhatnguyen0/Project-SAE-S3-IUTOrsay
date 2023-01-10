@@ -1,12 +1,18 @@
 <?php
 // Path: routeur.php
-@include("./View/controlleur.php");
-// Path: controlleur.php
-if (isset($_GET['page'])) {
-    $page = $_GET['page'];
-} else {
-    $page = "controllerIndex";
+$controleur = "controleur";
+if (isset($_GET["controleur"])) {
+    $controleur = $_GET["controleur"];
 }
-$controlleur = new Controlleur();
-$controlleur->$page();
+@require_once("./controleur/" . $controleur . "php");
+if (isset($_GET["action"])) {
+    $action = $_GET["action"];
+} else {
+    $action = "controleurIndex";
+}
+if (isset($_GET["id"])) {
+    $controleur::$action($_GET["id"]);
+} else {
+    $controleur::$action;
+}
 ?>

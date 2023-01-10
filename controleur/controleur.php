@@ -1,5 +1,5 @@
 <?php
-class Controlleur
+class Controleur
 {
     function controllerIndex()
     {

@@ -18,7 +18,6 @@ class ControleurDocument
         $titre = "Auteur" + $tableau[1] + " " + $tableau[2];
         include("./View/head.php");
         include("./View/headerVisitor.php");
-        include("./View/mainPage.php");
         include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");

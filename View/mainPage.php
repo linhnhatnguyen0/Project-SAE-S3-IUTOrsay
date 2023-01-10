@@ -44,7 +44,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
+                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
+                            ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -57,7 +58,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
+                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
+                            ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -70,7 +72,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
+                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
+                            ses oeuvres</a>
                     </div>
                 </div>
                 <div class="auteur">
@@ -83,7 +86,8 @@
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
                             inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
                             quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
+                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
+                            ses oeuvres</a>
                     </div>
                 </div>
             </div>
