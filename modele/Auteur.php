@@ -59,15 +59,26 @@ class Auteur extends Modele
       $this->AnneeNaissance = $annee;
     }
   }
-  public static function getAuteurById($idAuteur)
+
+
+  public static function getAuteurById($NumAuteur)
   {
-    $req_prep = "SELECT * FROM Auteur WHERE numAuteur = :tag;";
-    $resultat = Connexion::pdo()->prepare($req_prep);
-    $resultat->execute([":tag" => $idAuteur]);
-    $resultat->setFetchMode(PDO::FETCH_CLASS, "Auteur");
-    $tableau = $resultat->fetchAll();
-    return $tableau;
+    $requetePreparee = "SELECT * FROM Auteur WHERE NumAuteur = :tag_n;";
+    $req_prep = Connexion::pdo()->prepare($requetePreparee);
+    $valeurs = array("tag_n" => $NumAuteur);
+    try {
+      $req_prep->execute($valeurs);
+      $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Auteur');
+      $v = $req_prep->fetch();
+      if (!$v)
+        return false;
+      return $v;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+    }
+    return false;
   }
+
 }
 
 ?>

@@ -1,10 +1,12 @@
 <?php
 require_once("modele/Auteur.php");
+require_once("modele/Document.php");
 class Controleur
 {
     public static function controleurIndex()
     {
         $titre = "Médiathèque Paris-Saclay";
+        //$document = Document::getDocumentByNumDocument(1);
         $tableauAuteur = Auteur::getAuteurById(1);
         include("./View/head.php");
         include("./View/headerVisitor.php");
@@ -13,6 +15,7 @@ class Controleur
         include("./View/signup.php");
         include("./View/footer.php");
     }
+
     public static function controleurSearch()
     {
         $titre = "Recherche";
@@ -23,6 +26,7 @@ class Controleur
         include("./View/signup.php");
         include("./View/footer.php");
     }
+
     function controllerPropos()
     {
 
