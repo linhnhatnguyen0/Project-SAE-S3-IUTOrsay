@@ -1,6 +1,7 @@
 <?php
-for ($i = 0; $i < count($tableauLivre); $i++) {
-    echo (' <div class="livre-img">
+for ($i = 0; $i < count($tableauLivre); $i++) {   
+    echo (' <div class="livre">
+                <div class="livre-img">
                     <img src="./img/Victor_Hugo_001 1.png" alt="" />
                 </div>
                 <div class="livre-title">
@@ -9,13 +10,24 @@ for ($i = 0; $i < count($tableauLivre); $i++) {
     echo ($tableauLivre[$i]->getTitre());
     echo ('
         </h3>');
-    echo ('<p><strong>Auteur:</strong>');
-    echo ($tableauLivre[$i]->getNomAuteur()." ".$tableauLivre[$i]->getPrenomAuteur());
-    echo ('</p>
-        <a href="');
-    echo ("./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id={$tableauLivre[$i]->getNumAuteur()}");
-    echo ('">Consulter
-            ses oeuvres</a>
+    echo ('<p><strong>Auteur:</strong> ');
+    $auteur = $tableauLivre[$i]->getAuteurByDoc();
+    echo ($auteur->getNomAuteur()." ".$auteur->getPrenomAuteur());
+    echo ('</p>');
+    echo ('<p><strong>Année de parution:</strong> ');
+    echo ($tableauLivre[$i]->getAnneeParution());
+    echo ('</p>');
+    echo('<ul>');
+
+    if($tableauLivre[$i]->getNumCat() != NULL){
+        $categorie = $tableauLivre[$i]->getCategorieByDoc();
+        echo("<li>".$categorie->getNomCat()."</li>");
+    }
+    $TypeDoc = $tableauLivre[$i]->getTypeDocByDoc();
+    echo("<li>".$TypeDoc->getNomTypeD()."</li>");
+    echo('</ul>');
+    echo('<a>Emprunter</a>');
+    echo ('
         </div>
         </div>');
     }
@@ -28,18 +40,3 @@ for ($i = 0; $i < count($tableauLivre); $i++) {
 
 
 ?>
-<div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>

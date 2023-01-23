@@ -1,6 +1,6 @@
 <?php
 
-class TypeDegorie
+class TypeDocument
 {
 
   //attribut
@@ -37,7 +37,6 @@ class TypeDegorie
     if (!is_null($num) && !is_null($nom)) {
       $this->NumTypeD = $num;
       $this->NomTypeD = $nom;
-
     }
   }
 
