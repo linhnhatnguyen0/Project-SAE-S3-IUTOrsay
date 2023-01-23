@@ -1,6 +1,5 @@
 <section class="main-page" id="main-page">
     <section class="acceuil">
-
         <div class="img-1"></div>
         <div class="img-2"></div>
         <div class="img-3"></div>

@@ -7,8 +7,8 @@ class Controleur
     {
         $titre = "Médiathèque Paris-Saclay";
         //$document = Document::getDocumentByNumDocument(1);
-        
-        $tableauAuteur = array(Auteur::getAuteurById(1));
+
+        $tableauAuteur1 = Auteur::getAuteurById(1);
         include("./View/head.php");
         include("./View/headerVisitor.php");
         include("./View/mainPage.php");
