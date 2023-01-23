@@ -11,11 +11,11 @@ class Document extends Modele
   protected $Titre;
   protected $AnneeParution;
   protected $Autorisation;
-  protected $NomTypeD;
+  protected $NumTypeD;
   protected $NumAuteur;
   protected $NomAuteur;
   protected $PrenomAuteur;
-  protected $NomCat;
+  protected $NumCat;
   protected $DateAjout;
 
 
@@ -49,13 +49,13 @@ class Document extends Modele
   {
     return $this->PrenomAuteur;
   }
-  public function getNomCat()
+  public function getNumCat()
   {
-    return $this->NomCat;
+    return $this->NumCat;
   }
-  public function getNomTypeD()
+  public function getNumTypeD()
   {
-    return $this->NomTypeD;
+    return $this->NumTypeD;
   }
 
   public function get($attribut)
@@ -172,6 +172,56 @@ class Document extends Modele
     }
   }
 
+  public function getAuteurByDoc(){
+    $requetePreparee = "SELECT * FROM Auteur WHERE NumAuteur = :tag_n;";
+    $req_prep = Connexion::pdo()->prepare($requetePreparee);
+    $valeurs = array("tag_n" => $this->NumAuteur);
+    try {
+      $req_prep->execute($valeurs);
+      $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Auteur');
+      $v = $req_prep->fetch();
+      if (!$v)
+        return false;
+      return $v;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+    }
+    return false;
+  }
+
+  public function getTypeDocByDoc(){
+    $requetePreparee = "SELECT * FROM TypeDocument WHERE NumTypeD = :tag_n;";
+    $req_prep = Connexion::pdo()->prepare($requetePreparee);
+    $valeurs = array("tag_n" => $this->NumTypeD);
+    try {
+      $req_prep->execute($valeurs);
+      $req_prep->setFetchMode(PDO::FETCH_CLASS, 'TypeDocument');
+      $v = $req_prep->fetch();
+      if (!$v)
+        return false;
+      return $v;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+    }
+    return false;
+  }
+
+  public function getCategorieByDoc(){
+    $requetePreparee = "SELECT * FROM Categorie WHERE NumCat = :tag_n;";
+    $req_prep = Connexion::pdo()->prepare($requetePreparee);
+    $valeurs = array("tag_n" => $this->NumCat);
+    try {
+      $req_prep->execute($valeurs);
+      $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Categorie');
+      $v = $req_prep->fetch();
+      if (!$v)
+        return false;
+      return $v;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+    }
+    return false;
+  }
 
   public static function getDocumentByAuteur($idAuteur)
   {

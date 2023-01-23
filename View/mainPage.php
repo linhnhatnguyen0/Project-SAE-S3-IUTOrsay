@@ -40,66 +40,7 @@
             <h1>LIVRES</h1>
             <div class="line"></div>
             <div class="livres">
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
+                <?php require_once("./View/card/livre-card.php") ?>
             </div>
         </div>
     </section>
