@@ -9,6 +9,10 @@ class Controleur
         //$document = Document::getDocumentByNumDocument(1);
 
         $tableauAuteur1 = Auteur::getAuteurById(1);
+        $tableauAuteur2 = Auteur::getAuteurById(2);
+        $tableauAuteur3 = Auteur::getAuteurById(3);
+        $tableauAuteur4 = Auteur::getAuteurById(4);
+        $tableauAuteur = array($tableauAuteur1,$tableauAuteur2,$tableauAuteur3,$tableauAuteur4);
         include("./View/head.php");
         include("./View/headerVisitor.php");
         include("./View/mainPage.php");

@@ -12,6 +12,7 @@ class Document extends Modele
   protected $AnneeParution;
   protected $Autorisation;
   protected $NomTypeD;
+  protected $NumAuteur;
   protected $NomAuteur;
   protected $PrenomAuteur;
   protected $NomCat;
@@ -36,12 +37,15 @@ class Document extends Modele
   {
     return $this->Autorisation;
   }
-
+  public function getNumAuteur()
+  {
+    return $this->NumAuteur;
+  }
   public function getNomAuteur()
   {
     return $this->NomAuteur;
   }
-  public function getPreNomAuteur()
+  public function getPrenomAuteur()
   {
     return $this->PrenomAuteur;
   }
@@ -187,7 +191,7 @@ class Document extends Modele
     $tableau = $resultat->fetchAll();
     $string = "";
     foreach ($tableau as $value) {
-      $string = $string . $value->getTitre() . " ";
+      $string = $string . $value->getTitre() . ", ";
     }
     echo $string;
   }

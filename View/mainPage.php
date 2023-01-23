@@ -33,7 +33,7 @@
             <h1>AUTEURS</h1>
             <div class="line"></div>
             <div class="auteurs">
-                <?php require_once("./View/auteurCard/auteur-card.php") ?>
+                <?php require_once("./View/card/auteur-card.php") ?>
             </div>
         </div>
         <div class="preferee-livres">
