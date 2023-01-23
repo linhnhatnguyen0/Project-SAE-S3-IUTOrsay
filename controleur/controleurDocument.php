@@ -12,6 +12,8 @@ class ControleurDocument
         include("./View/headerVisitor.php");
         $Document1 = Document::getDocumentByNumDocument(1);
         echo metaphone($Document1->getTitre())."</br>";
+        $tableau = Document::getAllDocuments();
+        
         include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");
