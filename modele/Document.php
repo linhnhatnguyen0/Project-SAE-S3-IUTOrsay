@@ -99,6 +99,15 @@ class Document extends Modele
 
 
 
+  public static function getAllDocuments() {
+		$requete = "SELECT * FROM Document;";
+		$resultat = Connexion::pdo()->query($requete);
+		$resultat->setFetchMode(PDO::FETCH_CLASS,'Document');
+		$tableau = $resultat->fetchAll();
+		return $tableau;
+	}
+
+
   public static function addDocument($n, $t, $a)
   {
     $requetePreparee = "INSERT INTO Document (`NumDocument`, `Titre`,`AnneeParution`) VALUES (:n_tag, :t_tag, :a_tag);";

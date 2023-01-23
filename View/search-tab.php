@@ -1,6 +1,6 @@
 <form action="routeur.php" method="get" class="search-tab">
     <input type="hidden" name="controleur" value="controleurDocument" />
-    <input type="hidden" name="action" value="getDocumentByInfo" />
+    <input type="hidden" name="action" value="getResultSearch" />
     <div class="search-input">
         <input type="text" placeholder="Titre du document" class="search-input-titre" name="titre" />
         <input type="number" placeholder="Année parution" class="search-input-annee" name="annee" />
