@@ -187,7 +187,7 @@ class Document extends Modele
     $tableau = $resultat->fetchAll();
     $string = "";
     foreach ($tableau as $value) {
-      $string = $string . $value . " ";
+      $string = $string . $value->getTitre() . " ";
     }
     echo $string;
   }
