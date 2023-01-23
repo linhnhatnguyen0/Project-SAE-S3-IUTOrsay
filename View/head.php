@@ -17,7 +17,9 @@
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
     <link rel="preload" href="Mona-Sans.woff2" as="font" type="font/woff2" crossorigin />
-    <title>Mediatheque Paris-Saclay</title>
+    <title>
+        <?php echo $titre ?>
+    </title>
 </head>
 
 <body>

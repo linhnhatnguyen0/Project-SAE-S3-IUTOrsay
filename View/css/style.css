@@ -437,6 +437,12 @@ main .main-page .connu-decor .left {
 main .main-page .connu-decor .right {
   right: -150px;
 }
+main .title {
+  margin: 200px auto 50px auto;
+  color: #fff;
+  font-size: 40px;
+}
+
 /* colors */
 .overlay-dark {
   width: 100vw;
@@ -840,8 +846,8 @@ main .main-page .connu-decor .right {
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-  margin: 0 auto;
-  justify-content: space-between;
+  margin: 50px auto 0 auto;
+  justify-content: flex-start;
 }
 .search-result .search-result-card {
   min-height: 200px;
@@ -851,7 +857,7 @@ main .main-page .connu-decor .right {
   align-items: center;
   background: #1d222c;
   border-radius: 15px;
-  margin: 30px 0;
+  margin: 30px 50px 0 0;
   min-width: 465px;
 }
 .search-result .search-result-card-img {

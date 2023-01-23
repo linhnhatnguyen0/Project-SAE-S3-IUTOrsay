@@ -34,62 +34,7 @@
             <h1>AUTEURS</h1>
             <div class="line"></div>
             <div class="auteurs">
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>VICTOR HUGO</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
-                            ses oeuvres</a>
-                    </div>
-                </div>
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>J.K.ROWLING</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
-                            ses oeuvres</a>
-                    </div>
-                </div>
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>VICTOR HUGO</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
-                            ses oeuvres</a>
-                    </div>
-                </div>
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>VICTOR HUGO</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a href="./routeur.php?controleur=controleurDocument&action=getDocumentByAuteur&id=1">Consulter
-                            ses oeuvres</a>
-                    </div>
-                </div>
+                <?php require_once("./View/auteurCard/auteur-card.php") ?>
             </div>
         </div>
         <div class="preferee-livres">

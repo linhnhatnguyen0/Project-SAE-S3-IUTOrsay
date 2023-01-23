@@ -1,19 +1,21 @@
 <?php
 require_once("./config/connexion.php");
+require_once("modele.php");
 Connexion::connect();
 
-class Document
+class Document extends Modele
 {
 
   //attribut
-  private $NumDocument;
-  private $Titre;
-  private $AnneeParution;
-  private $Autorisation;
-  private $NumTypeD;
-  private $NumAuteur;
-  private $NumCat;
-  private $DateAjout;
+  protected $NumDocument;
+  protected $Titre;
+  protected $AnneeParution;
+  protected $Autorisation;
+  protected $NomTypeD;
+  protected $NomAuteur;
+  protected $PrenomAuteur;
+  protected $NomCat;
+  protected $DateAjout;
 
 
 
@@ -33,6 +35,23 @@ class Document
   public function getAutorisation()
   {
     return $this->Autorisation;
+  }
+
+  public function getNomAuteur()
+  {
+    return $this->NomAuteur;
+  }
+  public function getPreNomAuteur()
+  {
+    return $this->PrenomAuteur;
+  }
+  public function getNomCat()
+  {
+    return $this->NomCat;
+  }
+  public function getNomTypeD()
+  {
+    return $this->NomTypeD;
   }
 
   public function get($attribut)
@@ -152,12 +171,25 @@ class Document
 
   public static function getDocumentByAuteur($idAuteur)
   {
-    $req_prep = "SELECT Titre,NomAuteur,PrenomAuteur,AnneeParution,NomTypeD,NomCat FROM Document NATURAL JOIN TypeDocument, NATURAL JOIN Categorie, NATURAL JOIN Auteur, WHERE numAuteur = :tag;";
+    $req_prep = "SELECT Titre,NomAuteur,PrenomAuteur,AnneeParution,NomTypeD,NomCat FROM Document NATURAL JOIN TypeDocument NATURAL JOIN Categorie NATURAL JOIN Auteur WHERE numAuteur = :tag;";
     $resultat = Connexion::pdo()->prepare($req_prep);
     $resultat->execute([":tag" => $idAuteur]);
     $resultat->setFetchMode(PDO::FETCH_CLASS, "Document");
     $tableau = $resultat->fetchAll();
     return $tableau;
+  }
+  public static function getNomDocumentByAuteur($idAuteur)
+  {
+    $req_prep = "SELECT Titre FROM Document NATURAL JOIN Auteur WHERE numAuteur = :tag;";
+    $resultat = Connexion::pdo()->prepare($req_prep);
+    $resultat->execute([":tag" => $idAuteur]);
+    $resultat->setFetchMode(PDO::FETCH_CLASS, "Document");
+    $tableau = $resultat->fetchAll();
+    $string = "";
+    foreach ($tableau as $value) {
+      $string = $string . $value . " ";
+    }
+    echo $string;
   }
   public function afficherUne()
   {
@@ -166,12 +198,23 @@ class Document
         <img src="./img/miserable.jpg" alt="image de la plante">
     </div>
     <div class="search-result-card-title">
-        <h3><?php echo $tableau[0]; ?></h3>
-        <p><strong>Auteur:</strong> <?php echo ($tableau[1] + " " + $tableau[2]);?></p>
-        <p><strong>Année parution:</strong> <?php echo $tableau[3] ?></p>
+        <h3>');
+    echo "$this->Titre";
+    echo ('</h3>
+        <p><strong>Auteur:</strong> ');
+    echo ("$this->NomAuteur $this->PrenomAuteur");
+    echo ('</p>
+        <p><strong>Année parution:</strong>
+        ');
+    echo "$this->AnneeParution";
+    echo ('</p>
         <ul>
-            <li><?php echo $tableau[4] ?></li>
-            <li><?php echo $tableau[5] ?></li>
+            <li>');
+    echo "$this->NomTypeD";
+    echo ('</li>
+            <li>');
+    echo "$this->NomCat";
+    echo ('</li>
         </ul>
         <a>Emprunter</a>
     </div>

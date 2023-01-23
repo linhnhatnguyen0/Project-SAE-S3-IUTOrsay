@@ -154,8 +154,8 @@
   align-items: center;
   flex-wrap: wrap;
   width: 90%;
-  margin: 0 auto;
-  justify-content: space-between;
+  margin: 50px auto 0 auto;
+  justify-content: flex-start;
   .search-result-card {
     min-height: 200px;
     width: 30%;
@@ -164,7 +164,7 @@
     align-items: center;
     background: #1d222c;
     border-radius: 15px;
-    margin: 30px 0;
+    margin: 30px 50px 0 0;
     min-width: 465px;
     &-img {
       position: relative;

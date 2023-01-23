@@ -412,6 +412,11 @@ main {
       }
     }
   }
+  .title {
+    margin: 200px auto 50px auto;
+    color: #fff;
+    font-size: 40px;
+  }
 }
 
 @import "./login.scss";
