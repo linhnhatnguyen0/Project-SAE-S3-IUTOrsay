@@ -4,11 +4,21 @@
 body {
   font-size: 14px;
 }
-.icon-inner, .ionicon, svg {
-  display: block;
-  height: 100%;
-  width: 100%;
+ion-icon {
   color: white;
+}
+input[type=text]::placeholder,input[type=password]::placeholder{
+  color: rgba(237, 237, 237, 1);
+}
+input.v426_322,input.v426_326 ,input.v426_330,input.v426_334,input.v426_338{
+  background-color: rgba(26, 29, 50, 1);
+  font-family: 'Montserrat';
+  font-style: italic;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.015em;
+  padding: 14px;
 }
 .v426_301 {
   width: 100%;
@@ -23,7 +33,6 @@ body {
 .v426_302 {
   width: 100%;
   height: 653px;
-  background: url("../images/v426_302.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -126,15 +135,7 @@ input:focus{
   left: 25px;
   overflow: hidden;
 }
-.v426_310 {
-  width: 13px;
-  height: 16px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
+
 .v426_311 {
   width: 181px;
   color: rgba(255,255,255,1);
@@ -173,24 +174,7 @@ input:focus{
   left: 0px;
   overflow: hidden;
 }
-.v426_314 {
-  width: 9px;
-  height: 13px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-}
-.v426_315 {
-  width: 9px;
-  height: 6px;
-  background: rgba(255,255,255,1);
-  opacity: 1;
-  position: absolute;
-  top: 3px;
-  left: 4px;
-}
+
 .v426_316 {
   width: 159px;
   color: rgba(255,255,255,1);
