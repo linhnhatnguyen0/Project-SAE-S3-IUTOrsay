@@ -88,11 +88,11 @@ input:focus{
   border-bottom-right-radius: 6px;
   box-shadow: 2px 4px 24px rgba(0, 0, 0, 0.25);
   overflow: hidden;
+  
 }
 .v426_306 {
   width: 211px;
   height: 17px;
-  background: url("../images/v426_306.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -101,6 +101,10 @@ input:focus{
   top: 26px;
   left: 25px;
   overflow: hidden;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
 }
 .v426_307 {
   width: 14px;
@@ -135,6 +139,10 @@ input:focus{
   top: 80px;
   left: 25px;
   overflow: hidden;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
 }
 
 .v426_311 {
@@ -161,6 +169,10 @@ input:focus{
   top: 136px;
   left: 25px;
   overflow: hidden;
+  -webkit-appearance: button;
+  -moz-appearance: button;
+  appearance: button;
+  text-decoration: none;
 }
 .v426_313 {
   width: 14px;
