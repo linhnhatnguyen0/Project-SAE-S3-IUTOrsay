@@ -1,6 +1,7 @@
 <?php
 require_once("modele/Document.php");
 require_once("modele/modele.php");
+require_once("modele/session.php");
 require_once("modele/Categorie.php");
 require_once("modele/TypeDocument.php");
 class ControleurDocument
@@ -10,12 +11,13 @@ class ControleurDocument
     {
         $titre = "Résultats de la recherche";
         include("./View/head.php");
-        include("./View/headerVisitor.php");
-        if(isset($_GET["cat"])){
-            $tableau = Document::searchDoc($_GET['titre'],$_GET['auteur'], $_GET['annee'], $_GET['cat']);
-        }else{
-            $tableau = Document::searchDoc($_GET['titre'],$_GET['auteur'], $_GET['annee']);
+        include("./controleur/headerVerify.php");
+        if (isset($_GET["cat"])) {
+            $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee'], $_GET['cat']);
+        } else {
+            $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee']);
         }
+<<<<<<< Updated upstream
         
         echo ('<h1 class="title">Résultat: ');
         if(isset($_GET['titre'])){
@@ -32,6 +34,9 @@ class ControleurDocument
         }
         echo $titre;
         echo ('</h1>');
+=======
+
+>>>>>>> Stashed changes
         include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");
