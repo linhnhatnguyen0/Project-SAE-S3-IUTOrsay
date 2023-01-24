@@ -41,6 +41,14 @@ class Categorie
     }
   }
 
+  public static function getAllCategories() {
+		$requete = "SELECT * FROM Categorie;";
+		$resultat = Connexion::pdo()->query($requete);
+		$resultat->setFetchMode(PDO::FETCH_CLASS,'Categorie');
+		$tableau = $resultat->fetchAll();
+		return $tableau;
+	}
+
 }
 
 ?>

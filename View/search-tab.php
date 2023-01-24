@@ -12,10 +12,11 @@
             </label>
             <div class="search-input-categorie-dropdown">
                 <ul>
-                    <li class="dropdown-li type1">Type 1</li>
-                    <li class=" dropdown-li type2">Type 2</li>
-                    <li class="dropdown-li type3">Type 3</li>
-                    <li class=" dropdown-li type4">Type 4</li>
+                    <?php
+                        foreach ($tableauCategorie as $value) {
+                        echo ('<li class="dropdown-li">'.$value->getNomCat().'</li>');
+                        }
+                    ?>
                 </ul>
             </div>
         </div>

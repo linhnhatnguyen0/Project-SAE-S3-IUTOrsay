@@ -17,6 +17,21 @@ class ControleurDocument
             $tableau = Document::searchDoc($_GET['titre'],$_GET['auteur'], $_GET['annee']);
         }
         
+        echo ('<h1 class="title">Résultat: ');
+        if(isset($_GET['titre'])){
+
+        }
+        if(isset($_GET['auteur'])){
+            
+        }
+        if(isset($_GET['annee'])){
+            
+        }
+        if(isset($_GET['cat'])){
+            
+        }
+        echo $titre;
+        echo ('</h1>');
         include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");

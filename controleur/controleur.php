@@ -31,6 +31,7 @@ class Controleur
     public static function controleurSearch()
     {
         $titre = "Recherche";
+        $tableauCategorie = Categorie::getAllCategories();
         include("./View/head.php");
         include("./View/headerVisitor.php");
         include("./View/search-tab.php");

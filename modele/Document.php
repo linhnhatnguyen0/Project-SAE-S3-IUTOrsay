@@ -107,33 +107,7 @@ class Document extends Modele
 		return $tableau;
 	}
   
-/*
-if($titre != NULL){
-      $requetePreparee += "WHERE Titre LIKE '%:t_tag%' ";
-      $arg = 1;
-    }
 
-    if($auteur != NULL && $arg == 0){
-      $requetePreparee += "WHERE ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%:a_tag%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%:a_tag%' ) ";
-      $arg = 1;
-    }elseif($auteur != NULL && $arg == 1){
-      $requetePreparee += "AND ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%:a_tag%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%:a_tag%' ) ";
-    }
-
-    if($annee != NULL && $arg == 0){
-      $requetePreparee += "WHERE AnneeParution = :an_tag ";
-      $arg = 1;
-    }elseif($annee != NULL && $arg == 1){
-      $requetePreparee += "AND AnneeParution = :an_tag ";
-    }
-
-    if($categorie != NULL && $arg == 0){
-      $requetePreparee += "WHERE NumCat = :c_tag ";
-      $arg = 1;
-    }elseif($auteur != NULL && $arg == 1){
-      $requetePreparee += "AND NumCat = :c_tag ";
-    }
-*/
 
   public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL){
     $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";
