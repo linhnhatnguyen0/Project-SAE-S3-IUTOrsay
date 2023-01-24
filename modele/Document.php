@@ -111,7 +111,7 @@ class Document extends Modele
 
   public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL){
     $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";
-
+    $arg = 0;
     if($titre != NULL){
       $requetePreparee = $requetePreparee." WHERE Titre LIKE '%".$titre."%' ";
       $arg = 1;
