@@ -136,10 +136,10 @@ if($titre != NULL){
 */
 
   public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL){
-    $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie WHERE Titre LIKE '%harry%' ";
-    $arg = 1;
+    $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";
+
     if($titre != NULL){
-      $requetePreparee = $requetePreparee." ";
+      $requetePreparee = $requetePreparee." WHERE Titre LIKE '%".$titre."%' ";
       $arg = 1;
     }
 
@@ -164,7 +164,7 @@ if($titre != NULL){
       $requetePreparee = $requetePreparee."AND NumCat = ".$categorie." ";
     }
     $resultat = Connexion::pdo()->prepare($requetePreparee);
-    echo ($requetePreparee);
+    
     $valeurs = array(
       "t_tag" => $titre,
       "a_tag" => $auteur,
