@@ -106,17 +106,83 @@ class Document extends Modele
 		$tableau = $resultat->fetchAll();
 		return $tableau;
 	}
-  /*
-  public static function searchDoc($titre, $auteur, $annee, $categorie){
-    $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";
-    $arg = 0;
-    for(i)
-    if($titre != NULL){
-    $requetePreparee += "WHERE Titre LIKE '%".$titre."%' ";
+  
+/*
+if($titre != NULL){
+      $requetePreparee += "WHERE Titre LIKE '%:t_tag%' ";
+      $arg = 1;
     }
-    return 0;
 
-  }*/
+    if($auteur != NULL && $arg == 0){
+      $requetePreparee += "WHERE ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%:a_tag%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%:a_tag%' ) ";
+      $arg = 1;
+    }elseif($auteur != NULL && $arg == 1){
+      $requetePreparee += "AND ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%:a_tag%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%:a_tag%' ) ";
+    }
+
+    if($annee != NULL && $arg == 0){
+      $requetePreparee += "WHERE AnneeParution = :an_tag ";
+      $arg = 1;
+    }elseif($annee != NULL && $arg == 1){
+      $requetePreparee += "AND AnneeParution = :an_tag ";
+    }
+
+    if($categorie != NULL && $arg == 0){
+      $requetePreparee += "WHERE NumCat = :c_tag ";
+      $arg = 1;
+    }elseif($auteur != NULL && $arg == 1){
+      $requetePreparee += "AND NumCat = :c_tag ";
+    }
+*/
+
+  public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL){
+    $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie WHERE Titre LIKE '%harry%' ";
+    $arg = 1;
+    if($titre != NULL){
+      $requetePreparee = $requetePreparee." ";
+      $arg = 1;
+    }
+
+    if($auteur != NULL  && $arg == 0){
+      $requetePreparee = $requetePreparee."WHERE ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%".$auteur."%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%".$auteur."%' ) ";
+      $arg = 1;
+    }elseif($auteur != NULL && $arg == 1){
+      $requetePreparee = $requetePreparee."AND ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%".$auteur."%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%".$auteur."%' ) ";
+    }
+    
+    if($annee != NULL && $arg == 0){
+      $requetePreparee = $requetePreparee."WHERE AnneeParution = ".$annee." ";
+      $arg = 1;
+    }elseif($annee != NULL && $arg == 1){
+      $requetePreparee = $requetePreparee."AND AnneeParution = ".$annee." ";
+    }
+
+    if($categorie != NULL && $arg == 0){
+      $requetePreparee = $requetePreparee."WHERE NumCat = ".$categorie." ";
+      $arg = 1;
+    }elseif($categorie != NULL && $arg == 1){
+      $requetePreparee = $requetePreparee."AND NumCat = ".$categorie." ";
+    }
+    $resultat = Connexion::pdo()->prepare($requetePreparee);
+    echo ($requetePreparee);
+    $valeurs = array(
+      "t_tag" => $titre,
+      "a_tag" => $auteur,
+      "an_tag" => $annee,
+      "c_tag" => $categorie
+    );
+    try {
+      $resultat->execute($valeurs);
+      $resultat->setFetchMode(PDO::FETCH_CLASS,'Document');
+      $tableau = $resultat->fetchAll();
+      return $tableau;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+      return false;
+    }
+  }
+
+
 
   public static function addDocument($n, $t, $a)
   {
