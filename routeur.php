@@ -13,26 +13,20 @@ $controleur = "controleur";
 $action = "controleurIndex";
 // Path: routeur.php
 $tableauControlleur = ["controlleur", "controleurDocument", "controleurUtilisateur"];
-if (!Session::userConnected() && !Session::userConnecting()) {
-    // echo ("not connect yet");
-    // echo ("<pre>");
-    // print_r($_SESSION);
-    // echo ("<pre>");
-    $controleur::$action();
-} else {
-    if (isset($_GET["controleur"]) && in_array($_GET["controleur"], $tableauControlleur)) {
-        $controleur = $_GET["controleur"];
-        @require_once("./controleur/" . $controleur . ".php");
-    }
-    if (isset($_GET["action"])) {
-        $action = $_GET["action"];
-    } else {
-        $action = "controleurIndex";
-    }
-    if (isset($_GET["id"])) {
-        $controleur::$action($_GET["id"]);
-    } else {
-        $controleur::$action();
-    }
+
+if (isset($_GET["controleur"]) && in_array($_GET["controleur"], $tableauControlleur)) {
+    $controleur = $_GET["controleur"];
+    @require_once("./controleur/" . $controleur . ".php");
 }
+if (isset($_GET["action"])) {
+    $action = $_GET["action"];
+} else {
+    $action = "controleurIndex";
+}
+if (isset($_GET["id"])) {
+    $controleur::$action($_GET["id"]);
+} else {
+    $controleur::$action();
+}
+
 ?>

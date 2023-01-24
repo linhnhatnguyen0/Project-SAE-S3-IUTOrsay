@@ -54,7 +54,7 @@ class ControleurDocument
         // echo "</pre>";
         $titre = "Auteur " . $tableau[1]->getNomAuteur() . " " . $tableau[1]->getPreNomAuteur();
         include("./View/head.php");
-        include("./View/headerVisitor.php");
+        include("./controleur/headerVerify.php");
         echo ('<h1 class="title">Résultat: ');
         echo $titre;
         echo ('</h1>');

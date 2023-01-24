@@ -3,6 +3,7 @@ require_once("modele/Auteur.php");
 require_once("modele/Document.php");
 require_once("modele/Categorie.php");
 require_once("modele/TypeDocument.php");
+require_once("modele/session.php");
 class Controleur
 {
     public static function controleurIndex()
@@ -21,7 +22,7 @@ class Controleur
 
         $tableauLivre = array($Document1, $Document2, $Document3, $Document4);
         include("./View/head.php");
-        include("./View/headerVisitor.php");
+        include("./controleur/headerVerify.php");
         include("./View/mainPage.php");
         include("./View/login.php");
         include("./View/signup.php");
@@ -33,7 +34,7 @@ class Controleur
         $titre = "Recherche";
         $tableauCategorie = Categorie::getAllCategories();
         include("./View/head.php");
-        include("./View/headerVisitor.php");
+        include("./controleur/headerVerify.php");
         include("./View/search-tab.php");
         include("./View/login.php");
         include("./View/signup.php");
