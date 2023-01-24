@@ -106,7 +106,17 @@ class Document extends Modele
 		$tableau = $resultat->fetchAll();
 		return $tableau;
 	}
+  /*
+  public static function searchDoc($titre, $auteur, $annee, $categorie){
+    $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";
+    $arg = 0;
+    for(i)
+    if($titre != NULL){
+    $requetePreparee += "WHERE Titre LIKE '%".$titre."%' ";
+    }
+    return 0;
 
+  }*/
 
   public static function addDocument($n, $t, $a)
   {
@@ -254,6 +264,8 @@ class Document extends Modele
     }
     echo $string;
   }
+
+
   public function afficherUne()
   {
     echo ('<div class="search-result-card">

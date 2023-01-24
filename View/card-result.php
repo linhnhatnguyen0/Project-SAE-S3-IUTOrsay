@@ -1,6 +1,7 @@
 <?php
 foreach ($tableau as $value) {
-    if(metaphone($value->getTitre()) == metaphone($_GET['titre'])){
+        $typeD = $value->getTypeDocByDoc();
+        
         echo ('<div class="search-result-card">
         <div class="search-result-card-img">
             <img src="./img/miserable.jpg" alt="image de la plante">
@@ -18,15 +19,15 @@ foreach ($tableau as $value) {
         echo ('</p>
             <ul>
                 <li>');
-        //echo $value->getNomTypeD();
-        echo ('</li>
-                <li>');
-        //echo $value->getNomCat();
-        echo ('</li>
-            </ul>
+        echo $typeD->getNomTypeD();
+        echo ('</li>');
+        if($value->getNumCat() != NULL){
+            $categorie = $value->getCategorieByDoc();
+            echo("<li>".$categorie->getNomCat()."</li>");
+        }
+        echo ('</ul>
             <a>Emprunter</a>
         </div>
         </div>');
-    }
 }
 ?>

@@ -1,7 +1,8 @@
 <?php
 require_once("modele/Document.php");
 require_once("modele/modele.php");
-
+require_once("modele/Categorie.php");
+require_once("modele/TypeDocument.php");
 class ControleurDocument
 {
 
@@ -40,7 +41,7 @@ class ControleurDocument
         echo ('<h1 class="title">Résultat: ');
         echo $titre;
         echo ('</h1>');
-        include("./View/search-result.php");
+        include("./View/byAuthor-result.php");
         include("./View/login.php");
         include("./View/signup.php");
         include("./View/footer.php");
