@@ -17,7 +17,6 @@ class ControleurDocument
         } else {
             $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee']);
         }
-<<<<<<< Updated upstream
         
         echo ('<h1 class="title">Résultat: ');
         if(isset($_GET['titre'])){
@@ -34,9 +33,7 @@ class ControleurDocument
         }
         echo $titre;
         echo ('</h1>');
-=======
 
->>>>>>> Stashed changes
         include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");
