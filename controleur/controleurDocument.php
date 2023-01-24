@@ -8,6 +8,7 @@ class ControleurDocument
 
     public static function getResultSearch()
     {
+<<<<<<< Updated upstream
         $titre = "yahoo";
         include("./View/head.php");
         include("./View/headerVisitor.php");
@@ -19,6 +20,15 @@ class ControleurDocument
             $tableau = Document::searchDoc($_GET['titre'],$_GET['auteur'], $_GET['annee']);
         }
         
+=======
+
+        include("./View/head.php");
+        include("./View/headerVisitor.php");
+        $Document1 = Document::getDocumentByNumDocument(1);
+        echo metaphone($Document1->getTitre()) . "</br>";
+        $tableau = Document::getAllDocuments();
+
+>>>>>>> Stashed changes
         include("./View/search-result.php");
         include("./View/login.php");
         include("./View/signup.php");

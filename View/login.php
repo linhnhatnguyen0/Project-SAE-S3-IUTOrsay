@@ -1,5 +1,5 @@
 <div class="overlay-dark"></div>
-<form class="login">
+<form class="login" action="index.php" method="">
     <div class="svgContainer">
         <div>
             <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -138,19 +138,20 @@
             </svg>
         </div>
     </div>
-
+    <input type="hidden" name="action" value="controleurIndexConnected">
+    <input type="hidden" name="controleur" value="controleurUtilisateur">
     <div class="inputGroup inputGroup1">
-        <label for="email1">Email</label>
-        <input type="text" id="email" class="email" maxlength="256" />
+        <label for="login">Email</label>
+        <input type="text" id="email" class="email" maxlength="256" name="login" autocomplete="off" />
         <p class="helper helper1">email@domain.com</p>
         <span class="indicator"></span>
     </div>
     <div class="inputGroup inputGroup2">
         <label for="password">Password</label>
-        <input type="password" id="password" class="password" />
+        <input type="password" id="password" class="password" name="mdp" autocomplete="off" />
     </div>
     <div class="inputGroup inputGroup3">
-        <button id="login">Se connecter</button>
+        <button id="login" type="submit">Se connecter</button>
         <a href="#" id="indicator">S'inscrire</a>
     </div>
 </form>
