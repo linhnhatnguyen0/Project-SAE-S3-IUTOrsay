@@ -20,6 +20,10 @@ input.v511_108,input.v511_96,input.v511_112{
 }
 input:focus{
   outline:none;
+
+}
+input{
+  border: none;
 }
 .v511_75 {
   width: 100%;
