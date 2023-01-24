@@ -4,7 +4,7 @@
     </div>
     <div class="menu">
         <ul>
-            <li><a href="./index.php?controleur=controleurUtilisateur&action=controleurIndexConnected">Accueil</a></li>
+            <li><a href="./index.php?controleur=controleur&action=controleurIndex">Accueil</a></li>
             <li><a href="./index.php?controleur=controleur&action=controleurSearch">Recherche</a></li>
             <li><a href="#">Catalogue</a></li>
             <li><a href="#">À propos</a></li>
@@ -15,7 +15,8 @@
         <ul>
             <li>Mon Compte</li>
             <li>Emprunt</li>
-            <li>Se déconnecter</li>
+            <li><a href="./index.php?controleur=controleurUtilisateur&action=deconnecterUtilisateur">Se déconnecter</a>
+            </li>
         </ul>
     </div>
 </header>

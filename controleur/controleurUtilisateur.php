@@ -1,5 +1,6 @@
 <?php
 require_once("./modele/utilisateur.php");
+require_once("./controleur/controleur.php");
 class ControleurUtilisateur extends Controleur
 {
     public static function controleurIndexConnected()
@@ -28,6 +29,13 @@ class ControleurUtilisateur extends Controleur
         } else {
             Controleur::controleurIndex();
         }
+    }
+    public static function deconnecterUtilisateur()
+    {
+        session_unset();
+        session_destroy();
+        setcookie(session_name(), '', time() - 1);
+        Controleur::controleurIndex();
     }
 }
 ?>
