@@ -7,8 +7,9 @@ body {
 ion-icon {
   color: white;
 }
-input[type=text]::placeholder,input[type=password]::placeholder{
+input[type=text]::placeholder,input[type=password]::placeholder,input[type=text],input[type=password]{
   color: rgba(237, 237, 237, 1);
+  font-weight:normal;
 }
 input.v426_322,input.v426_326 ,input.v426_330,input.v426_334,input.v426_338{
   background-color: rgba(26, 29, 50, 1);
@@ -338,7 +339,6 @@ input:focus{
 .v426_329 {
   width: 380px;
   height: 75px;
-  background: url("../images/v426_329.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
