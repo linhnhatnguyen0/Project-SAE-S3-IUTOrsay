@@ -8,11 +8,9 @@ class ControleurDocument
 
     public static function getResultSearch()
     {
-        $titre = "yahoo";
+        $titre = "Résultats de la recherche";
         include("./View/head.php");
         include("./View/headerVisitor.php");
-        $Document1 = Document::getDocumentByNumDocument(1);
-        echo metaphone($Document1->getTitre())."</br>";
         if(isset($_GET["cat"])){
             $tableau = Document::searchDoc($_GET['titre'],$_GET['auteur'], $_GET['annee'], $_GET['cat']);
         }else{

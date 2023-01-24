@@ -10,6 +10,13 @@
             <li><a href="#">À propos</a></li>
         </ul>
     </div>
-    <button class="btn-connect" type="button">Se connecter</button>
+    <div class="user">
+        <img src="" alt="userlogo">
+        <ul>
+            <li>Mon Compte</li>
+            <li>Emprunt</li>
+            <li>Se déconnecter</li>
+        </ul>
+    </div>
 </header>
 <main>
