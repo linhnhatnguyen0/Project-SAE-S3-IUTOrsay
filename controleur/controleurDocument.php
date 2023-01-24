@@ -9,7 +9,7 @@ class ControleurDocument
 
     public static function getResultSearch()
     {
-        $titre = "Résultats de la recherche";
+        $titre = "Résultat de la recherche";
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         if (isset($_GET["cat"])) {
@@ -18,20 +18,10 @@ class ControleurDocument
             $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee']);
         }
         
-        echo ('<h1 class="title">Résultat: ');
-        if(isset($_GET['titre'])){
-
+        echo ('<h1 class="title">Résultat de la recherche');
+        if($_GET['titre'] != NULL ){
+            echo (': '.$_GET['titre']);
         }
-        if(isset($_GET['auteur'])){
-            
-        }
-        if(isset($_GET['annee'])){
-            
-        }
-        if(isset($_GET['cat'])){
-            
-        }
-        echo $titre;
         echo ('</h1>');
 
         include("./View/search-result.php");
