@@ -110,7 +110,7 @@ body {
 .vbutton {
   color: rgba(255,255,255,1);
   position: absolute;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: Bold;
   font-size: 20px;
   padding: 10px;
@@ -122,7 +122,7 @@ body {
   position: absolute;
   top: 183px;
   left: 23px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
@@ -163,7 +163,7 @@ body {
   position: absolute;
   top: 301px;
   left: 117px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: Bold;
   font-size: 20px;
   opacity: 1;
@@ -175,7 +175,7 @@ body {
   position: absolute;
   top: 183px;
   left: 23px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
@@ -184,11 +184,6 @@ body {
 .v492_797 {
   width: 310px;
   height: 378px;
-  background: url("../images/v492_797.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 837px;
   left: 895px;
@@ -214,7 +209,7 @@ body {
   position: absolute;
   top: 183px;
   left: 23px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;
@@ -223,11 +218,6 @@ body {
 .v492_791 {
   width: 310px;
   height: 378px;
-  background: url("../images/v492_791.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 259px;
   left: 1364px;
@@ -253,7 +243,7 @@ body {
   position: absolute;
   top: 183px;
   left: 23px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: Bold;
   font-size: 30px;
   opacity: 1;

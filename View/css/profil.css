@@ -64,10 +64,6 @@ input:focus{
 .v426_304 {
   width: 250px;
   height: 177px;
-  background: url("../images/v426_304.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -121,7 +117,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 39px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 14px;
   opacity: 1;
@@ -130,11 +126,6 @@ input:focus{
 .v426_309 {
   width: 220px;
   height: 18px;
-  background: url("../images/v426_309.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 80px;
   left: 25px;
@@ -151,7 +142,7 @@ input:focus{
   position: absolute;
   top: 1px;
   left: 39px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 14px;
   opacity: 1;
@@ -160,11 +151,6 @@ input:focus{
 .v426_312 {
   width: 198px;
   height: 17px;
-  background: url("../images/v426_312.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 136px;
   left: 25px;
@@ -177,11 +163,6 @@ input:focus{
 .v426_313 {
   width: 14px;
   height: 13px;
-  background: url("../images/v426_313.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 2px;
   left: 0px;
@@ -194,7 +175,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 39px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 14px;
   opacity: 1;
@@ -243,11 +224,6 @@ input:focus{
 .v426_321 {
   width: 596px;
   height: 75px;
-  background: url("../images/v426_321.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 465px;
   left: 820px;
@@ -276,7 +252,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 16px;
   opacity: 1;
@@ -288,7 +264,7 @@ input:focus{
   position: absolute;
   top: 37px;
   left: 17px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold Italic;
   font-size: 20px;
   opacity: 1;
@@ -297,11 +273,6 @@ input:focus{
 .v426_325 {
   width: 177px;
   height: 75px;
-  background: url("../images/v426_325.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 347px;
   left: 820px;
@@ -330,7 +301,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 16px;
   opacity: 1;
@@ -342,7 +313,7 @@ input:focus{
   position: absolute;
   top: 37px;
   left: 17px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold Italic;
   font-size: 20px;
   opacity: 1;
@@ -383,7 +354,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 16px;
   opacity: 1;
@@ -395,7 +366,7 @@ input:focus{
   position: absolute;
   top: 37px;
   left: 17px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold Italic;
   font-size: 20px;
   opacity: 1;
@@ -404,11 +375,6 @@ input:focus{
 .v426_333 {
   width: 596px;
   height: 75px;
-  background: url("../images/v426_333.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 587px;
   left: 820px;
@@ -437,7 +403,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 16px;
   opacity: 1;
@@ -449,7 +415,7 @@ input:focus{
   position: absolute;
   top: 37px;
   left: 20px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold Italic;
   font-size: 20px;
   opacity: 1;
@@ -458,11 +424,6 @@ input:focus{
 .v426_337 {
   width: 596px;
   height: 75px;
-  background: url("../images/v426_337.png");
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-size: cover;
-  opacity: 1;
   position: absolute;
   top: 705px;
   left: 820px;
@@ -491,7 +452,7 @@ input:focus{
   position: absolute;
   top: 0px;
   left: 0px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold;
   font-size: 16px;
   opacity: 1;
@@ -503,7 +464,7 @@ input:focus{
   position: absolute;
   top: 37px;
   left: 20px;
-  font-family: Montserrat;
+  font-family: "Mona Sans";
   font-weight: SemiBold Italic;
   font-size: 20px;
   opacity: 1;
