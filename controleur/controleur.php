@@ -4,6 +4,7 @@ require_once("modele/Document.php");
 require_once("modele/Categorie.php");
 require_once("modele/TypeDocument.php");
 require_once("modele/Exemplaire.php");
+require_once("modele/emprunt.php");
 require_once("modele/session.php");
 class Controleur
 {
@@ -47,7 +48,13 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue']);
-        if (count($tableauExemplaireDispo) > 0) {
+        /* -- TEST D'AJOUT D'EMPRUNT --
+        date_default_timezone_set('Europe/Paris');
+        $date = date('Y-m-d');
+        echo ($date);
+        Emprunt::addEmprunt($date, 1, 67); 
+        */
+        if(count($tableauExemplaireDispo) > 0){
             //Cas où il y a des exemplaires disponibles
         } else {
             //Cas où il n'y a pas d'exemplaire disponible

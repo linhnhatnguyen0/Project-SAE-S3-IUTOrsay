@@ -62,12 +62,15 @@ class Emprunt
     }
   }
 
-  public function addEmprunt($dateEmprunt, $numUtilisateur, $numExemplaire)
+  public function addEmprunt($dateRenduPrevu, $numUtilisateur, $numExemplaire)
   {
-    $requete = "UPDATE `Emprunt` SET `DateEmprunt`= :tag_date,`NumExemplaire`= :tag_e,`NumUtilisateur`= :tag_u;";
+    date_default_timezone_set('Europe/Paris');
+    $dateEmprunt = date('Y-m-d');
+    $requete = "INSERT INTO `Emprunt` (`DateEmprunt`, `DateRenduPrevu`, `NumExemplaire`, `NumUtilisateur`) VALUES (:tag_dateE, :tag_dateRP, :tag_e, :tag_u);";
     $result = Connexion::pdo()->prepare($requete);
     $valeurs = array(
-      "tag_date" => $dateEmprunt,
+      "tag_dateE" => $dateEmprunt,
+      "tag_dateRP" => $dateRenduPrevu,
       "tag_e" => $numExemplaire,
       "tag_u" => $numUtilisateur
     );
@@ -78,5 +81,6 @@ class Emprunt
     }
   }
 }
+
 
 ?>
