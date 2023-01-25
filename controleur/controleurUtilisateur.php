@@ -51,9 +51,17 @@ class ControleurUtilisateur extends Controleur
         include("./View/signup.php");
         include("./View/footer.php");
     }
-    public static function ajouterUtilisateur($nom, $prenom, $age, $etab, $email, $mdp, $tel)
+    public static function ajouterUtilisateur()
     {
-
+        $titre = "modification utilisateur";
+        $n = $_GET["nom"];
+        $p = $_GET["prenom"];
+        $et = $_GET["etab"];
+        $e = $_GET["email"];
+        $l = $_GET["login"];
+        $m = $_GET["mdp"];
+        $t = $_GET["type"];
+        $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $l, $m, $t);
     }
 }
 ?>

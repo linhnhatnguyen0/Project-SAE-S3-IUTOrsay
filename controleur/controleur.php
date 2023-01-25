@@ -28,7 +28,6 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/mainPage.php");
-        include("./View/signup.php");
         include("./View/footer.php");
     }
 
@@ -39,7 +38,6 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/search-tab.php");
-        include("./View/signup.php");
         include("./View/footer.php");
     }
 
@@ -55,7 +53,6 @@ class Controleur
             //Cas où il n'y a pas d'exemplaire disponible
             echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . " en langue " . $_GET['numLangue'] . "</h1>");
         }
-        include("./View/signup.php");
         include("./View/footer.php");
     }
 
