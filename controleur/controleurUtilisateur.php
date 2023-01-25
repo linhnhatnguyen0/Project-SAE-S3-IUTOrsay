@@ -18,6 +18,8 @@ class ControleurUtilisateur extends Controleur
         $Document2 = Document::getDocumentByNumDocument(26505);
 
         $tableauLivre = array($Document1, $Document2, $Document3, $Document4);
+        $tableauAuteurPopulaire = Auteur::getPopularAuteurs();
+        $tableauLivrePopulaire = Document::getPopularDocuments();
         $l = $_GET["login"];
         $mdp = $_GET["mdp"];
         if (Utilisateur::checkMDP($l, $mdp)) {
