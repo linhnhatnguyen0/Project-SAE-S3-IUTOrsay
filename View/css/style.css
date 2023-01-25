@@ -64,6 +64,26 @@ header a.btn-connect {
 header a.btn-connect:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
+header .user {
+  width: 2%;
+  position: relative;
+}
+header .user .logo {
+  background-color: rgb(148, 148, 148);
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+header .user ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  display: none;
+  flex-direction: column;
+}
+header .user:hover ul {
+  display: flex;
+}
 
 main {
   overflow-x: hidden;
@@ -141,7 +161,7 @@ main .main-page .acceuil .text {
   color: #fff;
   width: 60%;
   text-align: center;
-  margin: 120px 0;
+  margin: 100px 0;
 }
 main .main-page .acceuil .text span {
   font-weight: 700;

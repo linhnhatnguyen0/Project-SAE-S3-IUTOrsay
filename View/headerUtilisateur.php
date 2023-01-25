@@ -11,8 +11,10 @@
         </ul>
     </div>
     <div class="user">
-        <img src="" alt="userlogo">
-        <ul>
+        <div class="logo">
+            <img src="" alt="userlogo">
+        </div>
+        <ul class="user-func">
             <li>Mon Compte</li>
             <li>Emprunt</li>
             <li><a href="./index.php?controleur=controleurUtilisateur&action=deconnecterUtilisateur">Se déconnecter</a>
