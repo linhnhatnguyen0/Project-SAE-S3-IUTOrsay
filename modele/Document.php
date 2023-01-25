@@ -107,7 +107,13 @@ class Document extends Modele
 		return $tableau;
 	}
   
-
+  public static function getPopularDocuments() {
+		$requete = "SELECT COUNT(*) AS Lignes, NumDocument, Titre, AnneeParution, NumTypeD, NumAuteur, NumCat  FROM Document NATURAL JOIN Exemplaire NATURAL JOIN Emprunt GROUP BY NumDocument ORDER BY Lignes DESC";
+		$resultat = Connexion::pdo()->query($requete);
+		$resultat->setFetchMode(PDO::FETCH_CLASS,'Document');
+		$tableau = $resultat->fetchAll();
+		return $tableau;
+	}
 
   public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL){
     $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";

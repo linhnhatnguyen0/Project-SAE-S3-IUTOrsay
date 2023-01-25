@@ -1,5 +1,5 @@
 <?php
-for ($i = 0; $i < count($tableauLivre); $i++) {   
+for ($i = 0; $i < count($tableauLivrePopulaire) ; $i++) {   
     echo (' <div class="livre">
                 <div class="livre-img">
                     <img src="./img/Victor_Hugo_001 1.png" alt="" />
@@ -7,29 +7,32 @@ for ($i = 0; $i < count($tableauLivre); $i++) {
                 <div class="livre-title">
                     <h3>
                     ');
-    echo ($tableauLivre[$i]->getTitre());
+    echo ($tableauLivrePopulaire[$i]->getTitre());
     echo ('
         </h3>');
     echo ('<p><strong>Auteur:</strong> ');
-    $auteur = $tableauLivre[$i]->getAuteurByDoc();
+    $auteur = $tableauLivrePopulaire[$i]->getAuteurByDoc();
     echo ($auteur->getNomAuteur()." ".$auteur->getPrenomAuteur());
     echo ('</p>');
     echo ('<p><strong>Année de parution:</strong> ');
-    echo ($tableauLivre[$i]->getAnneeParution());
+    echo ($tableauLivrePopulaire[$i]->getAnneeParution());
     echo ('</p>');
     echo('<ul>');
 
-    if($tableauLivre[$i]->getNumCat() != NULL){
-        $categorie = $tableauLivre[$i]->getCategorieByDoc();
+    if($tableauLivrePopulaire[$i]->getNumCat() != NULL){
+        $categorie = $tableauLivrePopulaire[$i]->getCategorieByDoc();
         echo("<li>".$categorie->getNomCat()."</li>");
     }
-    $TypeDoc = $tableauLivre[$i]->getTypeDocByDoc();
+    $TypeDoc = $tableauLivrePopulaire[$i]->getTypeDocByDoc();
     echo("<li>".$TypeDoc->getNomTypeD()."</li>");
     echo('</ul>');
     echo('<a>Emprunter</a>');
     echo ('
         </div>
         </div>');
+    if($i == 3){
+        $i = count($tableauLivrePopulaire);
+    }
     }
 
 
