@@ -10,11 +10,13 @@ for ($i = 0; $i < count($tableauAuteurPopulaire); $i++) {
     echo ($tableauAuteurPopulaire[$i]->getNomAuteur() . " " . $tableauAuteurPopulaire[$i]->getPreNomAuteur());
     echo ('
     </h3>');
+    echo ('<p>');
     if ($tableauAuteurPopulaire[$i]->getAnneeNaissance() != NULL) {
         echo ("Année de naissance: " . $tableauAuteurPopulaire[$i]->getAnneeNaissance());
     } else {
         echo ('Année de naissance: inconnue');
     }
+    echo ('</p>');
     echo ('<p>');
     Document::getNomDocumentByAuteur($tableauAuteurPopulaire[$i]->getNumAuteur());
     echo ('</p>

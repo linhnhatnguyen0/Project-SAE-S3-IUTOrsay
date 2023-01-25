@@ -19,6 +19,12 @@
     align-items: flex-start;
     flex-direction: column;
     margin-bottom: 20px;
+    p {
+      display: none;
+      color: rgb(228, 88, 88);
+      font-size: 14px;
+      margin-top: 5px;
+    }
   }
   label {
     margin-bottom: 5px;

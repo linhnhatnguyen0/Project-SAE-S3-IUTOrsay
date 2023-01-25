@@ -12,7 +12,7 @@
     </div>
     <div class="user">
         <div class="logo">
-            <img src="" alt="userlogo">
+
         </div>
         <ul class="user-func">
             <li>Mon Compte</li>

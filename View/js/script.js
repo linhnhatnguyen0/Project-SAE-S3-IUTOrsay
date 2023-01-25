@@ -4,22 +4,7 @@ let image1 = $(".img-1");
 let image2 = $(".img-2");
 let image3 = $(".img-3");
 let image4 = $(".img-4");
-$(document).scroll(function () {
-  var imagePos = $(document).scrollTop();
-  console.log("imagePos=" + imagePos);
-  // if (imagePos > 0) {
-  //   image1.animate({ left: -600 + "px" }, 100, "linear");
-  //   image2.animate({ right: -600 + "px" }, 100, "linear");
-  //   image4.animate({ right: -600 + "px" }, 100, "linear");
-  //   image3.animate({ bottom: 2000 + "px" }, 100, "linear");
-  // }
-  // if (imagePos == 0) {
-  //   image1.animate({ left: 0 + "px" }, 100, "linear");
-  //   image2.animate({ right: 0 + "px" }, 100, "linear");
-  //   image4.animate({ right: 100 + "px" }, 100, "linear");
-  //   image3.animate({ bottom: 0 + "px" }, 100, "linear");
-  // }
-});
+
 $(document).ready(function () {
   if ($("main").children().attr("class") == "main-page") {
     console.log("haha");
@@ -107,5 +92,15 @@ $("label.for-dropdown").on("click", function () {
   }
   if ($(".search-input-categorie-dropdown").css("opacity") == 1) {
     $(".search-input-categorie-dropdown").css("opacity", 0);
+  }
+});
+
+var txt2 = $("<p></p>").text("Please fill the input");
+$("#sign-up input").blur(function () {
+  if (!$.trim(this.value).length) {
+    // zero-length string AFTER a trim
+    $(this).parent().children("p").css("display", "block");
+  } else {
+    $(this).parent().children("p").css("display", "none");
   }
 });
