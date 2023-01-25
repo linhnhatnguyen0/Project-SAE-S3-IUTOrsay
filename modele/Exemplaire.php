@@ -57,7 +57,7 @@ class Exemplaire
   }
 
   public static function listerExemplaireDisponible($nd, $l){
-    $requetePreparee = "SELECT NumExemplaire FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NULL AND NumDocument =".$nd." AND NumLangue = ".$nd." ";
+    $requetePreparee = "SELECT NumExemplaire, EtatExemplaire, NumLangue, NumDocument FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NULL AND NumDocument =".$nd." AND NumLangue = ".$nd." ";
     $resultat = Connexion::pdo()->prepare($requetePreparee);
 
     try {
