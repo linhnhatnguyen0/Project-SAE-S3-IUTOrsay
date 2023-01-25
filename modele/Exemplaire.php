@@ -56,7 +56,7 @@ class Exemplaire
     }
   }
 
-  public static function verifierDisponible($nd, $l){
+  public static function listerExemplaireDisponible($nd, $l){
     $requetePreparee = "SELECT NumExemplaire FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NULL AND NumDocument =".$nd." AND NumLangue = ".$nd." ";
     $resultat = Connexion::pdo()->prepare($requetePreparee);
 
