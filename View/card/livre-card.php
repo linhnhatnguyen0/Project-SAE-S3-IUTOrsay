@@ -26,7 +26,7 @@ for ($i = 0; $i < count($tableauLivrePopulaire) ; $i++) {
     $TypeDoc = $tableauLivrePopulaire[$i]->getTypeDocByDoc();
     echo("<li>".$TypeDoc->getNomTypeD()."</li>");
     echo('</ul>');
-    echo('<a>Emprunter</a>');
+    echo("<a href='./index.php?controleur=controleur&action=verifierdispo&numDoc={$tableauLivrePopulaire[$i]->getNumDocument()}&numLangue=1'>Emprunter</a>");
     echo ('
         </div>
         </div>');

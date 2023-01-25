@@ -3,6 +3,7 @@ require_once("modele/Auteur.php");
 require_once("modele/Document.php");
 require_once("modele/Categorie.php");
 require_once("modele/TypeDocument.php");
+require_once("modele/Exemplaire.php");
 require_once("modele/session.php");
 class Controleur
 {
@@ -27,7 +28,6 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/mainPage.php");
-        include("./View/login.php");
         include("./View/signup.php");
         include("./View/footer.php");
     }
@@ -39,7 +39,24 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/search-tab.php");
-        include("./View/login.php");
+        include("./View/signup.php");
+        include("./View/footer.php");
+    }
+
+    public static function verifierdispo()
+    {
+        $titre = "verifier dispo";
+        include("./View/head.php");
+        include("./controleur/headerVerify.php");
+        $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue']);
+        if(count($tableauExemplaireDispo) > 0){
+            //echo ($tableauExemplaireDispo[0]->getNumExemplaire());
+        }else{
+            echo('</br>');
+            echo (count($tableauExemplaireDispo));
+            
+            echo ("Pas d'exemplaire disponible pour ".$_GET['numDoc']." en langue ".$_GET['numLangue']);
+        }
         include("./View/signup.php");
         include("./View/footer.php");
     }
