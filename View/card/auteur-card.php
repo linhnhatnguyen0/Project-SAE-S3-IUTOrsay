@@ -24,7 +24,7 @@ for ($i = 0; $i < count($tableauAuteurPopulaire); $i++) {
         ses oeuvres</a>
     </div>
     </div>');
-    if($i == 3){
+    if ($i == 3) {
         $i = count($tableauLivrePopulaire);
     }
 }
