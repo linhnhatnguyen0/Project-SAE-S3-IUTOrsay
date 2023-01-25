@@ -29,7 +29,6 @@ class ControleurUtilisateur extends Controleur
             include("./View/mainPage.php");
             include("./View/footer.php");
         } else {
-            echo ("wrong password");
             ControleurUtilisateur::afficherLogin();
         }
     }
