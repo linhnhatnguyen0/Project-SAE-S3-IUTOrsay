@@ -14,13 +14,16 @@ class Controleur
         $Auteur3 = Auteur::getAuteurById(3);
         $Auteur4 = Auteur::getAuteurById(4);
         $tableauAuteur = array($Auteur1, $Auteur2, $Auteur3, $Auteur4);
-
+    
         $Document1 = Document::getDocumentByNumDocument(1);
         $Document4 = Document::getDocumentByNumDocument(2);
         $Document3 = Document::getDocumentByNumDocument(8337);
         $Document2 = Document::getDocumentByNumDocument(26505);
 
         $tableauLivre = array($Document1, $Document2, $Document3, $Document4);
+
+        $tableauAuteurPopulaire = Auteur::getPopularAuteurs();
+        $tableauLivrePopulaire = Document::getPopularDocuments();
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/mainPage.php");

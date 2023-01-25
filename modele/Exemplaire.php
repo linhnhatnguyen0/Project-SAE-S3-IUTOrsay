@@ -6,6 +6,9 @@ class Exemplaire
   //attribut
   private $NumExemplaire;
   private $EtatExemplaire;
+  private $NumLangue;
+  private $NumDocument;
+
 
   //getter
   public function geteNumExemplaire()
@@ -16,7 +19,14 @@ class Exemplaire
   {
     return $this->EtatExemplaire;
   }
-
+  public function getNumLangue()
+  {
+    return $this->NumLangue;
+  }
+  public function getNumDocument()
+  {
+    return $this->NumDocument;
+  }
 
   //setter
   public function setNumExemplaire($n)
@@ -26,6 +36,14 @@ class Exemplaire
   public function setEtatExemplaire($e)
   {
     $this->EtatExemplaire = $e;
+  }
+  public function setNumLangue($n)
+  {
+    $this->NumLangue = $n;
+  }
+  public function setgetNumDocument($n)
+  {
+    $this->getNumDocument = $n;
   }
 
 
@@ -38,6 +56,19 @@ class Exemplaire
     }
   }
 
+  public static function listerExemplaireDisponible($nd, $l){
+    $requetePreparee = "SELECT NumExemplaire, EtatExemplaire, NumLangue, NumDocument FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NULL AND NumDocument =".$nd." AND NumLangue = ".$nd." ";
+    $resultat = Connexion::pdo()->prepare($requetePreparee);
+
+    try {
+      $resultat->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
+      $tableau = $resultat->fetchAll();
+      return $tableau;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+      return false;
+    }
+  }
 
 }
 
