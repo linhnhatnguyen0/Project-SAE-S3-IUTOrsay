@@ -73,9 +73,9 @@ people-outline {
     background-color: var(--ronchi);
     border-radius: 20px;
     display: flex;
-    height: 45px;
+    height: 25px;
     justify-content: flex-end;
-    min-width: 267px;
+    /* min-width: 267px; */
     padding: 11px 8px;
 }
 
@@ -166,7 +166,7 @@ calendar-outline {
 .decouvrir {
     color: var(--white);
     font-family: var(--font-family-inter);
-    font-size: xx-large;
+    font-size:60px;
     font-weight: 800;
     left: 0;
     letter-spacing: 0;
@@ -204,8 +204,8 @@ calendar-outline {
 
 .inter-bold-white-40px {
     color: var(--white);
-    font-family: var(--font-family-inter);
-    font-size: var(--font-size-l);
+    font-family: 'Mona-Sans';
+    font-size: 30px;
     font-weight: 700;
     font-style: normal;
 }
