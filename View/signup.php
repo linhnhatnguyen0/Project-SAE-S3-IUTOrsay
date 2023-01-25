@@ -17,6 +17,10 @@
         <label>Email</label>
         <input type="text" placeholder="Email" name="email">
     </div>
+    <div class="tel">
+        <label>Numéro Téléphone</label>
+        <input type="text" placeholder="Numéro Téléphone" name="tel">
+    </div>
     <div class="login-input">
         <label>Login</label>
         <input type="text" placeholder="Login" name="login">
@@ -24,10 +28,6 @@
     <div class="password">
         <label>Mot de passe</label>
         <input type="password" placeholder="Mot de passe" name="mdp">
-    </div>
-    <div class="tel">
-        <label>Numéro Téléphone</label>
-        <input type="text" placeholder="Numéro Téléphone" name="tel">
     </div>
     <button type="submit">S'inscrire</button>
 </form>

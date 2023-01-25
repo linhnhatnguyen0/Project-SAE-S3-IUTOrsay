@@ -119,17 +119,15 @@ class Utilisateur
     }
   }
 
-
-
-
-  public static function ajouterUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $TelephoneUtilisateur, $loginUtilisateur, $mdpUtilisateur)
+  public static function ajouterUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $EmailUtilisateur, $TelephoneUtilisateur, $loginUtilisateur, $mdpUtilisateur)
   {
-    $requetePreparee = "INSERT INTO `Utilisateur`(`NomUtilisateur`, `PrenomUtilisateur`, `EtablissementUtilisateur`, `TelephoneUtilisateur`, `loginUtilisateur`, `mdpUtilisateur`) VALUES (:tag_nom,:tag_prenom,:tag_etab,:tag_tel,:tag_login,:tag_mdp);";
+    $requetePreparee = "INSERT INTO `Utilisateur`(`NomUtilisateur`, `PrenomUtilisateur`, `EtablissementUtilisateur`,`EmailUtilisateur`, `TelephoneUtilisateur`, `loginUtilisateur`, `mdpUtilisateur`) VALUES (:tag_nom,:tag_prenom,:tag_etab,:tag_email,:tag_tel,:tag_login,:tag_mdp);";
     $req_prep = Connexion::pdo()->prepare($requetePreparee);
     $valeurs = array(
       "tag_nom" => $NomUtilisateur,
       "tag_prenom" => $PrenomUtilisateur,
       "tag_etab" => $EtablissementUtilisateur,
+      "tag_email" => $EmailUtilisateur,
       "tag_tel" => $TelephoneUtilisateur,
       "tag_login" => $loginUtilisateur,
       "tag_mdp" => $mdpUtilisateur

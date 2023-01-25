@@ -58,10 +58,11 @@ class ControleurUtilisateur extends Controleur
         $p = $_GET["prenom"];
         $et = $_GET["etab"];
         $e = $_GET["email"];
+        $tel = $_GET["tel"];
         $l = $_GET["login"];
         $m = $_GET["mdp"];
-        $t = $_GET["type"];
-        $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $l, $m, $t);
+        $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $tel, $l, $m);
+        self::controleurIndexConnected();
     }
 }
 ?>
