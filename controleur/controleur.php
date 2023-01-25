@@ -3,6 +3,8 @@ require_once("modele/Auteur.php");
 require_once("modele/Document.php");
 require_once("modele/Categorie.php");
 require_once("modele/TypeDocument.php");
+require_once("modele/Exemplaire.php");
+require_once("modele/emprunt.php");
 require_once("modele/session.php");
 class Controleur
 {
@@ -21,11 +23,12 @@ class Controleur
         $Document2 = Document::getDocumentByNumDocument(26505);
 
         $tableauLivre = array($Document1, $Document2, $Document3, $Document4);
+
+        $tableauAuteurPopulaire = Auteur::getPopularAuteurs();
+        $tableauLivrePopulaire = Document::getPopularDocuments();
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/mainPage.php");
-        include("./View/login.php");
-        include("./View/signup.php");
         include("./View/footer.php");
     }
 
@@ -36,8 +39,27 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         include("./View/search-tab.php");
-        include("./View/login.php");
-        include("./View/signup.php");
+        include("./View/footer.php");
+    }
+
+    public static function verifierdispo()
+    {
+        $titre = "verifier dispo";
+        include("./View/head.php");
+        include("./controleur/headerVerify.php");
+        $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue']);
+        /* -- TEST D'AJOUT D'EMPRUNT --
+        date_default_timezone_set('Europe/Paris');
+        $date = date('Y-m-d');
+        echo ($date);
+        Emprunt::addEmprunt($date, 1, 67); 
+        */
+        if(count($tableauExemplaireDispo) > 0){
+            //Cas où il y a des exemplaires disponibles
+        } else {
+            //Cas où il n'y a pas d'exemplaire disponible
+            echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . " en langue " . $_GET['numLangue'] . "</h1>");
+        }
         include("./View/footer.php");
     }
 

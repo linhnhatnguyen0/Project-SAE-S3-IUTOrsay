@@ -60,6 +60,14 @@ class Auteur extends Modele
     }
   }
 
+  public static function getPopularAuteurs() {
+		$requete = "SELECT COUNT(*) AS Lignes, NumAuteur, NomAuteur , PrenomAuteur, AnneeNaissance FROM Auteur NATURAL JOIN Document NATURAL JOIN Exemplaire NATURAL JOIN Emprunt GROUP BY NumAuteur ORDER BY Lignes DESC";
+		$resultat = Connexion::pdo()->query($requete);
+		$resultat->setFetchMode(PDO::FETCH_CLASS,'Auteur');
+		$tableau = $resultat->fetchAll();
+		return $tableau;
+	}
+
 
   public static function getAuteurById($NumAuteur)
   {

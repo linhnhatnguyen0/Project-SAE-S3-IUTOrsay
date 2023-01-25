@@ -7,18 +7,15 @@ $inputBG: #f3fafd;
   width: 100vw;
   height: 100vh;
   position: fixed;
-  z-index: 2;
-  background-color: rgba(0, 0, 0, 0.7);
-  display: none;
+  z-index: 4;
+  background-color: rgb(0, 0, 0);
   top: 0;
 }
-.active {
-  display: block !important;
-}
+
 .login {
-  display: none;
-  z-index: 4;
-  position: absolute;
+  display: block;
+  z-index: 5;
+  position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

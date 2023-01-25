@@ -1,5 +1,5 @@
 <div class="overlay-dark"></div>
-<form class="login" action="index.php" method="" autocomplete="off">
+<form class="login" action="index.php" method="get" autocomplete="off">
     <div class="svgContainer">
         <div>
             <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
@@ -152,6 +152,6 @@
     </div>
     <div class="inputGroup inputGroup3">
         <button id="login" type="submit">Se connecter</button>
-        <a href="#" id="indicator">S'inscrire</a>
+        <a href="./index.php?controleur=controleurUtilisateur&action=afficherSignUp" id="indicator">S'inscrire</a>
     </div>
 </form>

@@ -1,5 +1,5 @@
 .sign-up {
-  display: none;
+  display: block;
   z-index: 4;
   width: 100%;
   max-width: 800px;
@@ -42,9 +42,6 @@
   }
   .prenom {
     width: 60%;
-  }
-  .age {
-    width: 20%;
   }
   .faculte {
     width: 70%;

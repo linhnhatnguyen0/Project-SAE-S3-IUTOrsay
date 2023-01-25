@@ -27,7 +27,8 @@ class ControleurUtilisateur extends Controleur
             include("./View/mainPage.php");
             include("./View/footer.php");
         } else {
-            Controleur::controleurIndex();
+            echo ("wrong password");
+            ControleurUtilisateur::afficherLogin();
         }
     }
     public static function deconnecterUtilisateur()
@@ -36,6 +37,32 @@ class ControleurUtilisateur extends Controleur
         session_destroy();
         setcookie(session_name(), '', time() - 1);
         Controleur::controleurIndex();
+    }
+    public static function afficherLogin()
+    {
+        include("./View/head.php");
+        include("./View/login.php");
+        include("./View/footer.php");
+
+    }
+    public static function afficherSignUp()
+    {
+        include("./View/head.php");
+        include("./View/signup.php");
+        include("./View/footer.php");
+    }
+    public static function ajouterUtilisateur()
+    {
+        $titre = "modification utilisateur";
+        $n = $_GET["nom"];
+        $p = $_GET["prenom"];
+        $et = $_GET["etab"];
+        $e = $_GET["email"];
+        $tel = $_GET["tel"];
+        $l = $_GET["login"];
+        $m = $_GET["mdp"];
+        $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $tel, $l, $m);
+        self::controleurIndexConnected();
     }
 }
 ?>

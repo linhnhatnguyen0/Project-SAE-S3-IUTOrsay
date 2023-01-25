@@ -7,7 +7,7 @@ class Utilisateur
   private $NumUtilisateur;
   private $NomUtilisateur;
   private $PrenomUtilisateur;
-  private $AdresseUtilisateur;
+  private $EtablissementUtilisateur;
   private $TelephoneUtilisateur;
   private $loginUtilisateur;
   private $mdpUtilisateur;
@@ -27,9 +27,9 @@ class Utilisateur
   {
     return $this->PrenomUtilisateur;
   }
-  public function getAdresseUtilisateur()
+  public function getEtablissementUtilisateur()
   {
-    return $this->AdresseUtilisateur;
+    return $this->EtablissementUtilisateur;
   }
   public function getTelephoneUtilisateur()
   {
@@ -70,9 +70,9 @@ class Utilisateur
   {
     $this->PrenomUtilisateur = $p;
   }
-  public function setAdresseUtilisateur($a)
+  public function setEtablissementUtilisateur($a)
   {
-    $this->AdresseUtilisateur = $a;
+    $this->EtablissementUtilisateur = $a;
   }
   public function setTelephoneUtilisateur($t)
   {
@@ -110,7 +110,7 @@ class Utilisateur
       $this->NumUtilisateur = $num;
       $this->NomUtilisateur = $nom;
       $this->PrenomUtilisateur = $prenom;
-      $this->AdresseUtilisateur = $adresse;
+      $this->EtablissementUtilisateur = $adresse;
       $this->TelephoneUtilisateur = $telephone;
       $this->loginUtilisateur = $login;
       $this->mdpUtilisateur = $mdp;
@@ -119,23 +119,27 @@ class Utilisateur
     }
   }
 
-
-
-  /*
-  public static function ajouterUtilisateur($NomUtilisateur, $PrenomUtilisateur, $AdresseUtilisateur, $TelephoneUtilisateur, $loginUtilisateur, $mdpUtilisateur, $NumType, ) {
-  $requetePreparee = "INSERT INTO Recette (`libelle`,`difficulte`, `description`) VALUES (:tag_libelle, :tag_difficulte, :tag_description);";
-  $req_prep = Connexion::pdo()->prepare($requetePreparee);
-  $valeurs = array(
-  "tag_libelle" => $libelle,
-  "tag_difficulte" => $difficulte,
-  "tag_description" => $description,
-  );
-  try {
-  $req_prep->execute($valeurs);
-  } catch (PDOException $e) {
-  echo "erreur : ".$e->getMessage()."<br>";
+  public static function ajouterUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $EmailUtilisateur, $TelephoneUtilisateur, $loginUtilisateur, $mdpUtilisateur)
+  {
+    $requetePreparee = "INSERT INTO `Utilisateur`(`NomUtilisateur`, `PrenomUtilisateur`, `EtablissementUtilisateur`,`EmailUtilisateur`, `TelephoneUtilisateur`, `loginUtilisateur`, `mdpUtilisateur`) VALUES (:tag_nom,:tag_prenom,:tag_etab,:tag_email,:tag_tel,:tag_login,:tag_mdp);";
+    $req_prep = Connexion::pdo()->prepare($requetePreparee);
+    $valeurs = array(
+      "tag_nom" => $NomUtilisateur,
+      "tag_prenom" => $PrenomUtilisateur,
+      "tag_etab" => $EtablissementUtilisateur,
+      "tag_email" => $EmailUtilisateur,
+      "tag_tel" => $TelephoneUtilisateur,
+      "tag_login" => $loginUtilisateur,
+      "tag_mdp" => $mdpUtilisateur
+    );
+    try {
+      $req_prep->execute($valeurs);
+      return true;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+      return false;
+    }
   }
-  }*/
 
   public static function checkMDP($l, $m)
   {
@@ -153,6 +157,7 @@ class Utilisateur
     else
       return false;
   }
+
 
 }
 
