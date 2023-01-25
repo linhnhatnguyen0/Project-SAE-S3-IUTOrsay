@@ -37,5 +37,19 @@ class ControleurUtilisateur extends Controleur
         setcookie(session_name(), '', time() - 1);
         Controleur::controleurIndex();
     }
+    public static function afficherLogin()
+    {
+        if (!Session::userConnected() && !Session::userConnecting()) {
+            include("./View/head.php");
+            include("./View/headerVisitor.php");
+            include("./View/login.php");
+            include("./View/mainPage.php");
+            include("./View/footer.php");
+            $signedIn = false;
+        } else {
+            include("./View/headerUtilisateur.php");
+            $signedIn = true;
+        }
+    }
 }
 ?>

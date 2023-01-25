@@ -5,5 +5,6 @@ class Modele
     {
         return $this->$attribut;
     }
+
 }
 ?>
