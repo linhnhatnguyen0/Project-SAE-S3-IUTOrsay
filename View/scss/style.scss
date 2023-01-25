@@ -9,7 +9,9 @@
 html {
   font-family: "Mona Sans";
 }
-
+body {
+  background-color: #11141a;
+}
 header {
   width: 100%;
   display: flex;
@@ -44,9 +46,10 @@ header {
       }
     }
   }
-  button {
+  a.btn-connect {
     @include button;
     font-size: 1rem;
+    text-decoration: none;
   }
 }
 main {

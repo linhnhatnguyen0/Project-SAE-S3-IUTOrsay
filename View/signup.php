@@ -1,4 +1,4 @@
-<form class="sign-up">
+<form class="sign-up" action="index.php">
     <div class="nom">
         <label>Nom</label>
         <input type="text" placeholder="Nom">

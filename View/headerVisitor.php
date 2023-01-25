@@ -10,6 +10,7 @@
             <li><a href="#">À propos</a></li>
         </ul>
     </div>
-    <button class="btn-connect" type="button">Se connecter</button>
+    <a class="btn-connect" type="button" href="./index.php?controleur=controleurUtilisateur&action=afficherLogin">Se
+        connecter</a>
 </header>
 <main>

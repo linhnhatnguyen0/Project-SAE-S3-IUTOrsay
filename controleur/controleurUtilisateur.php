@@ -27,7 +27,8 @@ class ControleurUtilisateur extends Controleur
             include("./View/mainPage.php");
             include("./View/footer.php");
         } else {
-            Controleur::controleurIndex();
+            echo ("wrong password");
+            ControleurUtilisateur::afficherLogin();
         }
     }
     public static function deconnecterUtilisateur()
@@ -39,17 +40,20 @@ class ControleurUtilisateur extends Controleur
     }
     public static function afficherLogin()
     {
-        if (!Session::userConnected() && !Session::userConnecting()) {
-            include("./View/head.php");
-            include("./View/headerVisitor.php");
-            include("./View/login.php");
-            include("./View/mainPage.php");
-            include("./View/footer.php");
-            $signedIn = false;
-        } else {
-            include("./View/headerUtilisateur.php");
-            $signedIn = true;
-        }
+        include("./View/head.php");
+        include("./View/login.php");
+        include("./View/footer.php");
+
+    }
+    public static function afficherSignUp()
+    {
+        include("./View/head.php");
+        include("./View/signup.php");
+        include("./View/footer.php");
+    }
+    public static function ajouterUtilisateur($nom, $prenom, $age, $etab, $email, $mdp, $tel)
+    {
+
     }
 }
 ?>

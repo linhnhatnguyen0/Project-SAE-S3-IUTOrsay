@@ -15,7 +15,7 @@ class Controleur
         $Auteur3 = Auteur::getAuteurById(3);
         $Auteur4 = Auteur::getAuteurById(4);
         $tableauAuteur = array($Auteur1, $Auteur2, $Auteur3, $Auteur4);
-    
+
         $Document1 = Document::getDocumentByNumDocument(1);
         $Document4 = Document::getDocumentByNumDocument(2);
         $Document3 = Document::getDocumentByNumDocument(8337);
@@ -49,11 +49,11 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
         $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue']);
-        if(count($tableauExemplaireDispo) > 0){
+        if (count($tableauExemplaireDispo) > 0) {
             //Cas où il y a des exemplaires disponibles
-        }else{
+        } else {
             //Cas où il n'y a pas d'exemplaire disponible
-            echo ("<h1>Pas d'exemplaire disponible pour ".$_GET['numDoc']." en langue ".$_GET['numLangue']."</h1>");
+            echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . " en langue " . $_GET['numLangue'] . "</h1>");
         }
         include("./View/signup.php");
         include("./View/footer.php");

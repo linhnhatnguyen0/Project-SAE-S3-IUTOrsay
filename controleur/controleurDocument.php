@@ -17,16 +17,14 @@ class ControleurDocument
         } else {
             $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee']);
         }
-        
+
         echo ('<h1 class="title">Résultat de la recherche');
-        if($_GET['titre'] != NULL ){
-            echo (': '.$_GET['titre']);
+        if ($_GET['titre'] != NULL) {
+            echo (': ' . $_GET['titre']);
         }
         echo ('</h1>');
 
         include("./View/search-result.php");
-        include("./View/login.php");
-        include("./View/signup.php");
         include("./View/footer.php");
     }
 
@@ -51,8 +49,6 @@ class ControleurDocument
         echo $titre;
         echo ('</h1>');
         include("./View/byAuthor-result.php");
-        include("./View/login.php");
-        include("./View/signup.php");
         include("./View/footer.php");
     }
 

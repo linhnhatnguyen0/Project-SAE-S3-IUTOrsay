@@ -152,6 +152,6 @@
     </div>
     <div class="inputGroup inputGroup3">
         <button id="login" type="submit">Se connecter</button>
-        <a href="#" id="indicator">S'inscrire</a>
+        <a href="./index.php?controleur=controleurUtilisateur&action=afficherSignUp" id="indicator">S'inscrire</a>
     </div>
 </form>

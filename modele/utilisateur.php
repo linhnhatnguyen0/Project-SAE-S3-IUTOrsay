@@ -7,7 +7,7 @@ class Utilisateur
   private $NumUtilisateur;
   private $NomUtilisateur;
   private $PrenomUtilisateur;
-  private $AdresseUtilisateur;
+  private $EtablissementUtilisateur;
   private $TelephoneUtilisateur;
   private $loginUtilisateur;
   private $mdpUtilisateur;
@@ -27,9 +27,9 @@ class Utilisateur
   {
     return $this->PrenomUtilisateur;
   }
-  public function getAdresseUtilisateur()
+  public function getEtablissementUtilisateur()
   {
-    return $this->AdresseUtilisateur;
+    return $this->EtablissementUtilisateur;
   }
   public function getTelephoneUtilisateur()
   {
@@ -70,9 +70,9 @@ class Utilisateur
   {
     $this->PrenomUtilisateur = $p;
   }
-  public function setAdresseUtilisateur($a)
+  public function setEtablissementUtilisateur($a)
   {
-    $this->AdresseUtilisateur = $a;
+    $this->EtablissementUtilisateur = $a;
   }
   public function setTelephoneUtilisateur($t)
   {
@@ -110,7 +110,7 @@ class Utilisateur
       $this->NumUtilisateur = $num;
       $this->NomUtilisateur = $nom;
       $this->PrenomUtilisateur = $prenom;
-      $this->AdresseUtilisateur = $adresse;
+      $this->EtablissementUtilisateur = $adresse;
       $this->TelephoneUtilisateur = $telephone;
       $this->loginUtilisateur = $login;
       $this->mdpUtilisateur = $mdp;
@@ -122,7 +122,7 @@ class Utilisateur
 
 
   /*
-  public static function ajouterUtilisateur($NomUtilisateur, $PrenomUtilisateur, $AdresseUtilisateur, $TelephoneUtilisateur, $loginUtilisateur, $mdpUtilisateur, $NumType, ) {
+  public static function ajouterUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $TelephoneUtilisateur, $loginUtilisateur, $mdpUtilisateur, $NumType, ) {
   $requetePreparee = "INSERT INTO Recette (`libelle`,`difficulte`, `description`) VALUES (:tag_libelle, :tag_difficulte, :tag_description);";
   $req_prep = Connexion::pdo()->prepare($requetePreparee);
   $valeurs = array(
