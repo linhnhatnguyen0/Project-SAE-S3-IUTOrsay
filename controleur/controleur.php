@@ -50,12 +50,10 @@ class Controleur
         include("./controleur/headerVerify.php");
         $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue']);
         if(count($tableauExemplaireDispo) > 0){
-            //echo ($tableauExemplaireDispo[0]->getNumExemplaire());
+            //Cas où il y a des exemplaires disponibles
         }else{
-            echo('</br>');
-            echo (count($tableauExemplaireDispo));
-            
-            echo ("Pas d'exemplaire disponible pour ".$_GET['numDoc']." en langue ".$_GET['numLangue']);
+            //Cas où il n'y a pas d'exemplaire disponible
+            echo ("<h1>Pas d'exemplaire disponible pour ".$_GET['numDoc']." en langue ".$_GET['numLangue']."</h1>");
         }
         include("./View/signup.php");
         include("./View/footer.php");
