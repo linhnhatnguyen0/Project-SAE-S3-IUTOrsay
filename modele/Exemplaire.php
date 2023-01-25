@@ -56,8 +56,18 @@ class Exemplaire
     }
   }
 
-  public static function verifierDisponible(){
-    
+  public static function verifierDisponible($nd, $l){
+    $requetePreparee = "SELECT NumExemplaire FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NULL AND NumDocument =".$nd." AND NumLangue = ".$nd." ";
+    $resultat = Connexion::pdo()->prepare($requetePreparee);
+
+    try {
+      $resultat->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
+      $tableau = $resultat->fetchAll();
+      return $tableau;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+      return false;
+    }
   }
 
 }
