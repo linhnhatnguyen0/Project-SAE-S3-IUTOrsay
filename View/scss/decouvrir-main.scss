@@ -1,5 +1,4 @@
 .decouvrir {
-
   .frame-1 {
     align-items: flex-start;
     background-color: var(--white);
@@ -75,9 +74,6 @@
     justify-content: flex-end;
     /* min-width: 267px; */
     padding: 11px 8px;
-    background: #F1C84A;
-    margin-top: 20px;
-
   }
 
   .consulter-les-services {
@@ -107,8 +103,6 @@
     height: 394px;
     position: relative;
     width: 450px;
-    margin-right: -100px;
-    margin-left: 100px;
   }
 
   .rectangle-156-1 {
@@ -122,7 +116,6 @@
     left: 0;
     position: absolute;
     top: 194px;
-    margin-left: 80px;
   }
 
   sparkles-outline {
@@ -168,7 +161,7 @@
   }
 
   .decouvrir {
-    color:white;
+    color: var(--white);
     font-family: var(--font-family-inter);
     font-size: 60px;
     font-weight: 800;
@@ -212,8 +205,6 @@
     font-size: 30px;
     font-weight: 700;
     font-style: normal;
-    margin-top: 20px;
-    margin-right: 10px;
   }
 
   .inter-bold-cinder-18px {
@@ -222,7 +213,6 @@
     font-size: var(--font-size-m);
     font-weight: 700;
     font-style: normal;
-    margin-top: 5px;
   }
 
   ion-icon {
