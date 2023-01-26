@@ -155,7 +155,8 @@ class Utilisateur
       "tag_prenom" => $PrenomUtilisateur,
       "tag_etab" => $EtablissementUtilisateur,
       "tag_email" => $EmailUtilisateur,
-      "tag_tel" => $TelephoneUtilisateur
+      "tag_tel" => $TelephoneUtilisateur,
+      "tag_login" => $login
     );
     try {
       $req_prep->execute($valeurs);

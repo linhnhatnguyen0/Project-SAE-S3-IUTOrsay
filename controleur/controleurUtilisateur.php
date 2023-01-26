@@ -86,6 +86,11 @@ class ControleurUtilisateur extends Controleur
         $tel = $_POST["tel"];
         $login = $_SESSION["login"];
         $b = Utilisateur::updateUtilisateur($n, $p, $et, $e, $tel, $login);
+        if ($b) {
+            echo ("vrai");
+        } else {
+            echo ("false");
+        }
         self::controleurIndex();
     }
 }
