@@ -56,6 +56,10 @@ class Controleur
         */
         if(count($tableauExemplaireDispo) > 0){
             //Cas où il y a des exemplaires disponibles
+
+            //test getDocumentById();
+            $doc = $tableauExemplaireDispo[0]->getDocumentById();
+            echo ($doc->getNumDocument());
         } else {
             //Cas où il n'y a pas d'exemplaire disponible
             echo ("<h1>Pas d'exemplaire disponible pour " . $_POST['numDoc'] . " en langue " . $_POST['numLangue'] . "</h1>");

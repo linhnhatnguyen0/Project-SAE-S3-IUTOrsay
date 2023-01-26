@@ -1,13 +1,14 @@
 <?php
+require_once("modele.php");
 
-class Exemplaire
+class Exemplaire extends Modele
 {
 
   //attribut
   private $NumExemplaire;
   private $EtatExemplaire;
   private $NumLangue;
-  private $NumDocument;
+  protected $NumDocument;
 
 
   //getter
