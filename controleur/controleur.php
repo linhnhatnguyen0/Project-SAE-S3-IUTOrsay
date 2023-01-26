@@ -67,7 +67,7 @@ class Controleur
 
         include("./controleur/headerVerify.php");
 
-        include("./View/Infos.html");
+        include("./View/Infos.php");
 
         include("./View/footer.php");
     }
