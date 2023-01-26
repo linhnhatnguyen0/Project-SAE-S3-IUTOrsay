@@ -1,7 +1,4 @@
 let btnLogin = document.querySelector("#login");
-btnLogin.addEventListener("click", function () {
-  console.log("click");
-});
 var email = document.querySelector("#email"),
   password = document.querySelector("#password"),
   mySVG = document.querySelector(".svgContainer"),

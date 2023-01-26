@@ -104,3 +104,22 @@ $("#sign-up input").blur(function () {
     $(this).parent().children("p").css("display", "none");
   }
 });
+
+$(".sign-up-btn").on("click", function () {
+  let check = true;
+  $("input").each(function (param) {
+    if (!$.trim(this.value).length) {
+      // zero-length string AFTER a trim
+      $(this).parent().children("p").css("display", "block");
+      check = false;
+    } else {
+      $(this).parent().children("p").css("display", "none");
+    }
+  });
+  console.log(check);
+  if (!check) {
+    $(this).attr("type", "button");
+  } else {
+    $(this).attr("type", "submit");
+  }
+});
