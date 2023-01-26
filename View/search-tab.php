@@ -1,4 +1,4 @@
-<form action="index.php" method="get" class="search-tab">
+<form action="index.php" method="post" class="search-tab">
     <input type="hidden" name="controleur" value="controleurDocument" />
     <input type="hidden" name="action" value="getResultSearch" />
     <div class="search-input">

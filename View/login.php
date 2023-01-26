@@ -1,5 +1,5 @@
 <div class="overlay-dark"></div>
-<form class="login" action="index.php" method="get" autocomplete="off">
+<form class="login" action="index.php" method="post" autocomplete="off">
     <div class="svgContainer">
         <div>
             <svg class="mySVG" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"

@@ -47,7 +47,7 @@ class Controleur
         $titre = "verifier dispo";
         include("./View/head.php");
         include("./controleur/headerVerify.php");
-        $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue']);
+        $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_POST['numDoc'], $_POST['numLangue']);
         /* -- TEST D'AJOUT D'EMPRUNT --
         date_default_timezone_set('Europe/Paris');
         $date = date('Y-m-d');
@@ -58,7 +58,7 @@ class Controleur
             //Cas où il y a des exemplaires disponibles
         } else {
             //Cas où il n'y a pas d'exemplaire disponible
-            echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . " en langue " . $_GET['numLangue'] . "</h1>");
+            echo ("<h1>Pas d'exemplaire disponible pour " . $_POST['numDoc'] . " en langue " . $_POST['numLangue'] . "</h1>");
         }
         include("./View/footer.php");
     }

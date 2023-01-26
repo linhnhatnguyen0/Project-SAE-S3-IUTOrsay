@@ -20,8 +20,8 @@ class ControleurUtilisateur extends Controleur
         $tableauLivre = array($Document1, $Document2, $Document3, $Document4);
         $tableauAuteurPopulaire = Auteur::getPopularAuteurs();
         $tableauLivrePopulaire = Document::getPopularDocuments();
-        $l = $_GET["login"];
-        $mdp = $_GET["mdp"];
+        $l = $_POST["login"];
+        $mdp = $_POST["mdp"];
         if (Utilisateur::checkMDP($l, $mdp)) {
             $_SESSION["login"] = $l;
             include("./View/head.php");
@@ -66,24 +66,24 @@ class ControleurUtilisateur extends Controleur
     public static function ajouterUtilisateur()
     {
         $titre = "modification utilisateur";
-        $n = $_GET["nom"];
-        $p = $_GET["prenom"];
-        $et = $_GET["etab"];
-        $e = $_GET["email"];
-        $tel = $_GET["tel"];
-        $l = $_GET["login"];
-        $m = $_GET["mdp"];
+        $n = $_POST["nom"];
+        $p = $_POST["prenom"];
+        $et = $_POST["etab"];
+        $e = $_POST["email"];
+        $tel = $_POST["tel"];
+        $l = $_POST["login"];
+        $m = $_POST["mdp"];
         $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $tel, $l, $m);
         self::controleurIndexConnected();
     }
     public static function updateUtilisateur()
     {
         $titre = "modification utilisateur";
-        $n = $_GET["nom"];
-        $p = $_GET["prenom"];
-        $et = $_GET["etab"];
-        $e = $_GET["email"];
-        $tel = $_GET["tel"];
+        $n = $_POST["nom"];
+        $p = $_POST["prenom"];
+        $et = $_POST["etab"];
+        $e = $_POST["email"];
+        $tel = $_POST["tel"];
         $login = $_SESSION["login"];
         $b = Utilisateur::updateUtilisateur($n, $p, $et, $e, $tel, $login);
         self::controleurIndex();

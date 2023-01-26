@@ -11,7 +11,7 @@ class Session
 
     public static function userConnecting()
     {
-        if (isset($_GET["action"]) && $_GET["action"] == "controleurIndexConnected") {
+        if (isset($_POST["action"]) && $_POST["action"] == "controleurIndexConnected") {
             return true;
         } else
             return false;

@@ -1,5 +1,5 @@
 <div class="overlay-dark"></div>
-<form id="sign-up" class="sign-up" action="index.php" autocomplete="off" method="get">
+<form id="sign-up" class="sign-up" action="index.php" autocomplete="off" method="post">
     <input type="hidden" name="action" value="ajouterUtilisateur">
     <input type="hidden" name="controleur" value="controleurUtilisateur">
     <div class="nom">

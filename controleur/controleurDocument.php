@@ -12,15 +12,15 @@ class ControleurDocument
         $titre = "Résultat de la recherche";
         include("./View/head.php");
         include("./controleur/headerVerify.php");
-        if (isset($_GET["cat"])) {
-            $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee'], $_GET['cat']);
+        if (isset($_POST["cat"])) {
+            $tableau = Document::searchDoc($_POST['titre'], $_POST['auteur'], $_POST['annee'], $_POST['cat']);
         } else {
-            $tableau = Document::searchDoc($_GET['titre'], $_GET['auteur'], $_GET['annee']);
+            $tableau = Document::searchDoc($_POST['titre'], $_POST['auteur'], $_POST['annee']);
         }
 
         echo ('<h1 class="title">Résultat de la recherche');
-        if ($_GET['titre'] != NULL) {
-            echo (': ' . $_GET['titre']);
+        if ($_POST['titre'] != NULL) {
+            echo (': ' . $_POST['titre']);
         }
         echo ('</h1>');
 
@@ -30,7 +30,7 @@ class ControleurDocument
 
     public static function lireDocument()
     {
-        $numDocument = $_GET['numDocument'];
+        $numDocument = $_POST['numDocument'];
         $document = Document::getDocumentByNumDocument($numDocument);
 
         $titre = $document->get('NomDocument');
