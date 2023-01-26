@@ -5,6 +5,7 @@ Connexion::connect();
 
 class Document extends Modele
 {
+  protected static $objet = "Document";
 
   //attribut
   protected $NumDocument;

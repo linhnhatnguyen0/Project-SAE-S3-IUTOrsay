@@ -3,13 +3,13 @@ require_once("modele.php");
 
 class Exemplaire extends Modele
 {
+  protected static $objet = "Exemplaire";
 
   //attribut
   private $NumExemplaire;
   private $EtatExemplaire;
   private $NumLangue;
   protected $NumDocument;
-
 
   //getter
   public function getNumExemplaire()

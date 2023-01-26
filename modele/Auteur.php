@@ -3,9 +3,10 @@ require_once("./config/connexion.php");
 require_once("modele.php");
 class Auteur extends Modele
 {
+  protected static $objet = "Auteur";
 
   //attribut
-  private $NumAuteur;
+  protected $NumAuteur;
   private $NomAuteur;
   private $PrenomAuteur;
   private $AnneeNaissance;
