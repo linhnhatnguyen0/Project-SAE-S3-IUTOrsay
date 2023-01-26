@@ -169,16 +169,15 @@ class Utilisateur
 
   public static function checkMDP($l, $m)
   {
-    $requetePreparee = "SELECT * FROM Utilisateur WHERE loginUtilisateur = :l_tag and mdpUtilisateur = :m_tag;";
+    $requetePreparee = "SELECT * FROM Utilisateur WHERE loginUtilisateur = :l_tag";
     $req_prep = connexion::pdo()->prepare($requetePreparee);
     $valeurs = array(
-      "l_tag" => $l,
-      "m_tag" => $m
+      "l_tag" => $l
     );
     $req_prep->execute($valeurs);
     $req_prep->setFetchMode(PDO::FETCH_CLASS, "Utilisateur");
     $tabUtilisateurs = $req_prep->fetchAll();
-    if (sizeof($tabUtilisateurs) == 1)
+    if (password_verify($m, $tabUtilisateurs[0]->getMdpUtilisateur()))
       return true;
     else
       return false;

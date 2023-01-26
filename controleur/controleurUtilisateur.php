@@ -68,7 +68,7 @@ class ControleurUtilisateur extends Controleur
     }
     public static function ajouterUtilisateur()
     {
-        $titre = "modification utilisateur";
+        $titre = "SIGNING UP";
         $n = $_POST["nom"];
         $p = $_POST["prenom"];
         $et = $_POST["etab"];
@@ -76,7 +76,8 @@ class ControleurUtilisateur extends Controleur
         $tel = $_POST["tel"];
         $l = $_POST["login"];
         $m = $_POST["mdp"];
-        $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $tel, $l, $m);
+        $mEnc = password_hash($m, PASSWORD_BCRYPT);
+        $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $tel, $l, $mEnc);
         self::controleurIndexConnected();
     }
     public static function updateUtilisateur()
