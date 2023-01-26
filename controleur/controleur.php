@@ -48,11 +48,11 @@ class Controleur
         include("./View/head.php");
         include("./controleur/headerVerify.php");
 
-        if (Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue'])) {
+        if (Exemplaire::listerExemplaireDisponible($_GET['numDoc'])) {
             echo ("<h1>Exemplaire est disponible</h1>");
         } else {
             //Cas où il n'y a pas d'exemplaire disponible
-            echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . " en langue " . $_GET['numLangue'] . "</h1>");
+            echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . "</h1>");
         }
         include("./View/footer.php");
     }

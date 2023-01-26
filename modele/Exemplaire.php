@@ -44,7 +44,7 @@ class Exemplaire extends Modele
   }
   public function setgetNumDocument($n)
   {
-    $this->getNumDocument = $n;
+    $this->NumDocument = $n;
   }
 
 
@@ -82,18 +82,22 @@ class Exemplaire extends Modele
   //   }
 
   // }
-  public static function listerExemplaireDisponible($nd, $l)
+  public static function listerExemplaireDisponible($nd)
   {
-    $requetePreparee1 = "SELECT * FROM Exemplaire NATURAL JOIN Emprunt WHERE NumDocument = " . $nd;
+    $requetePreparee1 = "SELECT EtatExemplaire FROM Exemplaire WHERE NumDocument = " . $nd;
+    echo ($requetePreparee1);
     $resultat1 = Connexion::pdo()->query($requetePreparee1);
     try {
       $resultat1->setFetchMode(PDO::FETCH_CLASS, 'Exemplaire');
       $tableau = $resultat1->fetchAll();
+      echo "<pre>";
+      print_r($tableau);
+      echo "</pre>";
       foreach ($tableau as $value) {
         if ($value->getEtatExemplaire() == "Bon") {
-          return false;
-        } else
           return true;
+        } else
+          return false;
       }
     } catch (PDOException $e) {
       echo "erreur : " . $e->getMessage() . "<br>";
