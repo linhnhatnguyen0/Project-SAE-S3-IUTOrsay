@@ -14,28 +14,28 @@
     </li>
   </ul>
   <form class="account-detail-form" action="index.php" method="get">
-    <input type="hidden" name="action" value="ajouterUtilisateur" />
+    <input type="hidden" name="action" value="updateUtilisateur" />
     <input type="hidden" name="controleur" value="controleurUtilisateur" />
     <div class="v426_325">
       <label>Nom</label>
-      <input type="text" value="Nom" name="nom" />
+      <input type="text" value="<?php echo ($tableau[0]->getNomUtilisateur()); ?>" name="nom" />
     </div>
     <div class="v426_329">
       <label>Prenom</label>
-      <input type="text" value="Prenom" name="prenom" />
+      <input type="text" value="<?php echo ($tableau[0]->getPrenomUtilisateur()); ?>" name="prenom" />
     </div>
     <div class="v426_321">
       <label>Etablissement</label>
-      <input type="text" value="Etablissement" name="etab" />
+      <input type="text" value="<?php echo ($tableau[0]->getEtablissementUtilisateur()); ?>" name="etab" />
     </div>
     <div class="v426_321">
       <label>Email</label>
-      <input type="text" value="email@domain.com" name="email" />
+      <input type="text" value="<?php echo ($tableau[0]->getEmailUtilisateur()); ?>" name="email" />
     </div>
     <div class="v426_337">
       <label>Numéro téléphone</label>
-      <input type="text" value="Numéro Téléphone" name="tel" />
+      <input type="text" value="<?php echo ($tableau[0]->getTelephoneUtilisateur()); ?>" name="tel" />
     </div>
-    <button type="submit"></button>
+    <button type="submit">Update</button>
   </form>
 </section>

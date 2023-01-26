@@ -8,6 +8,8 @@ class Utilisateur
   private $NomUtilisateur;
   private $PrenomUtilisateur;
   private $EtablissementUtilisateur;
+
+  protected $EmailUtilisateur;
   private $TelephoneUtilisateur;
   private $loginUtilisateur;
   private $mdpUtilisateur;
@@ -30,6 +32,10 @@ class Utilisateur
   public function getEtablissementUtilisateur()
   {
     return $this->EtablissementUtilisateur;
+  }
+  public function getEmailUtilisateur()
+  {
+    return $this->EmailUtilisateur;
   }
   public function getTelephoneUtilisateur()
   {
@@ -140,9 +146,9 @@ class Utilisateur
       return false;
     }
   }
-  public static function updateUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $EmailUtilisateur, $TelephoneUtilisateur)
+  public static function updateUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $EmailUtilisateur, $TelephoneUtilisateur, $login)
   {
-    $requetePreparee = "UPDATE `Utilisateur` SET `NomUtilisateur`=:tag_nom,`PrenomUtilisateur`=:tag_prenom,`EtablissementUtilisateur`=:tag_etab,`EmailUtilisateur`=:tag_email,`TelephoneUtilisateur`=:tag_tel;";
+    $requetePreparee = "UPDATE `Utilisateur` SET `NomUtilisateur`=:tag_nom,`PrenomUtilisateur`=:tag_prenom,`EtablissementUtilisateur`=:tag_etab,`EmailUtilisateur`=:tag_email,`TelephoneUtilisateur`=:tag_tel WHERE loginUtilisateur=:tag_login;";
     $req_prep = Connexion::pdo()->prepare($requetePreparee);
     $valeurs = array(
       "tag_nom" => $NomUtilisateur,
@@ -176,7 +182,18 @@ class Utilisateur
     else
       return false;
   }
-
+  public static function getUtilisateurByLogin($l)
+  {
+    $req = "SELECT * FROM Utilisateur WHERE loginUtilisateur=:tag";
+    $res = Connexion::pdo()->prepare($req);
+    $value = [
+      "tag" => $l
+    ];
+    $res->execute($value);
+    $res->setFetchMode(PDO::FETCH_CLASS, "Utilisateur");
+    $tableau = $res->fetchAll();
+    return $tableau;
+  }
 
 }
 

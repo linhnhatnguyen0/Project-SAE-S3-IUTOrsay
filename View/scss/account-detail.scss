@@ -79,4 +79,7 @@
       outline: none;
     }
   }
+  button {
+    @include button;
+  }
 }

@@ -57,8 +57,10 @@ class ControleurUtilisateur extends Controleur
     public static function afficherAccount()
     {
         $titre = "Account detail";
+        $login = $_SESSION["login"];
+        $tableau = Utilisateur::getUtilisateurByLogin($login);
         include("./View/head.php");
-        include("./View/profil.html");
+        include("./View/profil.php");
         include("./View/footer.php");
     }
     public static function ajouterUtilisateur()
@@ -82,8 +84,9 @@ class ControleurUtilisateur extends Controleur
         $et = $_GET["etab"];
         $e = $_GET["email"];
         $tel = $_GET["tel"];
-        $b = Utilisateur::updateUtilisateur($n, $p, $et, $e, $tel);
-        self::controleurIndexConnected();
+        $login = $_SESSION["login"];
+        $b = Utilisateur::updateUtilisateur($n, $p, $et, $e, $tel, $login);
+        self::controleurIndex();
     }
 }
 ?>
