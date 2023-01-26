@@ -13,7 +13,7 @@
       <a href="">Se déconnecter</a>
     </li>
   </ul>
-  <form class="account-detail-form" action="index.php" method="get">
+  <form class="account-detail-form" action="index.php" method="post">
     <input type="hidden" name="action" value="updateUtilisateur" />
     <input type="hidden" name="controleur" value="controleurUtilisateur" />
     <div class="v426_325">

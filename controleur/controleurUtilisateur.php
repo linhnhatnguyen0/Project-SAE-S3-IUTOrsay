@@ -59,6 +59,9 @@ class ControleurUtilisateur extends Controleur
         $titre = "Account detail";
         $login = $_SESSION["login"];
         $tableau = Utilisateur::getUtilisateurByLogin($login);
+        // echo "<pre>";
+        // print_r($tableau);
+        // echo "</pre>";
         include("./View/head.php");
         include("./View/profil.php");
         include("./View/footer.php");
