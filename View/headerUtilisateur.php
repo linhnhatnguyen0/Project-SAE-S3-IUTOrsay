@@ -15,7 +15,7 @@
 
         </div>
         <ul class="user-func">
-            <li>Mon Compte</li>
+            <li><a href="./index.php?controleur=controleurUtilisateur&action=afficherAccount">Mon compte</a></li>
             <li>Emprunt</li>
             <li><a href="./index.php?controleur=controleurUtilisateur&action=deconnecterUtilisateur">Se déconnecter</a>
             </li>

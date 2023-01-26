@@ -140,6 +140,25 @@ class Utilisateur
       return false;
     }
   }
+  public static function updateUtilisateur($NomUtilisateur, $PrenomUtilisateur, $EtablissementUtilisateur, $EmailUtilisateur, $TelephoneUtilisateur)
+  {
+    $requetePreparee = "UPDATE `Utilisateur` SET `NomUtilisateur`=:tag_nom,`PrenomUtilisateur`=:tag_prenom,`EtablissementUtilisateur`=:tag_etab,`EmailUtilisateur`=:tag_email,`TelephoneUtilisateur`=:tag_tel;";
+    $req_prep = Connexion::pdo()->prepare($requetePreparee);
+    $valeurs = array(
+      "tag_nom" => $NomUtilisateur,
+      "tag_prenom" => $PrenomUtilisateur,
+      "tag_etab" => $EtablissementUtilisateur,
+      "tag_email" => $EmailUtilisateur,
+      "tag_tel" => $TelephoneUtilisateur
+    );
+    try {
+      $req_prep->execute($valeurs);
+      return true;
+    } catch (PDOException $e) {
+      echo "erreur : " . $e->getMessage() . "<br>";
+      return false;
+    }
+  }
 
   public static function checkMDP($l, $m)
   {

@@ -41,6 +41,7 @@ class ControleurUtilisateur extends Controleur
     }
     public static function afficherLogin()
     {
+        $titre = "Login";
         include("./View/head.php");
         include("./View/login.php");
         include("./View/footer.php");
@@ -48,8 +49,16 @@ class ControleurUtilisateur extends Controleur
     }
     public static function afficherSignUp()
     {
+        $titre = "Sign Up";
         include("./View/head.php");
         include("./View/signup.php");
+        include("./View/footer.php");
+    }
+    public static function afficherAccount()
+    {
+        $titre = "Account detail";
+        include("./View/head.php");
+        include("./View/profil.html");
         include("./View/footer.php");
     }
     public static function ajouterUtilisateur()
@@ -63,6 +72,17 @@ class ControleurUtilisateur extends Controleur
         $l = $_GET["login"];
         $m = $_GET["mdp"];
         $b = Utilisateur::ajouterUtilisateur($n, $p, $et, $e, $tel, $l, $m);
+        self::controleurIndexConnected();
+    }
+    public static function updateUtilisateur()
+    {
+        $titre = "modification utilisateur";
+        $n = $_GET["nom"];
+        $p = $_GET["prenom"];
+        $et = $_GET["etab"];
+        $e = $_GET["email"];
+        $tel = $_GET["tel"];
+        $b = Utilisateur::updateUtilisateur($n, $p, $et, $e, $tel);
         self::controleurIndexConnected();
     }
 }

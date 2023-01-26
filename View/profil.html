@@ -1,61 +1,41 @@
-<!DOCTYPE html>
-<html>
-
-<head>
-    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet" />
-    <link href="./css/profil.css" rel="stylesheet" />
-    <title>profil</title>
-</head>
-
-<body>
-    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-    <div class="v426_301">
-        <div class="v426_302">
-            <div class="v426_303"></div>
-            <div class="v426_304">
-                <div class="v426_305">
-                    <a href="http://google.com" class="v426_306">
-                        <ion-icon name="person-outline"></ion-icon>
-                        <span class="v426_308">Account detail</span>
-                    </a>
-                    <a href="http://baidu.com" class="v426_309">
-                        <ion-icon name="lock-closed-outline"></ion-icon>    
-                        <span class="v426_311">Changer mot de passe</span>
-                    </a>
-                    <a href="http://apple.com"  class="v426_312">
-                        <ion-icon name="log-out-outline"></ion-icon>
-                        <span class="v426_316">Se déconnecter</span>
-                    </a>
-                </div>
-
-            </div>
-        </div>
-        <div class="v426_317"></div>
-        <div class="v426_318"></div>
-        <div class="v426_319"></div>
-        <div class="v426_320"></div>
-        <form class="v426_321">
-            <label class="v426_323">Email</label>
-            <input class="v426_322" type="text" placeholder="email@domain.com">
-        </form>
-        <form class="v426_325">
-            <label class="v426_327">Nom</label>
-            <input class="v426_326" type="text" placeholder="Nom">
-        </form>
-        <form class="v426_329">
-            <label class="v426_331">Prenom</label>
-            <input class="v426_330" type="text" placeholder="Pernom">
-        </form>
-        <form class="v426_333">
-            <label class="v426_335">Password</label>
-            <input class="v426_334" type="password" placeholder="Mot de passe">
-        </form>
-        <form class="v426_337">
-            <label class="v426_339">Numéro téléphone</label>
-            <input class="v426_338" type="text" placeholder="Numéro Téléphone">
-        </form>
+<section class="account-detail">
+  <ul class="account-detail-menu">
+    <li>
+      <ion-icon name="person-outline"></ion-icon>
+      <a href="">Account detail</a>
+    </li>
+    <li>
+      <ion-icon name="lock-closed-outline"></ion-icon>
+      <a href="">Changer mot de passe</a>
+    </li>
+    <li>
+      <ion-icon name="log-out-outline"></ion-icon>
+      <a href="">Se déconnecter</a>
+    </li>
+  </ul>
+  <form class="account-detail-form" action="index.php" method="get">
+    <input type="hidden" name="action" value="ajouterUtilisateur" />
+    <input type="hidden" name="controleur" value="controleurUtilisateur" />
+    <div class="v426_325">
+      <label>Nom</label>
+      <input type="text" value="Nom" name="nom" />
     </div>
-</body>
-
-</html>
+    <div class="v426_329">
+      <label>Prenom</label>
+      <input type="text" value="Prenom" name="prenom" />
+    </div>
+    <div class="v426_321">
+      <label>Etablissement</label>
+      <input type="text" value="Etablissement" name="etab" />
+    </div>
+    <div class="v426_321">
+      <label>Email</label>
+      <input type="text" value="email@domain.com" name="email" />
+    </div>
+    <div class="v426_337">
+      <label>Numéro téléphone</label>
+      <input type="text" value="Numéro Téléphone" name="tel" />
+    </div>
+    <button type="submit"></button>
+  </form>
+</section>
