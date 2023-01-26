@@ -108,6 +108,8 @@ class Document extends Modele
 		return $tableau;
 	}
   
+
+
   public static function getPopularDocuments() {
 		$requete = "SELECT COUNT(*) AS Lignes, NumDocument, Titre, AnneeParution, NumTypeD, NumAuteur, NumCat  FROM Document NATURAL JOIN Exemplaire NATURAL JOIN Emprunt GROUP BY NumDocument ORDER BY Lignes DESC";
 		$resultat = Connexion::pdo()->query($requete);
@@ -298,6 +300,27 @@ class Document extends Modele
     $tableau = $resultat->fetchAll();
     return $tableau;
   }
+
+  public static function getDocumentByTypeDocument($NumTypeD)
+  {
+    $req_prep = "SELECT * FROM Document NATURAL JOIN TypeDocument WHERE NumTypeD = :tag;";
+    $resultat = Connexion::pdo()->prepare($req_prep);
+    $resultat->execute([":tag" => $NumTypeD]);
+    $resultat->setFetchMode(PDO::FETCH_CLASS, "Document");
+    $tableau = $resultat->fetchAll();
+    return $tableau;
+  }
+
+  public static function getDocumentByCategorie($NumCat)
+  {
+    $req_prep = "SELECT * FROM Document NATURAL JOIN Categorie WHERE NumCat = :tag;";
+    $resultat = Connexion::pdo()->prepare($req_prep);
+    $resultat->execute([":tag" => $NumCat]);
+    $resultat->setFetchMode(PDO::FETCH_CLASS, "Document");
+    $tableau = $resultat->fetchAll();
+    return $tableau;
+  }
+
   public static function getNomDocumentByAuteur($idAuteur)
   {
     $req_prep = "SELECT Titre FROM Document NATURAL JOIN Auteur WHERE numAuteur = :tag;";
