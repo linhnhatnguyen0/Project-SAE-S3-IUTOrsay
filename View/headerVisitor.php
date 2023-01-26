@@ -6,7 +6,7 @@
         <ul>
             <li><a href="./index.php?controleur=controleur&action=controleurIndex">Accueil</a></li>
             <li><a href="./index.php?controleur=controleur&action=controleurSearch">Recherche</a></li>
-            <li><a href="#">Catalogue</a></li>
+            <li><a href="./index.php?controleur=controleur&action=cata_main">Catalogue</a></li>
             <li><a href="./index.php?controleur=controleur&action=aPropos">À propos</a></li>
         </ul>
     </div>
