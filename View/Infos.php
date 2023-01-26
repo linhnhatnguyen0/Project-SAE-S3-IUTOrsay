@@ -1,14 +1,7 @@
-<!DOCTYPE html>
-<html lang="fr">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" href="./css/infos.css" />
+  <body>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap");
     </style>
-  </head>
-
-  <body>
     <div class="middle" id="2">
       <div class="corpmiddlequatre">
         <div class="corpmiddlequatretitle">
