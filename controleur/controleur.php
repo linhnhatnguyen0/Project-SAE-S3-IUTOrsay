@@ -47,37 +47,28 @@ class Controleur
         $titre = "verifier dispo";
         include("./View/head.php");
         include("./controleur/headerVerify.php");
-        $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_POST['numDoc'], $_POST['numLangue']);
-        /* -- TEST D'AJOUT D'EMPRUNT --
-        date_default_timezone_set('Europe/Paris');
-        $date = date('Y-m-d');
-        echo ($date);
-        Emprunt::addEmprunt($date, 1, 67); 
-        */
-        if(count($tableauExemplaireDispo) > 0){
-            //Cas où il y a des exemplaires disponibles
 
-            //test getDocumentById();
-            $doc = $tableauExemplaireDispo[0]->getDocumentById();
-            echo ($doc->getNumDocument());
+        if (Exemplaire::listerExemplaireDisponible($_GET['numDoc'], $_GET['numLangue'])) {
+            echo ("<h1>Exemplaire est disponible</h1>");
         } else {
             //Cas où il n'y a pas d'exemplaire disponible
-            echo ("<h1>Pas d'exemplaire disponible pour " . $_POST['numDoc'] . " en langue " . $_POST['numLangue'] . "</h1>");
+            echo ("<h1>Pas d'exemplaire disponible pour " . $_GET['numDoc'] . " en langue " . $_GET['numLangue'] . "</h1>");
         }
         include("./View/footer.php");
     }
 
-    
 
 
-    public static function aPropos(){
+
+    public static function aPropos()
+    {
         $titre = "A propos";
         include("./View/head.php");
 
         include("./controleur/headerVerify.php");
 
         include("./View/Infos.html");
-        
+
         include("./View/footer.php");
     }
 

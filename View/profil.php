@@ -1,4 +1,6 @@
 <section class="account-detail">
+  <a href="./index.php?controleur=controleur&action=controleurIndex" class="arrow"><ion-icon
+      name="arrow-back-outline"></ion-icon>Retourne</a>
   <ul class="account-detail-menu">
     <li>
       <ion-icon name="person-outline"></ion-icon>
@@ -10,7 +12,7 @@
     </li>
     <li>
       <ion-icon name="log-out-outline"></ion-icon>
-      <a href="">Se déconnecter</a>
+      <a href="./index.php?controleur=controleurUtilisateur&action=deconnecterUtilisateur">Se déconnecter</a>
     </li>
   </ul>
   <form class="account-detail-form" action="index.php" method="post">

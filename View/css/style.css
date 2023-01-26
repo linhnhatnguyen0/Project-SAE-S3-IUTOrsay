@@ -496,6 +496,21 @@ main .title {
   background-color: rgb(0, 0, 0);
   top: 0;
 }
+.overlay-dark a.arrow {
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.overlay-dark a.arrow ion-icon {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
 
 .login {
   display: block;
@@ -1011,6 +1026,21 @@ main .title {
   display: flex;
   align-items: flex-start;
   justify-content: center;
+}
+.account-detail a.arrow {
+  color: #fff;
+  position: absolute;
+  top: 10%;
+  left: 15%;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+}
+.account-detail a.arrow ion-icon {
+  color: #fff;
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
 }
 .account-detail ul.account-detail-menu {
   background-color: #0f1020;

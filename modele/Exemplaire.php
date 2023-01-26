@@ -57,31 +57,50 @@ class Exemplaire extends Modele
     }
   }
 
-  public static function listerExemplaireDisponible($nd, $l){
-    $requetePreparee1 = "SELECT * FROM Exemplaire NATURAL JOIN Emprunt WHERE NumDocument = ".$nd." AND NumLangue = ".$l." ";
+  // public static function listerExemplaireDisponible($nd, $l){
+  //   $requetePreparee1 = "SELECT * FROM Exemplaire NATURAL JOIN Emprunt WHERE NumDocument = ".$nd;
+  //   $resultat1 = Connexion::pdo()->query($requetePreparee1);
+  //   try {
+  //     $resultat1->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
+  //     $tableau = $resultat1->fetchAll();
+  //     if(count($tableau) == 0){
+  //       $requetePreparee2 = "SELECT * FROM Exemplaire WHERE NumDocument = ".$nd." AND NumLangue = ".$l." ";
+  //       $resultat2 = Connexion::pdo()->query($requetePreparee2);
+  //       $resultat2->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
+  //       $tableau = $resultat2->fetchAll();
+  //       return $tableau;
+  //     }else{
+  //       $requetePreparee2 = "SELECT * FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NOT NULL AND NumDocument = ".$nd." AND NumLangue = ".$l." ";
+  //       $resultat2 = Connexion::pdo()->query($requetePreparee2);  
+  //       $resultat2->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
+  //       $tableau = $resultat2->fetchAll();
+  //       return $tableau;
+  //     }
+  //   } catch (PDOException $e) {
+  //     echo "erreur : " . $e->getMessage() . "<br>";
+  //     return false;
+  //   }
+
+  // }
+  public static function listerExemplaireDisponible($nd, $l)
+  {
+    $requetePreparee1 = "SELECT * FROM Exemplaire NATURAL JOIN Emprunt WHERE NumDocument = " . $nd;
     $resultat1 = Connexion::pdo()->query($requetePreparee1);
     try {
-      $resultat1->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
+      $resultat1->setFetchMode(PDO::FETCH_CLASS, 'Exemplaire');
       $tableau = $resultat1->fetchAll();
-      if(count($tableau) == 0){
-        $requetePreparee2 = "SELECT * FROM Exemplaire WHERE NumDocument = ".$nd." AND NumLangue = ".$l." ";
-        $resultat2 = Connexion::pdo()->query($requetePreparee2);
-        $resultat2->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
-        $tableau = $resultat2->fetchAll();
-        return $tableau;
-      }else{
-        $requetePreparee2 = "SELECT * FROM Exemplaire NATURAL JOIN Emprunt WHERE DateRenduReelle IS NOT NULL AND NumDocument = ".$nd." AND NumLangue = ".$l." ";
-        $resultat2 = Connexion::pdo()->query($requetePreparee2);  
-        $resultat2->setFetchMode(PDO::FETCH_CLASS,'Exemplaire');
-        $tableau = $resultat2->fetchAll();
-        return $tableau;
+      foreach ($tableau as $value) {
+        if ($value->getEtatExemplaire() == "Bon") {
+          return false;
+        } else
+          return true;
       }
     } catch (PDOException $e) {
       echo "erreur : " . $e->getMessage() . "<br>";
       return false;
     }
-    
   }
+
 
 }
 

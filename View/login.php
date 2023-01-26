@@ -1,4 +1,7 @@
-<div class="overlay-dark"></div>
+<div class="overlay-dark">
+    <a href="./index.php?controleur=controleur&action=controleurIndex" class="arrow"><ion-icon
+            name="arrow-back-outline"></ion-icon>Retourne</a>
+</div>
 <form class="login" action="index.php" method="post" autocomplete="off">
     <div class="svgContainer">
         <div>

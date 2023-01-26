@@ -1,4 +1,7 @@
-<div class="overlay-dark"></div>
+<div class="overlay-dark">
+    <a href="./index.php?controleur=controleur&action=controleurIndex" class="arrow"><ion-icon
+            name="arrow-back-outline"></ion-icon>Retourne</a>
+</div>
 <form id="sign-up" class="sign-up" action="index.php" autocomplete="off" method="post">
     <input type="hidden" name="action" value="ajouterUtilisateur">
     <input type="hidden" name="controleur" value="controleurUtilisateur">
