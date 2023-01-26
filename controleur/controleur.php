@@ -63,6 +63,24 @@ class Controleur
         include("./View/footer.php");
     }
 
+    
+
+    /*Exemple fonction page
+
+    public static function aPropos(){
+        $titre = "A propos";
+        include("./View/head.php");
+
+        -- En-tête de la page (Accueil / Recherche / Catalogue / A Propos / Se connecter)
+        include("./controleur/headerVerify.php");
+        
+        -- Contenu de la Page
+        include("./View/Infos.html");
+        
+        include("./View/footer.php");
+    }
+
+    */
 
 }
 
