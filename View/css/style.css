@@ -1383,38 +1383,37 @@ main .title {
   }
 }
 
-.decouvrir .frame-1 {
+.frame-1 {
   align-items: flex-start;
-  background-color: var(--white);
+  background-color: white;
   border: 1px none;
   display: flex;
-  height: 1080px;
-  width: 1920px;
+  height: 100vh;
+  width: 100vw;
 }
-.decouvrir .hidden,
-.decouvrir .hidden * {
+.frame-1 .hidden,
+.frame-1 .hidden * {
   pointer-events: none;
   visibility: hidden;
 }
-.decouvrir .bg {
-  align-items: flex-start;
-  background-color: var(--vulcan);
+.frame-1 .bg {
+  align-items: center;
+  justify-content: space-around;
+  background-color: rgb(17, 20, 26);
   display: flex;
   flex-direction: column;
-  gap: 70px;
-  min-height: 1080px;
-  padding: 175px 124px;
-  width: 1920px;
+  width: 100%;
+  height: 100vh;
 }
-.decouvrir .group-container {
+.frame-1 .group-container {
   align-items: flex-start;
   display: flex;
   gap: 160px;
   min-width: 1670px;
 }
-.decouvrir .group-112 {
+.frame-1 .group-112 {
   align-items: center;
-  background-color: var(--shark);
+  background-color: rgb(28, 33, 43);
   border-radius: 20px;
   box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -1422,28 +1421,27 @@ main .title {
   min-height: 383px;
   width: 450px;
 }
-.decouvrir people-outline {
+.frame-1 people-outline {
   height: 134px;
   margin-right: 0.03px;
   margin-top: 26px;
   width: 134px;
 }
-.decouvrir .frame-1 .overlap-group-3 {
+.frame-1 .overlap-group-3 {
   align-items: flex-start;
   border-radius: 20px;
-  box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
   display: flex;
   flex-direction: column;
   gap: 30px;
   padding: 22px 90px;
 }
-.decouvrir .overlap-group-2 {
+.frame-1 .overlap-group-2 {
   display: flex;
   border-radius: 0%;
 }
-.decouvrir .overlap-group1 {
+.frame-1 .overlap-group1 {
   align-items: flex-end;
-  background-color: var(--ronchi);
+  background-color: rgb(241, 200, 74);
   border-radius: 20px;
   display: flex;
   height: 25px;
@@ -1451,13 +1449,13 @@ main .title {
   /* min-width: 267px; */
   padding: 11px 8px;
 }
-.decouvrir .consulter-les-services {
+.frame-1 .consulter-les-services {
   letter-spacing: 0;
   line-height: normal;
   text-align: center;
   width: 249px;
 }
-.decouvrir .services {
+.frame-1 .services {
   align-self: center;
   letter-spacing: 0;
   line-height: normal;
@@ -1466,65 +1464,65 @@ main .title {
   min-width: 199px;
   text-align: center;
 }
-.decouvrir .frame-1 .rectangle-156-3 {
-  background-color: var(--alto);
+.frame-1 .frame-1 .rectangle-156-3 {
+  background-color: rgb(217, 217, 217);
   height: 8px;
   width: 450px;
 }
-.decouvrir .overlap-group {
+.frame-1 .overlap-group {
   height: 394px;
   position: relative;
   width: 450px;
 }
-.decouvrir .rectangle-156-1 {
+.frame-1 .rectangle-156-1 {
   border-radius: 20px;
   left: 0;
   position: absolute;
   top: 0;
 }
-.decouvrir .overlap-group-1 {
+.frame-1 .overlap-group-1 {
   left: 0;
   position: absolute;
   top: 194px;
 }
-.decouvrir sparkles-outline {
+.frame-1 sparkles-outline {
   height: 134px;
   left: 158px;
   position: absolute;
   top: 39px;
   width: 134px;
 }
-.decouvrir .frame-1 .rectangle {
+.frame-1 .frame-1 .rectangle {
   left: 0;
   position: absolute;
   top: 0;
   width: 450px;
 }
-.decouvrir .rectangle-83 {
-  background-color: var(--shark);
+.frame-1 .rectangle-83 {
+  background-color: rgb(28, 33, 43);
   border-radius: 20px;
   box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
   height: 383px;
 }
-.decouvrir .rectangle-156 {
+.frame-1 .rectangle-156 {
   height: 8px;
 }
-.decouvrir calendar-outline {
+.frame-1 calendar-outline {
   height: 126px;
   left: 146px;
   position: absolute;
   top: 47px;
   width: 134px;
 }
-.decouvrir .overlap-group4 {
+.frame-1 .overlap-group4 {
   align-self: center;
   height: 162px;
   margin-right: 15px;
   position: relative;
   width: 525px;
 }
-.decouvrir .decouvrir {
-  color: var(--white);
+.frame-1 .decouvrir {
+  color: white;
   font-family: var(--font-family-inter);
   font-size: 60px;
   font-weight: 800;
@@ -1536,8 +1534,8 @@ main .title {
   top: 0;
   width: 525px;
 }
-.decouvrir .rectangle-83-1 {
-  background-color: var(--vulcan);
+.frame-1 .rectangle-83-1 {
+  background-color: rgb(17, 20, 26);
   border-radius: 20px;
   box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
   height: 156px;
@@ -1546,7 +1544,7 @@ main .title {
   top: 6px;
   width: 522px;
 }
-.decouvrir :root {
+.frame-1 :root {
   --black: rgba(0, 0, 0, 1);
   --cinder: rgba(13, 14, 23, 1);
   --vulcan: rgba(17, 20, 26, 1);
@@ -1559,21 +1557,21 @@ main .title {
   --font-size-x1: 64px;
   --font-family-inter: "Mona-Sans";
 }
-.decouvrir .inter-bold-white-40px {
-  color: var(--white);
+.frame-1 .inter-bold-white-40px {
+  color: white;
   font-family: "Mona-Sans";
   font-size: 30px;
   font-weight: 700;
   font-style: normal;
 }
-.decouvrir .inter-bold-cinder-18px {
-  color: var(--cinder);
+.frame-1 .inter-bold-cinder-18px {
+  color: rgb(13, 14, 23);
   font-family: var(--font-family-inter);
   font-size: var(--font-size-m);
   font-weight: 700;
   font-style: normal;
 }
-.decouvrir ion-icon {
+.frame-1 ion-icon {
   font-size: 134px;
   background: linear-gradient(rgb(255, 80, 185), rgb(255, 168, 0));
   z-index: 999;
@@ -2051,6 +2049,91 @@ main .title {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   overflow: hidden;
+}
+
+.emprunt {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgb(0, 0, 0);
+}
+.emprunt-form {
+  display: flex;
+  align-items: flex-start;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #0f1020;
+  padding: 50px;
+}
+.emprunt-form .image {
+  width: 300px;
+  height: 400px;
+  margin-right: 30px;
+}
+.emprunt-form .text {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 30px;
+}
+.emprunt-form .text h1,
+.emprunt-form .text h2,
+.emprunt-form .text p,
+.emprunt-form .text ul {
+  margin-bottom: 20px;
+}
+.emprunt-form .text h1 {
+  font-family: "Mona-Sans";
+  font-weight: 600;
+  font-size: 40px;
+  color: #ffffff;
+}
+.emprunt-form .text h2 {
+  font-family: "Mona-Sans";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 22px;
+  color: #fff;
+}
+.emprunt-form .text p {
+  font-family: "Mona-Sans";
+  font-style: italic;
+  font-weight: 300;
+  font-size: 16px;
+  color: #fff;
+}
+.emprunt-form .text ul {
+  display: flex;
+  align-items: center;
+}
+.emprunt-form .text ul li {
+  background: #ff51b9;
+  padding: 3px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  vertical-align: baseline;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.emprunt-form .text a {
+  text-decoration: none;
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  font-size: 16px;
+  padding: 6px 10px;
+}
+.emprunt-form .text a:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
 }
 
 @keyframes bolder {

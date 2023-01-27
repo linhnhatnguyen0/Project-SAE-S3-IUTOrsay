@@ -84,25 +84,32 @@ class Exemplaire extends Modele
   // }
   public static function listerExemplaireDisponible($nd)
   {
-    $requetePreparee1 = "SELECT EtatExemplaire FROM Exemplaire WHERE NumDocument = " . $nd;
+    $requetePreparee1 = "SELECT NumExemplaire,EtatExemplaire FROM Exemplaire WHERE NumDocument = " . $nd;
     echo ($requetePreparee1);
     $resultat1 = Connexion::pdo()->query($requetePreparee1);
     try {
       $resultat1->setFetchMode(PDO::FETCH_CLASS, 'Exemplaire');
       $tableau = $resultat1->fetchAll();
-      echo "<pre>";
-      print_r($tableau);
-      echo "</pre>";
       foreach ($tableau as $value) {
         if ($value->getEtatExemplaire() == "Bon") {
-          return true;
-        } else
+          return $value->getNumExemplaire();
+        } else {
+          echo ("haha");
           return false;
+        }
       }
     } catch (PDOException $e) {
       echo "erreur : " . $e->getMessage() . "<br>";
       return false;
     }
+  }
+
+  public static function updateExemplaire($numE)
+  {
+    $req = "UPDATE Exemplaire SET EtatExemplaire='En Emprunt' WHERE numExemplaire = :tag;";
+    $res = Connexion::pdo()->prepare($req);
+    $value = ["tag" => $numE];
+    $res->execute($value);
   }
 
 

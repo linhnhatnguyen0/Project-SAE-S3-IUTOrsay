@@ -6,6 +6,9 @@ require_once("modele/TypeDocument.php");
 require_once("modele/Exemplaire.php");
 require_once("modele/emprunt.php");
 require_once("modele/session.php");
+require_once("./controleur/controleurUtilisateur.php");
+require_once("./controleur/controleurDocument.php");
+require_once("./controleur/controleurEmprunt.php");
 class Controleur
 {
     public static function controleurIndex()
@@ -44,51 +47,62 @@ class Controleur
 
     public static function verifierdispo()
     {
-        $titre = "verifier dispo";
-        include("./View/head.php");
-        include("./controleur/headerVerify.php");
-        $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_POST['numDoc'], $_POST['numLangue']);
-        /* -- TEST D'AJOUT D'EMPRUNT --
-        date_default_timezone_set('Europe/Paris');
-        $date = date('Y-m-d');
-        echo ($date);
-        Emprunt::addEmprunt($date, 1, 67); 
-        */
-        if(count($tableauExemplaireDispo) > 0){
-            //Cas où il y a des exemplaires disponibles
-
-            //test getDocumentById();
-            $doc = $tableauExemplaireDispo[0]->getDocumentById();
-            echo ($doc->getNumDocument());
+        if (!Session::userConnected() && !Session::userConnecting()) {
+            ControleurUtilisateur::afficherLogin();
         } else {
-            //Cas où il n'y a pas d'exemplaire disponible
-            echo ("<h1>Pas d'exemplaire disponible pour " . $_POST['numDoc'] . " en langue " . $_POST['numLangue'] . "</h1>");
+            $titre = "verifier dispo";
+            $tableauExemplaireDispo = Exemplaire::listerExemplaireDisponible($_GET['numDoc']);
+            $tableau = Document::getDocumentByNumDocument($_GET["numDoc"]);
+
+            $titreDoc = $tableau->getTitre();
+            $nomAuteur = Auteur::getAuteurById($tableau->getNumAuteur());
+            $nomA = $nomAuteur->getNomAuteur() . $nomAuteur->getPrenomAuteur();
+            $annee = $tableau->getAnneeParution();
+            $nomTypeD = $tableau->getTypeDocByDoc()->getNomTypeD();
+            $nomCat = $tableau->getCategorieByDoc()->getNomCat();
+            $login = $_SESSION["login"];
+            include("./View/head.php");
+            include("./controleur/headerVerify.php");
+            if ($tableauExemplaireDispo != NULL) {
+                //Cas où il y a des exemplaires disponibles
+                $notification = '<p>Une exemplaire est disponible</p>
+                <a href="./index.php?controleur=controleurEmprunt&action=ajouterEmprunt&numE=' . $tableauExemplaireDispo . '&numU=' . $login . '">Emprunter</a>';
+            } else {
+                $notification = "<p>Pas de exemplaire disponible</p>";
+                echo "<pre>";
+                echo ($tableauExemplaireDispo);
+                echo "</pre>";
+                //Cas où il n'y a pas d'exemplaire disponible
+            }
+            include("./View/emprunter-form.php");
+            include("./View/footer.php");
         }
-        include("./View/footer.php");
     }
 
-    
 
 
-    public static function aPropos(){
+
+    public static function aPropos()
+    {
         $titre = "A propos";
         include("./View/head.php");
 
         include("./controleur/headerVerify.php");
 
         include("./View/Infos.php");
-        
+
         include("./View/footer.php");
     }
 
-    public static function cata_main(){
+    public static function cata_main()
+    {
         $titre = "A propos";
         include("./View/head.php");
 
         include("./controleur/headerVerify.php");
 
         include("./View/cata-main.php");
-        
+
         include("./View/footer.php");
     }
 

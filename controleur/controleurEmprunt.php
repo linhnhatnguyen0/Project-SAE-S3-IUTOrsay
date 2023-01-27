@@ -2,9 +2,11 @@
 class controleurEmprunt
 {
 
-    public static function afficheEmprunt()
+    public static function ajouterEmprunt()
     {
-        $id = $_GET["numDoc"];
+        Emprunt::addEmprunt($_GET["numU"], $_GET["numE"]);
+        Exemplaire::updateExemplaire($_GET["numE"]);
+        Controleur::controleurIndex();
     }
 }
 ?>

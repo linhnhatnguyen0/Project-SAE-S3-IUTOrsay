@@ -1,13 +1,10 @@
-.decouvrir {
-  .frame-1 {
-    align-items: flex-start;
-    background-color: var(--white);
-    border: 1px none;
-    display: flex;
-    height: 1080px;
-    width: 1920px;
-  }
-
+.frame-1 {
+  align-items: flex-start;
+  background-color: white;
+  border: 1px none;
+  display: flex;
+  height: 100vh;
+  width: 100vw;
   .hidden,
   .hidden * {
     pointer-events: none;
@@ -15,14 +12,13 @@
   }
 
   .bg {
-    align-items: flex-start;
-    background-color: var(--vulcan);
+    align-items: center;
+    justify-content: space-around;
+    background-color: rgba(17, 20, 26, 1);
     display: flex;
     flex-direction: column;
-    gap: 70px;
-    min-height: 1080px;
-    padding: 175px 124px;
-    width: 1920px;
+    width: 100%;
+    height: 100vh;
   }
 
   .group-container {
@@ -34,7 +30,7 @@
 
   .group-112 {
     align-items: center;
-    background-color: var(--shark);
+    background-color: rgba(28, 33, 43, 1);
     border-radius: 20px;
     box-shadow: 4px 4px 25px 2px #00000033;
     display: flex;
@@ -50,10 +46,9 @@
     width: 134px;
   }
 
-  .frame-1 .overlap-group-3 {
+  .overlap-group-3 {
     align-items: flex-start;
     border-radius: 20px;
-    box-shadow: 4px 4px 25px 2px #00000033;
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -67,7 +62,7 @@
 
   .overlap-group1 {
     align-items: flex-end;
-    background-color: var(--ronchi);
+    background-color: rgba(241, 200, 74, 1);
     border-radius: 20px;
     display: flex;
     height: 25px;
@@ -94,7 +89,7 @@
   }
 
   .frame-1 .rectangle-156-3 {
-    background-color: var(--alto);
+    background-color: rgba(217, 217, 217, 1);
     height: 8px;
     width: 450px;
   }
@@ -134,7 +129,7 @@
   }
 
   .rectangle-83 {
-    background-color: var(--shark);
+    background-color: rgba(28, 33, 43, 1);
     border-radius: 20px;
     box-shadow: 4px 4px 25px 2px #00000033;
     height: 383px;
@@ -161,7 +156,7 @@
   }
 
   .decouvrir {
-    color: var(--white);
+    color: white;
     font-family: var(--font-family-inter);
     font-size: 60px;
     font-weight: 800;
@@ -175,7 +170,7 @@
   }
 
   .rectangle-83-1 {
-    background-color: var(--vulcan);
+    background-color: rgba(17, 20, 26, 1);
     border-radius: 20px;
     box-shadow: 4px 4px 25px 2px #00000033;
     height: 156px;
@@ -200,7 +195,7 @@
   }
 
   .inter-bold-white-40px {
-    color: var(--white);
+    color: white;
     font-family: "Mona-Sans";
     font-size: 30px;
     font-weight: 700;
@@ -208,7 +203,7 @@
   }
 
   .inter-bold-cinder-18px {
-    color: var(--cinder);
+    color: rgba(13, 14, 23, 1);
     font-family: var(--font-family-inter);
     font-size: var(--font-size-m);
     font-weight: 700;

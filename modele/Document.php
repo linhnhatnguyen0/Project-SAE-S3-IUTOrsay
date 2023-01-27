@@ -100,54 +100,57 @@ class Document extends Modele
 
 
 
-  public static function getAllDocuments() {
-		$requete = "SELECT * FROM Document;";
-		$resultat = Connexion::pdo()->query($requete);
-		$resultat->setFetchMode(PDO::FETCH_CLASS,'Document');
-		$tableau = $resultat->fetchAll();
-		return $tableau;
-	}
-  
+  public static function getAllDocuments()
+  {
+    $requete = "SELECT * FROM Document;";
+    $resultat = Connexion::pdo()->query($requete);
+    $resultat->setFetchMode(PDO::FETCH_CLASS, 'Document');
+    $tableau = $resultat->fetchAll();
+    return $tableau;
+  }
 
 
-  public static function getPopularDocuments() {
-		$requete = "SELECT COUNT(*) AS Lignes, NumDocument, Titre, AnneeParution, NumTypeD, NumAuteur, NumCat  FROM Document NATURAL JOIN Exemplaire NATURAL JOIN Emprunt GROUP BY NumDocument ORDER BY Lignes DESC";
-		$resultat = Connexion::pdo()->query($requete);
-		$resultat->setFetchMode(PDO::FETCH_CLASS,'Document');
-		$tableau = $resultat->fetchAll();
-		return $tableau;
-	}
 
-  public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL){
+  public static function getPopularDocuments()
+  {
+    $requete = "SELECT COUNT(*) AS Lignes, NumDocument, Titre, AnneeParution, NumTypeD, NumAuteur, NumCat  FROM Document NATURAL JOIN Exemplaire NATURAL JOIN Emprunt GROUP BY NumDocument ORDER BY Lignes DESC";
+    $resultat = Connexion::pdo()->query($requete);
+    $resultat->setFetchMode(PDO::FETCH_CLASS, 'Document');
+    $tableau = $resultat->fetchAll();
+    return $tableau;
+  }
+
+  public static function searchDoc($titre = NULL, $auteur = NULL, $annee = NULL, $categorie = NULL)
+  {
     $requetePreparee = "SELECT * FROM Document NATURAL JOIN Auteur NATURAL JOIN TypeDocument NATURAL JOIN Categorie ";
     $arg = 0;
-    if($titre != NULL){
-      $requetePreparee = $requetePreparee." WHERE Titre LIKE '%".$titre."%' ";
+    if ($titre != NULL) {
+      $requetePreparee = $requetePreparee . " WHERE Titre LIKE '%" . $titre . "%' ";
       $arg = 1;
     }
 
-    if($auteur != NULL  && $arg == 0){
-      $requetePreparee = $requetePreparee."WHERE ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%".$auteur."%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%".$auteur."%' ) ";
+    if ($auteur != NULL && $arg == 0) {
+      $requetePreparee = $requetePreparee . "WHERE ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%" . $auteur . "%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%" . $auteur . "%' ) ";
       $arg = 1;
-    }elseif($auteur != NULL && $arg == 1){
-      $requetePreparee = $requetePreparee."AND ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%".$auteur."%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%".$auteur."%' ) ";
-    }
-    
-    if($annee != NULL && $arg == 0){
-      $requetePreparee = $requetePreparee."WHERE AnneeParution = ".$annee." ";
-      $arg = 1;
-    }elseif($annee != NULL && $arg == 1){
-      $requetePreparee = $requetePreparee."AND AnneeParution = ".$annee." ";
+    } elseif ($auteur != NULL && $arg == 1) {
+      $requetePreparee = $requetePreparee . "AND ( CONCAT(NomAuteur, ' ', PrenomAuteur) LIKE '%" . $auteur . "%' OR CONCAT(PrenomAuteur, ' ', NomAuteur) LIKE '%" . $auteur . "%' ) ";
     }
 
-    if($categorie != NULL && $arg == 0){
-      $requetePreparee = $requetePreparee."WHERE NumCat = ".$categorie." ";
+    if ($annee != NULL && $arg == 0) {
+      $requetePreparee = $requetePreparee . "WHERE AnneeParution = " . $annee . " ";
       $arg = 1;
-    }elseif($categorie != NULL && $arg == 1){
-      $requetePreparee = $requetePreparee."AND NumCat = ".$categorie." ";
+    } elseif ($annee != NULL && $arg == 1) {
+      $requetePreparee = $requetePreparee . "AND AnneeParution = " . $annee . " ";
+    }
+
+    if ($categorie != NULL && $arg == 0) {
+      $requetePreparee = $requetePreparee . "WHERE NumCat = " . $categorie . " ";
+      $arg = 1;
+    } elseif ($categorie != NULL && $arg == 1) {
+      $requetePreparee = $requetePreparee . "AND NumCat = " . $categorie . " ";
     }
     $resultat = Connexion::pdo()->prepare($requetePreparee);
-    
+
     $valeurs = array(
       "t_tag" => $titre,
       "a_tag" => $auteur,
@@ -156,7 +159,7 @@ class Document extends Modele
     );
     try {
       $resultat->execute($valeurs);
-      $resultat->setFetchMode(PDO::FETCH_CLASS,'Document');
+      $resultat->setFetchMode(PDO::FETCH_CLASS, 'Document');
       $tableau = $resultat->fetchAll();
       return $tableau;
     } catch (PDOException $e) {
@@ -209,8 +212,6 @@ class Document extends Modele
       $req_prep->execute($valeurs);
       $req_prep->setFetchMode(PDO::FETCH_CLASS, 'Document');
       $v = $req_prep->fetch();
-      if (!$v)
-        return false;
       return $v;
     } catch (PDOException $e) {
       echo "erreur : " . $e->getMessage() . "<br>";
@@ -240,7 +241,8 @@ class Document extends Modele
     }
   }
 
-  public function getAuteurByDoc(){
+  public function getAuteurByDoc()
+  {
     $requetePreparee = "SELECT * FROM Auteur WHERE NumAuteur = :tag_n;";
     $req_prep = Connexion::pdo()->prepare($requetePreparee);
     $valeurs = array("tag_n" => $this->NumAuteur);
@@ -257,7 +259,8 @@ class Document extends Modele
     return false;
   }
 
-  public function getTypeDocByDoc(){
+  public function getTypeDocByDoc()
+  {
     $requetePreparee = "SELECT * FROM TypeDocument WHERE NumTypeD = :tag_n;";
     $req_prep = Connexion::pdo()->prepare($requetePreparee);
     $valeurs = array("tag_n" => $this->NumTypeD);
@@ -274,7 +277,8 @@ class Document extends Modele
     return false;
   }
 
-  public function getCategorieByDoc(){
+  public function getCategorieByDoc()
+  {
     $requetePreparee = "SELECT * FROM Categorie WHERE NumCat = :tag_n;";
     $req_prep = Connexion::pdo()->prepare($requetePreparee);
     $valeurs = array("tag_n" => $this->NumCat);

@@ -144,9 +144,9 @@
     <input type="hidden" name="action" value="controleurIndexConnected">
     <input type="hidden" name="controleur" value="controleurUtilisateur">
     <div class="inputGroup inputGroup1">
-        <label for="login">Email</label>
+        <label for="login">Login</label>
         <input type="text" id="email" class="email" maxlength="256" name="login" autocomplete="off" />
-        <p class="helper helper1">email@domain.com</p>
+        <p class="helper helper1">Login</p>
         <span class="indicator"></span>
     </div>
     <div class="inputGroup inputGroup2">
