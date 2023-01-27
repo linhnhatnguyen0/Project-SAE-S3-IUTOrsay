@@ -12,7 +12,7 @@ require_once("./controleur/controleur.php");
 $controleur = "controleur";
 $action = "controleurIndex";
 // Path: routeur.php
-$tableauControlleur = ["controlleur", "controleurDocument", "controleurUtilisateur"];
+$tableauControlleur = ["controleur", "controleurDocument", "controleurUtilisateur", "controleurEmprunt"];
 
 if (isset($_POST["controleur"]) && in_array($_POST["controleur"], $tableauControlleur)) {
     $controleur = $_POST["controleur"];
