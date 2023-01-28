@@ -11,11 +11,12 @@
         <ion-icon name="calendar-outline"></ion-icon>
         <div class="overlap-group-1 overlap-group-3">
           <div class="services inter-bold-white-40px">SERVICES</div>
-          <div class="overlap-group1">
-            <div class="consulter-les-services inter-bold-cinder-18px">
-              Consulter The Services
-            </div>
-          </div>
+          <li class="overlap-group1"><a href="./index.php?controleur=controleur&action=decouvrirService">
+              <div class="consulter-les-services inter-bold-cinder-18px">
+                Consulter The Services
+              </div>
+            </a>
+          </li>
         </div>
       </div>
       <div class="overlap-group">
@@ -24,11 +25,12 @@
         <ion-icon name="sparkles-outline"></ion-icon>
         <div class="overlap-group-1 overlap-group-3">
           <div class="services inter-bold-white-40px">ACTUALITE</div>
-          <div class="overlap-group1">
-            <li class="consulter-les-services inter-bold-cinder-18px"><a href="./index.php?controleur=controleur&action=decouvrirService">
-              Consulter The Services
-            </li>
-          </div>
+          <li class="overlap-group1"><a href="./index.php?controleur=controleur&action=decouvrirActualite">
+              <div class="consulter-les-services inter-bold-cinder-18px">
+                Consulter The Services
+              </div>
+            </a>
+          </li>
         </div>
       </div>
       <div class="overlap-group">
@@ -37,11 +39,12 @@
         <ion-icon name="people-outline"></ion-icon>
         <div class="overlap-group-1 overlap-group-3">
           <div class="services inter-bold-white-40px">COLLABORATION</div>
-          <div class="overlap-group1">
-            <div class="consulter-les-services inter-bold-cinder-18px">
-              Consulter The Services
-            </div>
-          </div>
+          <li class="overlap-group1"><a href="./index.php?controleur=controleur&action=decouvrircollaboration">
+              <div class="consulter-les-services inter-bold-cinder-18px">
+                Consulter The Services
+              </div>
+            </a>
+          </li>
         </div>
       </div>
     </div>

@@ -118,6 +118,30 @@ class Controleur
         include("./View/footer.php");
     }
 
+
+    public static function decouvrirActualite()
+    {
+        $titre = "Decouvrir Actualite";
+        include("./View/head.php");
+
+        include("./controleur/headerVerify.php");
+
+        include("./View/cata-actualite.php");
+
+        include("./View/footer.php");
+    }
+
+    public static function decouvrircollaboration()
+    {
+        $titre = "Decouvrir collaboration";
+        include("./View/head.php");
+
+        include("./controleur/headerVerify.php");
+
+        include("./View/cata-collaboration.php");
+
+        include("./View/footer.php");
+    }
 }
 
 ?>
