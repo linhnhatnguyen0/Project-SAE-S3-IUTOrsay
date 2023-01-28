@@ -96,7 +96,7 @@ class Controleur
 
     public static function cata_main()
     {
-        $titre = "A propos";
+        $titre = "Decouvrir main";
         include("./View/head.php");
 
         include("./controleur/headerVerify.php");
@@ -106,6 +106,17 @@ class Controleur
         include("./View/footer.php");
     }
 
+    public static function decouvrirService()
+    {
+        $titre = "Decouvrir Service";
+        include("./View/head.php");
+
+        include("./controleur/headerVerify.php");
+
+        include("./View/server.php");
+
+        include("./View/footer.php");
+    }
 
 }
 
