@@ -1,14 +1,14 @@
-.v483_107 {
+.service .v483_107 {
   width: 100%;
   height: 1365px;
-  background: rgba(255, 255, 255, 1);
+  background: rgb(255, 255, 255);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
 }
-.v483_108 {
+.service .v483_108 {
   width: 100%;
   height: 1375px;
   opacity: 1;
@@ -16,17 +16,17 @@
   left: 0px;
   overflow: hidden;
 }
-.v483_109 {
+.service .v483_109 {
   width: 100%;
   height: 100%;
-  background: rgba(13, 14, 23, 1);
+  background: rgb(13, 14, 23);
   opacity: 1;
   position: absolute;
   top: 0px;
   left: 0px;
   overflow: hidden;
 }
-.v483_114 {
+.service .v483_114 {
   width: 65px;
   height: 65px;
   opacity: 1;
@@ -35,10 +35,9 @@
   left: 1766px;
   overflow: hidden;
 }
-
-.v483_129 {
+.service .v483_129 {
   width: 662px;
-  color: rgba(255, 235, 57, 1);
+  color: rgb(255, 235, 57);
   position: absolute;
   top: 442px;
   left: 106px;
@@ -48,9 +47,9 @@
   opacity: 1;
   text-align: left;
 }
-.v494_127 {
+.service .v494_127 {
   width: 662px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 639px;
   left: 106px;
@@ -60,8 +59,7 @@
   opacity: 1;
   text-align: left;
 }
-
-.v494_126 {
+.service .v494_126 {
   width: 310px;
   height: 378px;
   position: absolute;
@@ -69,10 +67,10 @@
   left: 894px;
   overflow: hidden;
 }
-.v483_125 {
+.service .v483_125 {
   width: 310px;
   height: 378px;
-  background: rgba(241, 200, 74, 1);
+  background: rgb(241, 200, 74);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -83,10 +81,10 @@
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
-.v483_262 {
+.service .v483_262 {
   width: 143px;
   height: 46px;
-  background: rgba(199, 51, 107, 1);
+  background: rgb(199, 51, 107);
   opacity: 1;
   position: absolute;
   top: 290px;
@@ -101,8 +99,8 @@
   appearance: button;
   text-decoration: none;
 }
-.vbutton {
-  color: rgba(255, 255, 255, 1);
+.service .vbutton {
+  color: rgb(255, 255, 255);
   position: absolute;
   font-family: "Mona Sans";
   font-weight: Bold;
@@ -110,9 +108,9 @@
   padding: 10px;
   margin-left: 30px;
 }
-.v494_103 {
+.service .v494_103 {
   width: 263px;
-  color: rgba(13, 14, 23, 1);
+  color: rgb(13, 14, 23);
   position: absolute;
   top: 183px;
   left: 23px;
@@ -122,14 +120,14 @@
   opacity: 1;
   text-align: center;
 }
-.v494_117 {
+.service .v494_117 {
   width: 120px;
   position: absolute;
   opacity: 1;
   top: 46px;
   left: 97px;
 }
-.v492_803 {
+.service .v492_803 {
   width: 310px;
   height: 378px;
   opacity: 1;
@@ -137,10 +135,10 @@
   top: 837px;
   left: 1364px;
 }
-.v492_804 {
+.service .v492_804 {
   width: 310px;
   height: 378px;
-  background: rgba(241, 200, 74, 1);
+  background: rgb(241, 200, 74);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -151,9 +149,9 @@
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
-.v492_806 {
+.service .v492_806 {
   width: 76px;
-  color: rgba(255, 255, 255, 1);
+  color: rgb(255, 255, 255);
   position: absolute;
   top: 301px;
   left: 117px;
@@ -163,9 +161,9 @@
   opacity: 1;
   text-align: center;
 }
-.v492_807 {
+.service .v492_807 {
   width: 263px;
-  color: rgba(13, 14, 23, 1);
+  color: rgb(13, 14, 23);
   position: absolute;
   top: 183px;
   left: 23px;
@@ -175,7 +173,7 @@
   opacity: 1;
   text-align: center;
 }
-.v492_797 {
+.service .v492_797 {
   width: 310px;
   height: 378px;
   position: absolute;
@@ -183,10 +181,10 @@
   left: 895px;
   overflow: hidden;
 }
-.v492_798 {
+.service .v492_798 {
   width: 310px;
   height: 378px;
-  background: rgba(241, 200, 74, 1);
+  background: rgb(241, 200, 74);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -197,9 +195,9 @@
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
-.v492_801 {
+.service .v492_801 {
   width: 263px;
-  color: rgba(13, 14, 23, 1);
+  color: rgb(13, 14, 23);
   position: absolute;
   top: 183px;
   left: 23px;
@@ -209,7 +207,7 @@
   opacity: 1;
   text-align: center;
 }
-.v492_791 {
+.service .v492_791 {
   width: 310px;
   height: 378px;
   position: absolute;
@@ -217,10 +215,10 @@
   left: 1364px;
   overflow: hidden;
 }
-.v492_792 {
+.service .v492_792 {
   width: 310px;
   height: 378px;
-  background: rgba(241, 200, 74, 1);
+  background: rgb(241, 200, 74);
   opacity: 1;
   position: absolute;
   top: 0px;
@@ -231,9 +229,9 @@
   border-bottom-right-radius: 20px;
   overflow: hidden;
 }
-.v492_795 {
+.service .v492_795 {
   width: 263px;
-  color: rgba(13, 14, 23, 1);
+  color: rgb(13, 14, 23);
   position: absolute;
   top: 183px;
   left: 23px;
@@ -243,3 +241,5 @@
   opacity: 1;
   text-align: center;
 }
+
+/*# sourceMappingURL=service.css.map */

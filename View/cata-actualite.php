@@ -1,4 +1,4 @@
-<body>
+<section class="v107_0 actualite">
     <div class="v107_75">
         <div class="v107_77"></div>
         <div class="v107_76">
@@ -40,4 +40,4 @@
             </div><span class="v109_174">magazin</span><span class="v109_168">exposition</span>
         </div>
     </div>
-</body>
+</section>
