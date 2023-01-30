@@ -53,7 +53,7 @@
     </div>
     <div class="map">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2626.3729368696204!2d2.329833716005461!3d48.8320247292849!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e671b9efc12f79%3A0x24719ea354d14bac!2s13%20Av.%20du%20G%C3%A9n%C3%A9ral%20Leclerc%2C%2075014%20Paris!5e0!3m2!1sfr!2sfr!4v1635933680242!5m2!1sfr!2sfr"
+        src="https://www.google.com/maps/place/Universit%C3%A9+Paris-Saclay+-+IUT+d'Orsay/@48.7090634,2.1676754,15z/data=!4m5!3m4!1s0x47e67f538f1df01d:0xe5d2ea29a4e0ceb!8m2!3d48.7109946!4d2.1708547"
         width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
     </div>
   </div>
