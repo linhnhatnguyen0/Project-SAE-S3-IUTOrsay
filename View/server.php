@@ -1,4 +1,4 @@
-<body>
+<section class="v483.0 service">
     <div class="v483_107">
         <div class="v483_108">
             <div class="v483_109"></div>
@@ -38,4 +38,4 @@
             <span class="v492_795">Service d'imprimant</span>
         </div>
     </div>
-</body>
+</section>
