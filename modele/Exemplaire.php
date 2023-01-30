@@ -94,7 +94,6 @@ class Exemplaire extends Modele
         if ($value->getEtatExemplaire() == "Bon") {
           return $value->getNumExemplaire();
         } else {
-          echo ("haha");
           return false;
         }
       }
