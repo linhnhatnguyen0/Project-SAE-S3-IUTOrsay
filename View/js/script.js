@@ -7,7 +7,6 @@ let image4 = $(".img-4");
 
 $(document).ready(function () {
   if ($("main").children().attr("class") == "main-page") {
-    console.log("haha");
     $(document).bind("mousewheel DOMMouseScroll", function (event) {
       if (
         event.originalEvent.wheelDelta > 0 ||

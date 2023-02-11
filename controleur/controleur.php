@@ -113,7 +113,7 @@ class Controleur
 
         include("./controleur/headerVerify.php");
 
-        include("./View/server.php");
+        include("./View/cata-service.php");
 
         include("./View/footer.php");
     }

@@ -579,7 +579,7 @@ main .title {
   background-color: #f3fafd;
   border: solid 2px #217093;
   border-radius: 4px;
-  -webkit-appearance-: none;
+  -webkit-appearance: none;
   box-sizing: border-box;
   width: 100%;
   height: 65px;
@@ -1383,201 +1383,70 @@ main .title {
   }
 }
 
-.frame-1 {
-  align-items: flex-start;
-  background-color: white;
-  border: 1px none;
+.decouvrir {
+  width: 100%;
+  height: 60vh;
   display: flex;
-  height: 100vh;
-  width: 100vw;
-}
-.frame-1 .hidden,
-.frame-1 .hidden * {
-  pointer-events: none;
-  visibility: hidden;
-}
-.frame-1 .bg {
   align-items: center;
   justify-content: space-around;
-  background-color: rgb(17, 20, 26);
-  display: flex;
   flex-direction: column;
-  width: 100%;
-  height: 100vh;
 }
-.frame-1 .group-container {
-  align-items: flex-start;
+.decouvrir-title h1 {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+.decouvrir-contents {
   display: flex;
-  gap: 160px;
-  min-width: 1670px;
-}
-.frame-1 .group-112 {
   align-items: center;
-  background-color: rgb(28, 33, 43);
-  border-radius: 20px;
-  box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
+  justify-content: space-between;
+  width: 60%;
+}
+.decouvrir-contents > div {
+  width: 25%;
+  background-color: #1c1e29;
+  border-radius: 5px;
+  padding: 2rem 0;
   display: flex;
   flex-direction: column;
-  min-height: 383px;
-  width: 450px;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
 }
-.frame-1 people-outline {
-  height: 134px;
-  margin-right: 0.03px;
-  margin-top: 26px;
-  width: 134px;
+.decouvrir-contents > div:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.356);
+  transition: ease-in-out 0.2s;
 }
-.frame-1 .overlap-group-3 {
-  align-items: flex-start;
-  border-radius: 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-  padding: 22px 90px;
+.decouvrir-contents > div ion-icon {
+  color: rgb(255, 179, 135);
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.5rem;
 }
-.frame-1 .overlap-group-2 {
-  display: flex;
-  border-radius: 0%;
+.decouvrir-contents > div h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  color: rgb(255, 255, 255);
+  margin-bottom: 1.5rem;
 }
-.frame-1 .overlap-group1 {
-  align-items: flex-end;
-  background-color: rgb(241, 200, 74);
-  border-radius: 20px;
-  display: flex;
-  height: 25px;
-  justify-content: flex-end;
-  /* min-width: 267px; */
-  padding: 11px 8px;
+.decouvrir-contents > div a {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
+  text-decoration: none;
+  font-size: 15px;
 }
-.frame-1 .consulter-les-services {
-  letter-spacing: 0;
-  line-height: normal;
-  text-align: center;
-  width: 249px;
-}
-.frame-1 .services {
-  align-self: center;
-  letter-spacing: 0;
-  line-height: normal;
-  margin-right: 25px;
-  min-height: 48px;
-  min-width: 199px;
-  text-align: center;
-}
-.frame-1 .frame-1 .rectangle-156-3 {
-  background-color: rgb(217, 217, 217);
-  height: 8px;
-  width: 450px;
-}
-.frame-1 .overlap-group {
-  height: 394px;
-  position: relative;
-  width: 450px;
-}
-.frame-1 .rectangle-156-1 {
-  border-radius: 20px;
-  left: 0;
-  position: absolute;
-  top: 0;
-}
-.frame-1 .overlap-group-1 {
-  left: 0;
-  position: absolute;
-  top: 194px;
-}
-.frame-1 sparkles-outline {
-  height: 134px;
-  left: 158px;
-  position: absolute;
-  top: 39px;
-  width: 134px;
-}
-.frame-1 .frame-1 .rectangle {
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 450px;
-}
-.frame-1 .rectangle-83 {
-  background-color: rgb(28, 33, 43);
-  border-radius: 20px;
-  box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
-  height: 383px;
-}
-.frame-1 .rectangle-156 {
-  height: 8px;
-}
-.frame-1 calendar-outline {
-  height: 126px;
-  left: 146px;
-  position: absolute;
-  top: 47px;
-  width: 134px;
-}
-.frame-1 .overlap-group4 {
-  align-self: center;
-  height: 162px;
-  margin-right: 15px;
-  position: relative;
-  width: 525px;
-}
-.frame-1 .decouvrir {
-  color: white;
-  font-family: var(--font-family-inter);
-  font-size: 60px;
-  font-weight: 800;
-  left: 0;
-  letter-spacing: 0;
-  line-height: 30px;
-  position: absolute;
-  text-align: center;
-  top: 0;
-  width: 525px;
-}
-.frame-1 .rectangle-83-1 {
-  background-color: rgb(17, 20, 26);
-  border-radius: 20px;
-  box-shadow: 4px 4px 25px 2px rgba(0, 0, 0, 0.2);
-  height: 156px;
-  left: 3px;
-  position: absolute;
-  top: 6px;
-  width: 522px;
-}
-.frame-1 :root {
-  --black: rgba(0, 0, 0, 1);
-  --cinder: rgba(13, 14, 23, 1);
-  --vulcan: rgba(17, 20, 26, 1);
-  --shark: rgba(28, 33, 43, 1);
-  --alto: rgba(217, 217, 217, 1);
-  --ronchi: rgba(241, 200, 74, 1);
-  --white: rgba(255, 255, 255, 1);
-  --font-size-m: 18px;
-  --font-size-1: 40px;
-  --font-size-x1: 64px;
-  --font-family-inter: "Mona-Sans";
-}
-.frame-1 .inter-bold-white-40px {
-  color: white;
-  font-family: "Mona-Sans";
-  font-size: 30px;
-  font-weight: 700;
-  font-style: normal;
-}
-.frame-1 .inter-bold-cinder-18px {
-  color: rgb(13, 14, 23);
-  font-family: var(--font-family-inter);
-  font-size: var(--font-size-m);
-  font-weight: 700;
-  font-style: normal;
-}
-.frame-1 ion-icon {
-  font-size: 134px;
-  background: linear-gradient(rgb(255, 80, 185), rgb(255, 168, 0));
-  z-index: 999;
-  position: absolute;
-  left: 150px;
-  top: 14%;
+.decouvrir-contents > div a:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
 }
 
 .collaboration .v119_244 {
@@ -1940,7 +1809,7 @@ main .title {
   width: 542px;
   color: rgb(255, 255, 255);
   position: absolute;
-  top: 124px;
+  top: 104px;
   left: 723px;
   font-family: Inter;
   font-weight: Bold;
@@ -2135,6 +2004,7 @@ main .title {
 .emprunt-form .text a:hover {
   animation: bolder 0.8s ease-in-out infinite alternate;
 }
+
 .actualite .v107_75 {
   width: 100%;
   height: 1080px;
@@ -2320,7 +2190,7 @@ main .title {
 .actualite .v111_202 {
   width: 280px;
   height: 185px;
-  background: url("../../img/expositon.jpg");
+  background: url("img/expositon.jpg");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -2726,248 +2596,81 @@ main .title {
   text-align: center;
   text-decoration: underline;
 }
-.service .v483_107 {
-  width: 100%;
-  height: 1365px;
-  background: rgb(255, 255, 255);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+
+.service-list {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+  height: 80vh;
 }
-.service .v483_108 {
-  width: 100%;
-  height: 1375px;
-  opacity: 1;
-  position: absolute;
-  left: 0px;
-  overflow: hidden;
+.service-list-title {
+  width: 40%;
 }
-.service .v483_109 {
-  width: 100%;
-  height: 100%;
-  background: rgb(13, 14, 23);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  overflow: hidden;
+.service-list-title h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: white;
+  text-align: center;
+  margin-bottom: 1rem;
 }
-.service .v483_114 {
-  width: 65px;
-  height: 65px;
-  opacity: 1;
-  position: absolute;
-  top: 55px;
-  left: 1766px;
-  overflow: hidden;
+.service-list-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: white;
+  text-align: center;
+  margin-bottom: 2rem;
 }
-.service .v483_129 {
-  width: 662px;
-  color: rgb(255, 235, 57);
-  position: absolute;
-  top: 442px;
-  left: 106px;
-  font-family: Inter;
-  font-weight: Bold;
-  font-size: 80px;
-  opacity: 1;
-  text-align: left;
+.service-list-contents {
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
 }
-.service .v494_127 {
-  width: 662px;
+.service-list-contents > div {
+  width: 40%;
+  background-color: #222431;
+  border-radius: 5px;
+  padding: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: ease-in-out 0.3s;
+  margin: 20px;
+}
+.service-list-contents > div:hover {
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.356);
+  transition: ease-in-out 0.2s;
+}
+.service-list-contents > div ion-icon {
+  color: rgb(255, 179, 135);
+  width: 70px;
+  height: 70px;
+  margin-bottom: 1.5rem;
+}
+.service-list-contents > div h2 {
+  font-size: 1.6rem;
+  font-weight: 600;
   color: rgb(255, 255, 255);
-  position: absolute;
-  top: 639px;
-  left: 106px;
-  font-family: Inter;
-  font-weight: Bold;
-  font-size: 50px;
-  opacity: 1;
-  text-align: left;
+  margin-bottom: 1.5rem;
 }
-.service .v494_126 {
-  width: 310px;
-  height: 378px;
-  position: absolute;
-  top: 265px;
-  left: 894px;
-  overflow: hidden;
-}
-.service .v483_125 {
-  width: 310px;
-  height: 378px;
-  background: rgb(241, 200, 74);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-}
-.service .v483_262 {
-  width: 143px;
-  height: 46px;
-  background: rgb(199, 51, 107);
-  opacity: 1;
-  position: absolute;
-  top: 290px;
-  left: 83px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-  -webkit-appearance: button;
-  -moz-appearance: button;
-  appearance: button;
+.service-list-contents > div a {
+  background-color: #f1c84a;
+  color: #11141a;
+  padding: 10px 30px;
+  border: none;
+  cursor: pointer;
+  font-family: "Mona Sans";
+  font-weight: 600;
+  font-size: 1.2rem;
+  box-shadow: 0px 2px 40px 6px rgba(220, 158, 0, 0.3);
+  border-radius: 38px;
   text-decoration: none;
+  font-size: 15px;
 }
-.service .vbutton {
-  color: rgb(255, 255, 255);
-  position: absolute;
-  font-family: "Mona Sans";
-  font-weight: Bold;
-  font-size: 20px;
-  padding: 10px;
-  margin-left: 30px;
-}
-.service .v494_103 {
-  width: 263px;
-  color: rgb(13, 14, 23);
-  position: absolute;
-  top: 183px;
-  left: 23px;
-  font-family: "Mona Sans";
-  font-weight: Bold;
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
-}
-.service .v494_117 {
-  width: 120px;
-  position: absolute;
-  opacity: 1;
-  top: 46px;
-  left: 97px;
-}
-.service .v492_803 {
-  width: 310px;
-  height: 378px;
-  opacity: 1;
-  position: absolute;
-  top: 837px;
-  left: 1364px;
-}
-.service .v492_804 {
-  width: 310px;
-  height: 378px;
-  background: rgb(241, 200, 74);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-}
-.service .v492_806 {
-  width: 76px;
-  color: rgb(255, 255, 255);
-  position: absolute;
-  top: 301px;
-  left: 117px;
-  font-family: "Mona Sans";
-  font-weight: Bold;
-  font-size: 20px;
-  opacity: 1;
-  text-align: center;
-}
-.service .v492_807 {
-  width: 263px;
-  color: rgb(13, 14, 23);
-  position: absolute;
-  top: 183px;
-  left: 23px;
-  font-family: "Mona Sans";
-  font-weight: Bold;
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
-}
-.service .v492_797 {
-  width: 310px;
-  height: 378px;
-  position: absolute;
-  top: 837px;
-  left: 895px;
-  overflow: hidden;
-}
-.service .v492_798 {
-  width: 310px;
-  height: 378px;
-  background: rgb(241, 200, 74);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-}
-.service .v492_801 {
-  width: 263px;
-  color: rgb(13, 14, 23);
-  position: absolute;
-  top: 183px;
-  left: 23px;
-  font-family: "Mona Sans";
-  font-weight: Bold;
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
-}
-.service .v492_791 {
-  width: 310px;
-  height: 378px;
-  position: absolute;
-  top: 259px;
-  left: 1364px;
-  overflow: hidden;
-}
-.service .v492_792 {
-  width: 310px;
-  height: 378px;
-  background: rgb(241, 200, 74);
-  opacity: 1;
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
-  overflow: hidden;
-}
-.service .v492_795 {
-  width: 263px;
-  color: rgb(13, 14, 23);
-  position: absolute;
-  top: 183px;
-  left: 23px;
-  font-family: "Mona Sans";
-  font-weight: Bold;
-  font-size: 30px;
-  opacity: 1;
-  text-align: center;
+.service-list-contents > div a:hover {
+  animation: bolder 0.8s ease-in-out infinite alternate;
 }
 
 @keyframes bolder {
