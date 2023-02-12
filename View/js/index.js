@@ -5,32 +5,86 @@ const API_ENDPOINT = "https://newsapi.org/v2/top-headlines";
 const params = {
   country: "fr",
   category: "business",
+  pageSize: 21,
   apiKey: API_KEY,
 };
 
 // Convert the parameters to a query string
-const queryString = new URLSearchParams(params).toString();
+const queryString = $.param(params);
 
 // Make the API request
-fetch(`${API_ENDPOINT}?${queryString}`)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
+$.ajax({
+  url: `${API_ENDPOINT}?${queryString}`,
+  method: "GET",
+  success: function (data) {
     // Convert the JSON data to HTML
     const articles = data.articles;
     const html = articles
       .map((article) => {
         return `
         <div class="article">
-          <h2><a href="${article.url}">${article.title}</a></h2>
-          <p>${article.content}</p>
+        <div class="article-img">
+            <img src="${article.urlToImage}" alt="${article.title}" />
+        </div>
+        <div class="article-inf">
+            <span class="article-author">By ${article.author}</span>
+            <span class="article-date">${article.publishedAt}</span>
+        </div>
+        <h2><a href="${article.url}">${article.title}</a></h2>
+        <p>${article.description}</p>
+        <div class="lire-plus"><a href="${article.url}">Lire plus</a></div>
         </div>
       `;
       })
       .join("");
-    document.querySelector("#news-container").innerHTML = html;
-  })
-  .catch((error) => {
+    $("#news-container").html(html);
+
+    var $items = $("#news-container").find(".article");
+    var itemsPerPage = 3;
+    var numPages = Math.ceil($items.length / itemsPerPage);
+
+    for (var i = 0; i < numPages; i++) {
+      var $page = $("<div>").addClass("page");
+
+      for (var j = 0; j < itemsPerPage; j++) {
+        var itemIndex = i * itemsPerPage + j;
+        if (itemIndex >= $items.length) break;
+
+        $page.append($items.eq(itemIndex));
+      }
+
+      $("#news-container").append($page);
+    }
+
+    var currentSlide = 0;
+    var $slides = $(".page");
+
+    function showSlide() {
+      $slides.hide();
+      $slides.eq(currentSlide).show();
+    }
+
+    function nextSlide() {
+      currentSlide++;
+      if (currentSlide >= $slides.length) {
+        currentSlide = 0;
+      }
+      showSlide();
+    }
+
+    function prevSlide() {
+      currentSlide--;
+      if (currentSlide < 0) {
+        currentSlide = $slides.length - 1;
+      }
+      showSlide();
+    }
+    $("#next").on("click", nextSlide);
+    $("#prev").on("click", prevSlide);
+    showSlide();
+  },
+  error: function (error) {
     // Handle any errors
     console.error(error);
-  });
+  },
+});

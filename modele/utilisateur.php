@@ -177,7 +177,9 @@ class Utilisateur
     $req_prep->execute($valeurs);
     $req_prep->setFetchMode(PDO::FETCH_CLASS, "Utilisateur");
     $tabUtilisateurs = $req_prep->fetchAll();
-    if (password_verify($m, $tabUtilisateurs[0]->getMdpUtilisateur()))
+    if (count($tabUtilisateurs) == 0)
+      return false;
+    else if (password_verify($m, $tabUtilisateurs[0]->getMdpUtilisateur()))
       return true;
     else
       return false;

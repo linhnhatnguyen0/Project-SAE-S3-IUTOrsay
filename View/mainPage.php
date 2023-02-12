@@ -33,14 +33,14 @@
             <h1>AUTEURS</h1>
             <div class="line"></div>
             <div class="auteurs">
-                <?php require_once("./View/card/auteur-card.php") ?>
+                <?php include("./View/card/auteur-card.php") ?>
             </div>
         </div>
         <div class="preferee-livres">
             <h1>LIVRES</h1>
             <div class="line"></div>
             <div class="livres">
-                <?php require_once("./View/card/livre-card.php") ?>
+                <?php include("./View/card/livre-card.php") ?>
             </div>
         </div>
     </section>
@@ -61,124 +61,14 @@
             <h1>AUTEURS</h1>
             <div class="line"></div>
             <div class="auteurs">
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>VICTOR HUGO</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
-                    </div>
-                </div>
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>J.K.ROWLING</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
-                    </div>
-                </div>
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>VICTOR HUGO</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
-                    </div>
-                </div>
-                <div class="auteur">
-                    <div class="auteur-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="auteur-title">
-                        <h3>VICTOR HUGO</h3>
-                        <span>1890-1940</span>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam reprehenderit reiciendis
-                            inventore assumenda explicabo rerum soluta, sequi temporibus est nemo ipsam nihil aspernatur
-                            quod expedita? Fugiat magnam exercitationem nemo doloremque.</p>
-                        <a>Consulter ses oeuvres</a>
-                    </div>
-                </div>
+                <?php include("./View/card/auteur-card.php") ?>
             </div>
         </div>
         <div class="connu-livres">
             <h1>LIVRES</h1>
             <div class="line"></div>
             <div class="livres">
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
-                <div class="livre">
-                    <div class="livre-img">
-                        <img src="./img/Victor_Hugo_001 1.png" alt="" />
-                    </div>
-                    <div class="livre-title">
-                        <h3>HARRY POTTER AND THE MAGICAL SORCERER STONE</h3>
-                        <p><strong>Auteur:</strong> J.K.Rowling</p>
-                        <p><strong>Année parution:</strong> 1890</p>
-                        <ul>
-                            <li>Fantastique</li>
-                            <li>Roman</li>
-                        </ul>
-                        <a>Emprunter</a>
-                    </div>
-                </div>
+                <?php include("./View/card/livre-card.php") ?>
             </div>
         </div>
     </section>

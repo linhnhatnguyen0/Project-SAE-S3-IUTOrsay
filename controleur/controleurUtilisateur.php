@@ -1,7 +1,6 @@
 <?php
 require_once("./modele/utilisateur.php");
 require_once("./controleur/controleur.php");
-
 class ControleurUtilisateur
 {
     public static function controleurIndexConnected()
@@ -30,7 +29,8 @@ class ControleurUtilisateur
             include("./View/mainPage.php");
             include("./View/footer.php");
         } else {
-            ControleurUtilisateur::afficherLogin();
+            $id = 0;
+            ControleurUtilisateur::afficherLogin($id);
         }
     }
     public static function deconnecterUtilisateur()
@@ -40,12 +40,21 @@ class ControleurUtilisateur
         setcookie(session_name(), '', time() - 1);
         Controleur::controleurIndex();
     }
-    public static function afficherLogin()
+    public static function afficherLogin($id)
     {
-        $titre = "Login";
-        include("./View/head.php");
-        include("./View/login.php");
-        include("./View/footer.php");
+        if ($id == 1) {
+            $titre = "Login";
+            $msg = "";
+            include("./View/head.php");
+            include("./View/login.php");
+            include("./View/footer.php");
+        } else {
+            $msg = "Login ou mot de passe incorrect";
+            $titre = "Login";
+            include("./View/head.php");
+            include("./View/login.php");
+            include("./View/footer.php");
+        }
 
     }
     public static function afficherSignUp()

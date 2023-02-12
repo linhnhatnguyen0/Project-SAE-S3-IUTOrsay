@@ -1,5 +1,5 @@
 <header>
-    <div class="logo">
+    <div class="logo-ps">
         <img src="./img/logo.png" width="115" height="85" alt="logo" />
     </div>
     <div class="menu">
@@ -10,7 +10,7 @@
             <li><a href="./index.php?controleur=controleur&action=aPropos">À propos</a></li>
         </ul>
     </div>
-    <a class="btn-connect" href="./index.php?controleur=controleurUtilisateur&action=afficherLogin">Se
+    <a class="btn-connect" href="./index.php?controleur=controleurUtilisateur&action=afficherLogin&id=1">Se
         connecter</a>
 </header>
 <main>

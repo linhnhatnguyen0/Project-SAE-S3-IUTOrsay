@@ -122,3 +122,22 @@ $(".sign-up-btn").on("click", function () {
     $(this).attr("type", "submit");
   }
 });
+$("#login").on("click", function () {
+  let check = true;
+  $("input").each(function (param) {
+    if (!$.trim(this.value).length) {
+      // zero-length string AFTER a trim
+      $(".error-msg").css("display", "block");
+      $(".error-msg").text("Please fill the input");
+      check = false;
+    } else {
+      $(".error-msg").css("display", "none");
+    }
+  });
+  console.log(check);
+  if (!check) {
+    $(this).attr("type", "button");
+  } else {
+    $(this).attr("type", "submit");
+  }
+});

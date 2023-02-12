@@ -149,10 +149,16 @@
         <p class="helper helper1">Login</p>
         <span class="indicator"></span>
     </div>
+    <p class="error-msg">
+        <?php echo $msg ?>
+    </p>
     <div class="inputGroup inputGroup2">
         <label for="password">Password</label>
         <input type="password" id="password" class="password" name="mdp" autocomplete="off" />
     </div>
+    <p class="error-msg">
+        <?php echo $msg ?>
+    </p>
     <div class="inputGroup inputGroup3">
         <button id="login" type="submit">Se connecter</button>
         <a href="./index.php?controleur=controleurUtilisateur&action=afficherSignUp" id="indicator">S'inscrire</a>

@@ -1,13 +1,6 @@
-@font-face {
-  font-family: "Mona Sans";
-  src: url("Mona-Sans.woff2") format("woff2 supports variations"),
-    url("Mona-Sans.woff2") format("woff2-variations");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
-}
 @import "./mixin";
 html {
-  font-family: "Mona Sans";
+  font-family: "Montserrat";
 }
 body {
   background-color: #11141a;
@@ -17,8 +10,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding: 0 20vw;
-  padding: 20px;
+  padding: 10px;
   position: fixed;
   top: 0;
   right: 50%;
@@ -39,9 +31,6 @@ header {
           text-decoration: none;
           color: #fff;
           font-weight: 400;
-          &:hover {
-            animation: bolder 0.8s ease-in-out infinite alternate;
-          }
         }
       }
     }
@@ -50,6 +39,14 @@ header {
     @include button;
     font-size: 1rem;
     text-decoration: none;
+  }
+  .logo-ps {
+    width: 5%;
+    position: relative;
+    img {
+      width: 100%;
+      height: 100%;
+    }
   }
   .user {
     width: 2%;
@@ -233,11 +230,21 @@ main {
         }
         .preferee-wd-left {
           left: 0;
-          background-color: rgb(122, 42, 42);
+          background: rgb(255, 161, 127);
+          background: linear-gradient(
+            180deg,
+            rgba(255, 161, 127, 1) 0%,
+            rgba(0, 34, 62, 1) 100%
+          );
         }
         .preferee-wd-right {
           right: 0;
-          background-color: rgb(61, 50, 128);
+          background: rgb(255, 161, 127);
+          background: linear-gradient(
+            180deg,
+            rgba(255, 161, 127, 1) 0%,
+            rgba(0, 34, 62, 1) 100%
+          );
         }
         .preferee-text-button-window {
           position: absolute;
@@ -473,12 +480,4 @@ main {
 @import "./emprunt.scss";
 @import "./actualite.scss";
 @import "./service.scss";
-
-@keyframes bolder {
-  from {
-    font-weight: 600;
-  }
-  to {
-    font-weight: 900;
-  }
-}
+@import "./contact.scss";

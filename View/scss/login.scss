@@ -41,7 +41,7 @@ $inputBG: #f3fafd;
   padding: 2.25em;
   box-sizing: border-box;
   border-radius: 0.5em;
-  font-family: "Mona Sans";
+  font-family: "Montserrat";
   .svgContainer {
     position: relative;
     width: 200px;
@@ -115,23 +115,19 @@ $inputBG: #f3fafd;
   button {
     display: block;
     margin: 0 auto;
-    padding: 0.8em 1em 1em;
-    background-color: #c8346b;
+    padding: 0.8em;
+    background-color: #f1c84a;
     border: none;
     border-radius: 30px;
     box-sizing: border-box;
     box-shadow: none;
     width: 40%;
     height: 65px;
-    font-size: 1.55em;
-    color: #fff;
-    font-weight: 400;
+    font-size: 1.5em;
+    color: #1b1633;
+    font-weight: 600;
     font-family: inherit;
-    transition: background-color 0.2s ease-out;
-    &:hover,
-    &:active {
-      background-color: $darkBlue;
-    }
+    cursor: pointer;
   }
   a {
     text-decoration: none;
@@ -164,6 +160,11 @@ $inputBG: #f3fafd;
       transform: translate(1.4em, 2em) scale(0.65);
       opacity: 1;
     }
+  }
+  .error-msg {
+    color: red;
+    font-size: 0.8em;
+    margin: -25px 0 10px 0;
   }
   .inputGroup3 {
     display: flex;

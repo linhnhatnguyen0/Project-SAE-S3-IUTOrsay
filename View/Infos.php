@@ -1,60 +1,38 @@
 <section class="contact">
-  <div class="middle" id="2">
-    <div class="corpmiddlequatre">
-      <div class="corpmiddlequatretitle">
-        <span>NOUS CONTACTER</span>
-      </div>
-      <div class="corpmiddlequatrecorp">
-        <div class="corpmiddlequatrecorpun">
-          <div class="gauche">
-            <h1>COORDONNÉES</h1>
-          </div>
-          <div class="droite">
-            <h1>HORAIRES D'OUVERTURE</h1>
-          </div>
-        </div>
-        <div class="corpmiddlequatrecorpdeux">
-          <img src="../img/loca.png" alt="" />
-          <div class="gauche">3 rue Joliot Curie 91190 Gif-sur-Yvette</div>
-          <div class="droite">LUNDI, MARDI, JEUDI : 8H00 – 20H30</div>
-        </div>
-        <div class="corpmiddlequatrecorptrois">
-          <img src="../img/Tel.png" alt="" />
-          <div class="gauche">
-            <a href="tel:0497732500">04 97 73 25 00</a>
-          </div>
-          <div class="droite">MERCREDI : 8H00 – 19H30</div>
-        </div>
-        <div class="corpmiddlequatrecorpquatre">
-          <img src="../img/Message.png" alt="" />
-          <div class="gauche">
-            <a href="mailto:ACCUEIL@Mediatheque-Paris-Saclay.FR">ACCUEIL@Mediatheque-Paris-Saclay.FR</a>
-          </div>
-          <div class="droite">VENDREDI : 8H00 – 19H45</div>
-        </div>
-      </div>
-    </div>
+  <div class="contact-bg">
+    <h1>À PROPOS DE NOUS</h1>
+    <img src="./img/bg-contact.png" alt="bg-contact">
+    <div class="overlay"></div>
   </div>
-
-  <div class="middledeux">
-    <div class="info_mail">
-      <form action="#" method="post">
-        <div class="form-group">
-          <input type="text" name="Name" class="form-control" placeholder="Name" required="" />
-        </div>
-        <div class="form-group">
-          <input type="email" name="Email" class="form-control" placeholder="Email" required="" />
-        </div>
-        <div class="form-group">
-          <textarea name="Message" placeholder="Message......." required=""></textarea>
-        </div>
-        <button type="button" class="btn">Candidater</button>
-      </form>
+  <div class="contact-detail">
+    <div class="contact-contents">
+      <div class="contact-item">
+        <h2>MAIL</h2>
+        <a href="#">mediatheque-ps@universite-paris-saclay.fr</a>
+      </div>
+      <div class="contact-item">
+        <h2>TELEPHONE</h2>
+        <a href="#">France: +33 1 69 15 15 15</a>
+      </div>
+      <div class="contact-item">
+        <h2>ADRESSE</h2>
+        <a href="#">13 Av. des Sciences, 91190 Gif-sur-Yvette</a>
+      </div>
     </div>
-    <div class="map">
-      <iframe
-        src="https://www.google.com/maps/place/Universit%C3%A9+Paris-Saclay+-+IUT+d'Orsay/@48.7090634,2.1676754,15z/data=!4m5!3m4!1s0x47e67f538f1df01d:0xe5d2ea29a4e0ceb!8m2!3d48.7109946!4d2.1708547"
-        width="600" height="450" style="border: 0" allowfullscreen="" loading="lazy"></iframe>
+    <div class="contact-horaire-map">
+      <div class="contact-horaire">
+        <h2>Horaire</h2>
+        <p>Le lundi de 9h à 17h</p>
+        <p>Le mardi de 9h à 17h</p>
+        <p>Le mercredi de 9h à 17h</p>
+        <p>Le jeudi de 9h à 17h</p>
+        <p>Le vendredi de 9h à 17h</p>
+      </div>
+      <div class="contact-map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2624.569497000001!2d2.238100315674989!3d48.71107897928808!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47e66e0d8b5c8a0b%3A0x9e9b3b3b4b3b3b3b!2s13+Av.+des+Sciences%2C+91190+Gif-sur-Yvette!5e0!3m2!1sfr!2sfr!4v1550101000000"
+          width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+      </div>
     </div>
   </div>
 </section>
