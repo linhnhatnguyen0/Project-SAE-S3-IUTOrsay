@@ -1,14 +1,14 @@
 <?php
 class Connexion
 {
-    // static private $hostname = 'sql304.epizy.com';
-    // static private $database = 'epiz_27776579_saes3wlechha';
-    // static private $login = 'epiz_27776579';
-    // static private $password = 'nTJL1fEWGB';
-    static private $hostname = 'localhost';
-    static private $database = 'projet-sae';
-    static private $login = 'root';
-    static private $password = '';
+    static private $hostname = 'sql304.epizy.com';
+    static private $database = 'epiz_27776579_saes3wlechha';
+    static private $login = 'epiz_27776579';
+    static private $password = 'nTJL1fEWGB';
+    // static private $hostname = 'localhost';
+    // static private $database = 'projet-sae';
+    // static private $login = 'root';
+    // static private $password = '';
 
     static private $tabUTF8 = array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8");
 
