@@ -1,42 +1,19 @@
-<section class="v119_244 collaboration">
-  <div class="v119_245"></div>
-  <div class="v122_3">
-    <div class="v122_4"></div>
-    <div class="v123_46"></div>
-  </div>
-  <div class="v122_5">
-    <div class="v122_6"></div>
-  </div>
-  <div class="v122_7">
-    <div class="v122_8"></div>
-    <div class="v120_392"></div>
-  </div>
-  <div class="v122_9">
-    <div class="v122_10"></div>
-  </div>
-  <div class="v122_11">
-    <div class="v122_12"></div>
-  </div>
-  <div class="v122_13">
-    <div class="v122_14"></div>
-  </div>
-  <div class="v122_15">
-    <div class="v122_16"></div>
-  </div>
-  <div class="v122_17">
-    <div class="v122_18"></div>
-  </div>
-  <div class="v120_386">
-    <div class="v120_387"></div>
-    <div class="v120_377"></div>
-  </div>
-  <span class="v120_403">nationale</span><span class="v120_401">regionale</span
-  ><span class="v120_404">internationale</span
-  ><span class="v122_19">collaboration</span>
-  <div class="v123_47"></div>
-  <div class="v123_48"></div>
-  <div class="v123_49"></div>
-  <div class="v123_50"></div>
-  <div class="v123_51"></div>
-  <div class="v123_52"></div>
+<section class="collaboration">
+    <div class="collaboration-title">
+        <h1>Collaboration</h1>
+    </div>
+    <div class="collaboration-national">
+        <img src="./img/m-culture.jpg" alt="Ministere de la culture">
+        <img src="./img/b2.png" alt="Bibliotheque nationale">
+        <img src="./img/b1.jpg" alt="Infobibliotheque.com">
+    </div>
+    <div class="collaboration-international">
+        <img src="./img/b3.png" alt="">
+        <img src="./img/eu-lib.jpg" alt="">
+        <img src="" alt="">
+    </div>
+    <div class="collaboration-region">
+        <img src="" alt="">
+        <img src="" alt=""><img src="" alt="">
+    </div>
 </section>
